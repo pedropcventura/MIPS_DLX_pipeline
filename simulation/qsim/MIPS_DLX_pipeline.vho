@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "11/28/2024 00:00:00"
+-- DATE "11/28/2024 00:18:04"
 
 -- 
 -- Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -40,13 +40,13 @@ ENTITY 	TipoRIJ IS
     PORT (
 	CLOCK_50 : IN std_logic;
 	KEY : IN std_logic_vector(3 DOWNTO 0);
-	simu_ula_out : BUFFER std_logic_vector(31 DOWNTO 0);
-	simu_decoder_out : BUFFER std_logic_vector(8 DOWNTO 0);
-	simu_pc_out : BUFFER std_logic_vector(31 DOWNTO 0);
-	simu_instru_out : BUFFER std_logic_vector(31 DOWNTO 0);
-	simu_ula_A : BUFFER std_logic_vector(31 DOWNTO 0);
-	simu_ula_B : BUFFER std_logic_vector(31 DOWNTO 0);
-	simu_ula_z : BUFFER std_logic
+	simu_ula_out : OUT std_logic_vector(31 DOWNTO 0);
+	simu_decoder_out : OUT std_logic_vector(8 DOWNTO 0);
+	simu_pc_out : OUT std_logic_vector(31 DOWNTO 0);
+	simu_instru_out : OUT std_logic_vector(31 DOWNTO 0);
+	simu_ula_A : OUT std_logic_vector(31 DOWNTO 0);
+	simu_ula_B : OUT std_logic_vector(31 DOWNTO 0);
+	simu_ula_z : OUT std_logic
 	);
 END TipoRIJ;
 
@@ -271,7 +271,7 @@ SIGNAL \unidade_de_controle_ULA|ULActrl[1]~4_combout\ : std_logic;
 SIGNAL \unidade_de_controle_ULA|ULActrl[0]~5_combout\ : std_logic;
 SIGNAL \ula_bit_a_bit_MIPS|MUX_reseultado0|saida_MUX~4_combout\ : std_logic;
 SIGNAL \ROM_MIPS|memROM~1_combout\ : std_logic;
-SIGNAL \unidade_de_controle_FD|saida[3]~0_combout\ : std_logic;
+SIGNAL \unidade_de_controle_FD|saida[5]~0_combout\ : std_logic;
 SIGNAL \banco_regs|Equal0~0_combout\ : std_logic;
 SIGNAL \ROM_MIPS|memROM~7_combout\ : std_logic;
 SIGNAL \ROM_MIPS|memROM~13_combout\ : std_logic;
@@ -280,7 +280,7 @@ SIGNAL \ROM_MIPS|memROM~8_combout\ : std_logic;
 SIGNAL \ROM_MIPS|memROM~17_combout\ : std_logic;
 SIGNAL \unidade_de_controle_FD|Equal4~0_combout\ : std_logic;
 SIGNAL \ROM_MIPS|memROM~2_combout\ : std_logic;
-SIGNAL \unidade_de_controle_FD|saida[8]~2_combout\ : std_logic;
+SIGNAL \unidade_de_controle_FD|saida[0]~2_combout\ : std_logic;
 SIGNAL \banco_regs|registrador~1223_combout\ : std_logic;
 SIGNAL \banco_regs|registrador~62_q\ : std_logic;
 SIGNAL \ROM_MIPS|memROM~14_combout\ : std_logic;
@@ -333,7 +333,7 @@ SIGNAL \banco_regs|registrador~46_q\ : std_logic;
 SIGNAL \banco_regs|registrador~1176_combout\ : std_logic;
 SIGNAL \banco_regs|saidaA[8]~22_combout\ : std_logic;
 SIGNAL \banco_regs|saidaB[7]~24_combout\ : std_logic;
-SIGNAL \unidade_de_controle_FD|saida[8]~3_combout\ : std_logic;
+SIGNAL \unidade_de_controle_FD|saida[0]~1_combout\ : std_logic;
 SIGNAL \banco_regs|saidaB[2]~29_combout\ : std_logic;
 SIGNAL \banco_regs|saidaB[3]~28_combout\ : std_logic;
 SIGNAL \banco_regs|saidaB[4]~27_combout\ : std_logic;
@@ -3445,7 +3445,7 @@ SIGNAL \add_extended_signal_and_PC|Add0~9_sumout\ : std_logic;
 SIGNAL \MUX_proxPC|saida_MUX[3]~52_combout\ : std_logic;
 SIGNAL \ROM_MIPS|memROM~0_combout\ : std_logic;
 SIGNAL \ROM_MIPS|memROM~15_combout\ : std_logic;
-SIGNAL \unidade_de_controle_FD|saida[0]~1_combout\ : std_logic;
+SIGNAL \unidade_de_controle_FD|saida[8]~3_combout\ : std_logic;
 SIGNAL \proxPC|Add0~18\ : std_logic;
 SIGNAL \proxPC|Add0~5_sumout\ : std_logic;
 SIGNAL \add_extended_signal_and_PC|Add0~18\ : std_logic;
@@ -3697,85 +3697,6 @@ SIGNAL \MUX_register_bank_out|saida_MUX[14]~30_combout\ : std_logic;
 SIGNAL \MUX_register_bank_out|saida_MUX[15]~31_combout\ : std_logic;
 SIGNAL \ula_bit_a_bit_MIPS|Z~10_combout\ : std_logic;
 SIGNAL \PC|DOUT\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \ram_mips|ALT_INV_memRAM~330_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2658_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1738_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1226_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~714_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~202_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2657_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1610_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1098_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~586_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~74_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2656_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2655_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1962_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1450_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~938_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~426_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2654_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1834_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1322_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~810_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~298_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2653_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1706_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1194_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~682_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~170_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2652_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1578_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1066_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~554_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~42_q\ : std_logic;
-SIGNAL \banco_regs|ALT_INV_registrador~1251_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2651_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2650_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2649_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2059_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1931_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1803_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1675_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2648_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2027_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1899_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1771_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1643_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2647_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1995_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1867_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1739_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1611_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2646_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1963_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1835_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1707_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1579_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2645_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2644_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1547_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1515_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1483_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1451_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2643_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1419_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1387_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1355_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1323_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2642_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1291_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1259_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1227_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1195_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2641_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1163_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1131_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1099_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1067_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2640_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2639_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1035_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~907_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~779_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~651_q\ : std_logic;
@@ -4075,79 +3996,6 @@ SIGNAL \banco_regs|ALT_INV_registrador~1247_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2569_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2568_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2567_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2063_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1551_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1039_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~527_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2566_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2031_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1519_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1007_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~495_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2565_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1999_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1487_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~975_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~463_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2564_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1967_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1455_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~943_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~431_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2563_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2562_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1935_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1903_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1871_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1839_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2561_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1423_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1391_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1359_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1327_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2560_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~911_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~879_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~847_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~815_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2559_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~399_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~367_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~335_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~303_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2558_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2557_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1807_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1775_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1743_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1711_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2556_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1295_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1263_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1231_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1199_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2555_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~783_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~751_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~719_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~687_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2554_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~271_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~239_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~207_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~175_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2553_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2552_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1679_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1647_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1615_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1583_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2551_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1167_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1135_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1103_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1071_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2550_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~655_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~623_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~591_q\ : std_logic;
@@ -4223,6 +4071,79 @@ SIGNAL \ram_mips|ALT_INV_memRAM~1104_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~592_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~80_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2532_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2063_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1551_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1039_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~527_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2566_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2031_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1519_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1007_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~495_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2565_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1999_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1487_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~975_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~463_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2564_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1967_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1455_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~943_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~431_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2563_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2562_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1935_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1903_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1871_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1839_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2561_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1423_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1391_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1359_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1327_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2560_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~911_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~879_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~847_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~815_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2559_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~399_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~367_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~335_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~303_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2558_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2557_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1807_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1775_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1743_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1711_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2556_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1295_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1263_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1231_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1199_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2555_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~783_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~751_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~719_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~687_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2554_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~271_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~239_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~207_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~175_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2553_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2552_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1679_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1647_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1615_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1583_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2551_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1167_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1135_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1103_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1071_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2550_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2531_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1968_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1456_q\ : std_logic;
@@ -4667,10 +4588,9 @@ SIGNAL \ram_mips|ALT_INV_memRAM~2424_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~661_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~629_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~597_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~950_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~438_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2404_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1846_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~565_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2423_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~149_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1334_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~822_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~310_q\ : std_logic;
@@ -4741,9 +4661,10 @@ SIGNAL \ram_mips|ALT_INV_memRAM~759_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~631_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2387_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~983_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~565_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2423_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~149_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~855_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~727_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~599_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2386_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~117_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~85_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~53_q\ : std_logic;
@@ -4816,10 +4737,10 @@ SIGNAL \ram_mips|ALT_INV_memRAM~2406_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2405_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1974_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1462_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~855_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~727_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~599_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2386_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~950_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~438_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2404_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1846_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~951_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~823_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~695_q\ : std_logic;
@@ -5712,6 +5633,84 @@ SIGNAL \ram_mips|ALT_INV_memRAM~2168_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2082_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1954_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1826_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1698_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2167_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1570_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1442_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1314_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1186_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2166_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1058_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~930_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~802_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~674_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2165_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~546_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~418_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~290_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~162_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2164_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2163_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2050_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1538_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1026_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~514_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2162_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1922_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1410_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~898_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~386_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2161_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1794_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1282_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~770_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~258_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2160_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1666_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1154_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~642_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~130_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2159_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2158_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2018_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1506_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~994_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~482_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2157_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1890_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1378_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~866_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~354_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2156_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1762_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1250_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~738_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~226_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2155_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1634_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1122_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~610_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~98_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2154_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2153_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1986_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1474_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~962_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~450_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2152_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1858_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1346_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~834_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~322_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2151_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1730_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1218_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~706_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~194_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2150_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1602_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1090_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~578_q\ : std_logic;
 SIGNAL \banco_regs|ALT_INV_Equal0~0_combout\ : std_logic;
 SIGNAL \unidade_de_controle_ULA|ALT_INV_ULActrl[0]~5_combout\ : std_logic;
 SIGNAL \ula_bit_a_bit_MIPS|SOMADOR_27|ALT_INV_C_out~2_combout\ : std_logic;
@@ -5758,6 +5757,58 @@ SIGNAL \ram_mips|ALT_INV_memRAM~2818_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2816_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2814_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2812_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2810_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2808_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2806_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2804_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2802_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2800_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2798_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2796_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2794_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2792_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2790_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2788_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2786_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2784_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2782_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2780_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2778_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2776_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2774_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2772_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2770_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2768_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2766_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2764_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2762_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2760_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2758_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2756_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2755_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2754_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2753_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2086_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1958_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1830_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1702_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2752_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1574_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1446_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1318_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1190_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2751_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1062_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~934_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~806_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~678_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2750_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~550_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~422_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~294_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~166_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2749_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2748_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2054_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1542_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1030_q\ : std_logic;
@@ -5833,58 +5884,6 @@ SIGNAL \ram_mips|ALT_INV_memRAM~1927_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1895_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1863_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1831_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2810_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2808_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2806_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2804_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2802_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2800_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2798_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2796_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2794_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2792_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2790_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2788_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2786_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2784_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2782_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2780_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2778_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2776_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2774_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2772_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2770_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2768_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2766_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2764_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2762_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2760_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2758_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2756_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2755_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2754_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2753_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2086_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1958_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1830_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1702_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2752_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1574_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1446_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1318_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1190_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2751_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1062_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~934_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~806_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~678_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2750_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~550_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~422_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~294_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~166_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2749_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2748_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2730_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1799_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1767_q\ : std_logic;
@@ -6182,84 +6181,85 @@ SIGNAL \ram_mips|ALT_INV_memRAM~2659_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1866_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~1354_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~842_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1698_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2167_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1570_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1442_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1314_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1186_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2166_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1058_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~930_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~802_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~674_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2165_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~546_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~418_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~290_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~162_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2164_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2163_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2050_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1538_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1026_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~514_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2162_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1922_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1410_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~898_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~386_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2161_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1794_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1282_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~770_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~258_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2160_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1666_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1154_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~642_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~130_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2159_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2158_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2018_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1506_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~994_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~482_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2157_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1890_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1378_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~866_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~354_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2156_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1762_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1250_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~738_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~226_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2155_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1634_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1122_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~610_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~98_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2154_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2153_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1986_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1474_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~962_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~450_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2152_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1858_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1346_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~834_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~322_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2151_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1730_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1218_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~706_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~194_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~2150_combout\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1602_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~1090_q\ : std_logic;
-SIGNAL \ram_mips|ALT_INV_memRAM~578_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~330_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2658_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1738_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1226_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~714_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~202_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2657_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1610_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1098_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~586_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~74_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2656_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2655_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1962_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1450_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~938_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~426_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2654_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1834_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1322_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~810_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~298_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2653_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1706_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1194_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~682_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~170_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2652_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1578_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1066_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~554_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~42_q\ : std_logic;
+SIGNAL \banco_regs|ALT_INV_registrador~1251_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2651_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2650_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2649_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2059_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1931_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1803_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1675_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2648_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2027_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1899_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1771_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1643_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2647_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1995_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1867_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1739_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1611_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2646_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1963_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1835_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1707_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1579_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2645_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2644_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1547_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1515_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1483_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1451_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2643_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1419_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1387_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1355_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1323_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2642_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1291_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1259_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1227_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1195_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2641_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1163_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1131_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1099_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1067_q\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2640_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~2639_combout\ : std_logic;
+SIGNAL \ram_mips|ALT_INV_memRAM~1035_q\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~66_q\ : std_logic;
 SIGNAL \banco_regs|ALT_INV_registrador~1227_combout\ : std_logic;
 SIGNAL \ram_mips|ALT_INV_memRAM~2149_combout\ : std_logic;
@@ -6538,10 +6538,10 @@ SIGNAL \ROM_MIPS|ALT_INV_memROM~17_combout\ : std_logic;
 SIGNAL \ROM_MIPS|ALT_INV_memROM~16_combout\ : std_logic;
 SIGNAL \PC|ALT_INV_DOUT\ : std_logic_vector(31 DOWNTO 2);
 SIGNAL \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\ : std_logic;
-SIGNAL \unidade_de_controle_FD|ALT_INV_Equal3~1_combout\ : std_logic;
-SIGNAL \unidade_de_controle_FD|ALT_INV_saida[8]~2_combout\ : std_logic;
-SIGNAL \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\ : std_logic;
 SIGNAL \ROM_MIPS|ALT_INV_memROM~15_combout\ : std_logic;
+SIGNAL \unidade_de_controle_FD|ALT_INV_saida[0]~2_combout\ : std_logic;
+SIGNAL \unidade_de_controle_FD|ALT_INV_Equal3~1_combout\ : std_logic;
+SIGNAL \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\ : std_logic;
 SIGNAL \ula_bit_a_bit_MIPS|MUX_reseultado31|ALT_INV_saida_MUX~0_combout\ : std_logic;
 SIGNAL \ula_bit_a_bit_MIPS|SOMADOR_31|ALT_INV_soma~0_combout\ : std_logic;
 SIGNAL \ula_bit_a_bit_MIPS|MUX_reseultado30|ALT_INV_saida_MUX~0_combout\ : std_logic;
@@ -6829,7 +6829,7 @@ SIGNAL \ROM_MIPS|ALT_INV_memROM~13_combout\ : std_logic;
 SIGNAL \ula_bit_a_bit_MIPS|MUX_B_30|ALT_INV_saida_MUX~0_combout\ : std_logic;
 SIGNAL \MUX_register_bank_out|ALT_INV_saida_MUX[30]~0_combout\ : std_logic;
 SIGNAL \banco_regs|ALT_INV_saidaB[30]~0_combout\ : std_logic;
-SIGNAL \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\ : std_logic;
+SIGNAL \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\ : std_logic;
 SIGNAL \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\ : std_logic;
 SIGNAL \unidade_de_controle_ULA|ALT_INV_ULActrl[1]~2_combout\ : std_logic;
 SIGNAL \unidade_de_controle_ULA|ALT_INV_ULActrl~1_combout\ : std_logic;
@@ -6955,85 +6955,6 @@ simu_ula_z <= ww_simu_ula_z;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\ram_mips|ALT_INV_memRAM~330_q\ <= NOT \ram_mips|memRAM~330_q\;
-\ram_mips|ALT_INV_memRAM~2658_combout\ <= NOT \ram_mips|memRAM~2658_combout\;
-\ram_mips|ALT_INV_memRAM~1738_q\ <= NOT \ram_mips|memRAM~1738_q\;
-\ram_mips|ALT_INV_memRAM~1226_q\ <= NOT \ram_mips|memRAM~1226_q\;
-\ram_mips|ALT_INV_memRAM~714_q\ <= NOT \ram_mips|memRAM~714_q\;
-\ram_mips|ALT_INV_memRAM~202_q\ <= NOT \ram_mips|memRAM~202_q\;
-\ram_mips|ALT_INV_memRAM~2657_combout\ <= NOT \ram_mips|memRAM~2657_combout\;
-\ram_mips|ALT_INV_memRAM~1610_q\ <= NOT \ram_mips|memRAM~1610_q\;
-\ram_mips|ALT_INV_memRAM~1098_q\ <= NOT \ram_mips|memRAM~1098_q\;
-\ram_mips|ALT_INV_memRAM~586_q\ <= NOT \ram_mips|memRAM~586_q\;
-\ram_mips|ALT_INV_memRAM~74_q\ <= NOT \ram_mips|memRAM~74_q\;
-\ram_mips|ALT_INV_memRAM~2656_combout\ <= NOT \ram_mips|memRAM~2656_combout\;
-\ram_mips|ALT_INV_memRAM~2655_combout\ <= NOT \ram_mips|memRAM~2655_combout\;
-\ram_mips|ALT_INV_memRAM~1962_q\ <= NOT \ram_mips|memRAM~1962_q\;
-\ram_mips|ALT_INV_memRAM~1450_q\ <= NOT \ram_mips|memRAM~1450_q\;
-\ram_mips|ALT_INV_memRAM~938_q\ <= NOT \ram_mips|memRAM~938_q\;
-\ram_mips|ALT_INV_memRAM~426_q\ <= NOT \ram_mips|memRAM~426_q\;
-\ram_mips|ALT_INV_memRAM~2654_combout\ <= NOT \ram_mips|memRAM~2654_combout\;
-\ram_mips|ALT_INV_memRAM~1834_q\ <= NOT \ram_mips|memRAM~1834_q\;
-\ram_mips|ALT_INV_memRAM~1322_q\ <= NOT \ram_mips|memRAM~1322_q\;
-\ram_mips|ALT_INV_memRAM~810_q\ <= NOT \ram_mips|memRAM~810_q\;
-\ram_mips|ALT_INV_memRAM~298_q\ <= NOT \ram_mips|memRAM~298_q\;
-\ram_mips|ALT_INV_memRAM~2653_combout\ <= NOT \ram_mips|memRAM~2653_combout\;
-\ram_mips|ALT_INV_memRAM~1706_q\ <= NOT \ram_mips|memRAM~1706_q\;
-\ram_mips|ALT_INV_memRAM~1194_q\ <= NOT \ram_mips|memRAM~1194_q\;
-\ram_mips|ALT_INV_memRAM~682_q\ <= NOT \ram_mips|memRAM~682_q\;
-\ram_mips|ALT_INV_memRAM~170_q\ <= NOT \ram_mips|memRAM~170_q\;
-\ram_mips|ALT_INV_memRAM~2652_combout\ <= NOT \ram_mips|memRAM~2652_combout\;
-\ram_mips|ALT_INV_memRAM~1578_q\ <= NOT \ram_mips|memRAM~1578_q\;
-\ram_mips|ALT_INV_memRAM~1066_q\ <= NOT \ram_mips|memRAM~1066_q\;
-\ram_mips|ALT_INV_memRAM~554_q\ <= NOT \ram_mips|memRAM~554_q\;
-\ram_mips|ALT_INV_memRAM~42_q\ <= NOT \ram_mips|memRAM~42_q\;
-\banco_regs|ALT_INV_registrador~1251_combout\ <= NOT \banco_regs|registrador~1251_combout\;
-\ram_mips|ALT_INV_memRAM~2651_combout\ <= NOT \ram_mips|memRAM~2651_combout\;
-\ram_mips|ALT_INV_memRAM~2650_combout\ <= NOT \ram_mips|memRAM~2650_combout\;
-\ram_mips|ALT_INV_memRAM~2649_combout\ <= NOT \ram_mips|memRAM~2649_combout\;
-\ram_mips|ALT_INV_memRAM~2059_q\ <= NOT \ram_mips|memRAM~2059_q\;
-\ram_mips|ALT_INV_memRAM~1931_q\ <= NOT \ram_mips|memRAM~1931_q\;
-\ram_mips|ALT_INV_memRAM~1803_q\ <= NOT \ram_mips|memRAM~1803_q\;
-\ram_mips|ALT_INV_memRAM~1675_q\ <= NOT \ram_mips|memRAM~1675_q\;
-\ram_mips|ALT_INV_memRAM~2648_combout\ <= NOT \ram_mips|memRAM~2648_combout\;
-\ram_mips|ALT_INV_memRAM~2027_q\ <= NOT \ram_mips|memRAM~2027_q\;
-\ram_mips|ALT_INV_memRAM~1899_q\ <= NOT \ram_mips|memRAM~1899_q\;
-\ram_mips|ALT_INV_memRAM~1771_q\ <= NOT \ram_mips|memRAM~1771_q\;
-\ram_mips|ALT_INV_memRAM~1643_q\ <= NOT \ram_mips|memRAM~1643_q\;
-\ram_mips|ALT_INV_memRAM~2647_combout\ <= NOT \ram_mips|memRAM~2647_combout\;
-\ram_mips|ALT_INV_memRAM~1995_q\ <= NOT \ram_mips|memRAM~1995_q\;
-\ram_mips|ALT_INV_memRAM~1867_q\ <= NOT \ram_mips|memRAM~1867_q\;
-\ram_mips|ALT_INV_memRAM~1739_q\ <= NOT \ram_mips|memRAM~1739_q\;
-\ram_mips|ALT_INV_memRAM~1611_q\ <= NOT \ram_mips|memRAM~1611_q\;
-\ram_mips|ALT_INV_memRAM~2646_combout\ <= NOT \ram_mips|memRAM~2646_combout\;
-\ram_mips|ALT_INV_memRAM~1963_q\ <= NOT \ram_mips|memRAM~1963_q\;
-\ram_mips|ALT_INV_memRAM~1835_q\ <= NOT \ram_mips|memRAM~1835_q\;
-\ram_mips|ALT_INV_memRAM~1707_q\ <= NOT \ram_mips|memRAM~1707_q\;
-\ram_mips|ALT_INV_memRAM~1579_q\ <= NOT \ram_mips|memRAM~1579_q\;
-\ram_mips|ALT_INV_memRAM~2645_combout\ <= NOT \ram_mips|memRAM~2645_combout\;
-\ram_mips|ALT_INV_memRAM~2644_combout\ <= NOT \ram_mips|memRAM~2644_combout\;
-\ram_mips|ALT_INV_memRAM~1547_q\ <= NOT \ram_mips|memRAM~1547_q\;
-\ram_mips|ALT_INV_memRAM~1515_q\ <= NOT \ram_mips|memRAM~1515_q\;
-\ram_mips|ALT_INV_memRAM~1483_q\ <= NOT \ram_mips|memRAM~1483_q\;
-\ram_mips|ALT_INV_memRAM~1451_q\ <= NOT \ram_mips|memRAM~1451_q\;
-\ram_mips|ALT_INV_memRAM~2643_combout\ <= NOT \ram_mips|memRAM~2643_combout\;
-\ram_mips|ALT_INV_memRAM~1419_q\ <= NOT \ram_mips|memRAM~1419_q\;
-\ram_mips|ALT_INV_memRAM~1387_q\ <= NOT \ram_mips|memRAM~1387_q\;
-\ram_mips|ALT_INV_memRAM~1355_q\ <= NOT \ram_mips|memRAM~1355_q\;
-\ram_mips|ALT_INV_memRAM~1323_q\ <= NOT \ram_mips|memRAM~1323_q\;
-\ram_mips|ALT_INV_memRAM~2642_combout\ <= NOT \ram_mips|memRAM~2642_combout\;
-\ram_mips|ALT_INV_memRAM~1291_q\ <= NOT \ram_mips|memRAM~1291_q\;
-\ram_mips|ALT_INV_memRAM~1259_q\ <= NOT \ram_mips|memRAM~1259_q\;
-\ram_mips|ALT_INV_memRAM~1227_q\ <= NOT \ram_mips|memRAM~1227_q\;
-\ram_mips|ALT_INV_memRAM~1195_q\ <= NOT \ram_mips|memRAM~1195_q\;
-\ram_mips|ALT_INV_memRAM~2641_combout\ <= NOT \ram_mips|memRAM~2641_combout\;
-\ram_mips|ALT_INV_memRAM~1163_q\ <= NOT \ram_mips|memRAM~1163_q\;
-\ram_mips|ALT_INV_memRAM~1131_q\ <= NOT \ram_mips|memRAM~1131_q\;
-\ram_mips|ALT_INV_memRAM~1099_q\ <= NOT \ram_mips|memRAM~1099_q\;
-\ram_mips|ALT_INV_memRAM~1067_q\ <= NOT \ram_mips|memRAM~1067_q\;
-\ram_mips|ALT_INV_memRAM~2640_combout\ <= NOT \ram_mips|memRAM~2640_combout\;
-\ram_mips|ALT_INV_memRAM~2639_combout\ <= NOT \ram_mips|memRAM~2639_combout\;
-\ram_mips|ALT_INV_memRAM~1035_q\ <= NOT \ram_mips|memRAM~1035_q\;
 \ram_mips|ALT_INV_memRAM~907_q\ <= NOT \ram_mips|memRAM~907_q\;
 \ram_mips|ALT_INV_memRAM~779_q\ <= NOT \ram_mips|memRAM~779_q\;
 \ram_mips|ALT_INV_memRAM~651_q\ <= NOT \ram_mips|memRAM~651_q\;
@@ -7333,79 +7254,6 @@ ww_devpor <= devpor;
 \ram_mips|ALT_INV_memRAM~2569_combout\ <= NOT \ram_mips|memRAM~2569_combout\;
 \ram_mips|ALT_INV_memRAM~2568_combout\ <= NOT \ram_mips|memRAM~2568_combout\;
 \ram_mips|ALT_INV_memRAM~2567_combout\ <= NOT \ram_mips|memRAM~2567_combout\;
-\ram_mips|ALT_INV_memRAM~2063_q\ <= NOT \ram_mips|memRAM~2063_q\;
-\ram_mips|ALT_INV_memRAM~1551_q\ <= NOT \ram_mips|memRAM~1551_q\;
-\ram_mips|ALT_INV_memRAM~1039_q\ <= NOT \ram_mips|memRAM~1039_q\;
-\ram_mips|ALT_INV_memRAM~527_q\ <= NOT \ram_mips|memRAM~527_q\;
-\ram_mips|ALT_INV_memRAM~2566_combout\ <= NOT \ram_mips|memRAM~2566_combout\;
-\ram_mips|ALT_INV_memRAM~2031_q\ <= NOT \ram_mips|memRAM~2031_q\;
-\ram_mips|ALT_INV_memRAM~1519_q\ <= NOT \ram_mips|memRAM~1519_q\;
-\ram_mips|ALT_INV_memRAM~1007_q\ <= NOT \ram_mips|memRAM~1007_q\;
-\ram_mips|ALT_INV_memRAM~495_q\ <= NOT \ram_mips|memRAM~495_q\;
-\ram_mips|ALT_INV_memRAM~2565_combout\ <= NOT \ram_mips|memRAM~2565_combout\;
-\ram_mips|ALT_INV_memRAM~1999_q\ <= NOT \ram_mips|memRAM~1999_q\;
-\ram_mips|ALT_INV_memRAM~1487_q\ <= NOT \ram_mips|memRAM~1487_q\;
-\ram_mips|ALT_INV_memRAM~975_q\ <= NOT \ram_mips|memRAM~975_q\;
-\ram_mips|ALT_INV_memRAM~463_q\ <= NOT \ram_mips|memRAM~463_q\;
-\ram_mips|ALT_INV_memRAM~2564_combout\ <= NOT \ram_mips|memRAM~2564_combout\;
-\ram_mips|ALT_INV_memRAM~1967_q\ <= NOT \ram_mips|memRAM~1967_q\;
-\ram_mips|ALT_INV_memRAM~1455_q\ <= NOT \ram_mips|memRAM~1455_q\;
-\ram_mips|ALT_INV_memRAM~943_q\ <= NOT \ram_mips|memRAM~943_q\;
-\ram_mips|ALT_INV_memRAM~431_q\ <= NOT \ram_mips|memRAM~431_q\;
-\ram_mips|ALT_INV_memRAM~2563_combout\ <= NOT \ram_mips|memRAM~2563_combout\;
-\ram_mips|ALT_INV_memRAM~2562_combout\ <= NOT \ram_mips|memRAM~2562_combout\;
-\ram_mips|ALT_INV_memRAM~1935_q\ <= NOT \ram_mips|memRAM~1935_q\;
-\ram_mips|ALT_INV_memRAM~1903_q\ <= NOT \ram_mips|memRAM~1903_q\;
-\ram_mips|ALT_INV_memRAM~1871_q\ <= NOT \ram_mips|memRAM~1871_q\;
-\ram_mips|ALT_INV_memRAM~1839_q\ <= NOT \ram_mips|memRAM~1839_q\;
-\ram_mips|ALT_INV_memRAM~2561_combout\ <= NOT \ram_mips|memRAM~2561_combout\;
-\ram_mips|ALT_INV_memRAM~1423_q\ <= NOT \ram_mips|memRAM~1423_q\;
-\ram_mips|ALT_INV_memRAM~1391_q\ <= NOT \ram_mips|memRAM~1391_q\;
-\ram_mips|ALT_INV_memRAM~1359_q\ <= NOT \ram_mips|memRAM~1359_q\;
-\ram_mips|ALT_INV_memRAM~1327_q\ <= NOT \ram_mips|memRAM~1327_q\;
-\ram_mips|ALT_INV_memRAM~2560_combout\ <= NOT \ram_mips|memRAM~2560_combout\;
-\ram_mips|ALT_INV_memRAM~911_q\ <= NOT \ram_mips|memRAM~911_q\;
-\ram_mips|ALT_INV_memRAM~879_q\ <= NOT \ram_mips|memRAM~879_q\;
-\ram_mips|ALT_INV_memRAM~847_q\ <= NOT \ram_mips|memRAM~847_q\;
-\ram_mips|ALT_INV_memRAM~815_q\ <= NOT \ram_mips|memRAM~815_q\;
-\ram_mips|ALT_INV_memRAM~2559_combout\ <= NOT \ram_mips|memRAM~2559_combout\;
-\ram_mips|ALT_INV_memRAM~399_q\ <= NOT \ram_mips|memRAM~399_q\;
-\ram_mips|ALT_INV_memRAM~367_q\ <= NOT \ram_mips|memRAM~367_q\;
-\ram_mips|ALT_INV_memRAM~335_q\ <= NOT \ram_mips|memRAM~335_q\;
-\ram_mips|ALT_INV_memRAM~303_q\ <= NOT \ram_mips|memRAM~303_q\;
-\ram_mips|ALT_INV_memRAM~2558_combout\ <= NOT \ram_mips|memRAM~2558_combout\;
-\ram_mips|ALT_INV_memRAM~2557_combout\ <= NOT \ram_mips|memRAM~2557_combout\;
-\ram_mips|ALT_INV_memRAM~1807_q\ <= NOT \ram_mips|memRAM~1807_q\;
-\ram_mips|ALT_INV_memRAM~1775_q\ <= NOT \ram_mips|memRAM~1775_q\;
-\ram_mips|ALT_INV_memRAM~1743_q\ <= NOT \ram_mips|memRAM~1743_q\;
-\ram_mips|ALT_INV_memRAM~1711_q\ <= NOT \ram_mips|memRAM~1711_q\;
-\ram_mips|ALT_INV_memRAM~2556_combout\ <= NOT \ram_mips|memRAM~2556_combout\;
-\ram_mips|ALT_INV_memRAM~1295_q\ <= NOT \ram_mips|memRAM~1295_q\;
-\ram_mips|ALT_INV_memRAM~1263_q\ <= NOT \ram_mips|memRAM~1263_q\;
-\ram_mips|ALT_INV_memRAM~1231_q\ <= NOT \ram_mips|memRAM~1231_q\;
-\ram_mips|ALT_INV_memRAM~1199_q\ <= NOT \ram_mips|memRAM~1199_q\;
-\ram_mips|ALT_INV_memRAM~2555_combout\ <= NOT \ram_mips|memRAM~2555_combout\;
-\ram_mips|ALT_INV_memRAM~783_q\ <= NOT \ram_mips|memRAM~783_q\;
-\ram_mips|ALT_INV_memRAM~751_q\ <= NOT \ram_mips|memRAM~751_q\;
-\ram_mips|ALT_INV_memRAM~719_q\ <= NOT \ram_mips|memRAM~719_q\;
-\ram_mips|ALT_INV_memRAM~687_q\ <= NOT \ram_mips|memRAM~687_q\;
-\ram_mips|ALT_INV_memRAM~2554_combout\ <= NOT \ram_mips|memRAM~2554_combout\;
-\ram_mips|ALT_INV_memRAM~271_q\ <= NOT \ram_mips|memRAM~271_q\;
-\ram_mips|ALT_INV_memRAM~239_q\ <= NOT \ram_mips|memRAM~239_q\;
-\ram_mips|ALT_INV_memRAM~207_q\ <= NOT \ram_mips|memRAM~207_q\;
-\ram_mips|ALT_INV_memRAM~175_q\ <= NOT \ram_mips|memRAM~175_q\;
-\ram_mips|ALT_INV_memRAM~2553_combout\ <= NOT \ram_mips|memRAM~2553_combout\;
-\ram_mips|ALT_INV_memRAM~2552_combout\ <= NOT \ram_mips|memRAM~2552_combout\;
-\ram_mips|ALT_INV_memRAM~1679_q\ <= NOT \ram_mips|memRAM~1679_q\;
-\ram_mips|ALT_INV_memRAM~1647_q\ <= NOT \ram_mips|memRAM~1647_q\;
-\ram_mips|ALT_INV_memRAM~1615_q\ <= NOT \ram_mips|memRAM~1615_q\;
-\ram_mips|ALT_INV_memRAM~1583_q\ <= NOT \ram_mips|memRAM~1583_q\;
-\ram_mips|ALT_INV_memRAM~2551_combout\ <= NOT \ram_mips|memRAM~2551_combout\;
-\ram_mips|ALT_INV_memRAM~1167_q\ <= NOT \ram_mips|memRAM~1167_q\;
-\ram_mips|ALT_INV_memRAM~1135_q\ <= NOT \ram_mips|memRAM~1135_q\;
-\ram_mips|ALT_INV_memRAM~1103_q\ <= NOT \ram_mips|memRAM~1103_q\;
-\ram_mips|ALT_INV_memRAM~1071_q\ <= NOT \ram_mips|memRAM~1071_q\;
-\ram_mips|ALT_INV_memRAM~2550_combout\ <= NOT \ram_mips|memRAM~2550_combout\;
 \ram_mips|ALT_INV_memRAM~655_q\ <= NOT \ram_mips|memRAM~655_q\;
 \ram_mips|ALT_INV_memRAM~623_q\ <= NOT \ram_mips|memRAM~623_q\;
 \ram_mips|ALT_INV_memRAM~591_q\ <= NOT \ram_mips|memRAM~591_q\;
@@ -7481,6 +7329,79 @@ ww_devpor <= devpor;
 \ram_mips|ALT_INV_memRAM~592_q\ <= NOT \ram_mips|memRAM~592_q\;
 \ram_mips|ALT_INV_memRAM~80_q\ <= NOT \ram_mips|memRAM~80_q\;
 \ram_mips|ALT_INV_memRAM~2532_combout\ <= NOT \ram_mips|memRAM~2532_combout\;
+\ram_mips|ALT_INV_memRAM~2063_q\ <= NOT \ram_mips|memRAM~2063_q\;
+\ram_mips|ALT_INV_memRAM~1551_q\ <= NOT \ram_mips|memRAM~1551_q\;
+\ram_mips|ALT_INV_memRAM~1039_q\ <= NOT \ram_mips|memRAM~1039_q\;
+\ram_mips|ALT_INV_memRAM~527_q\ <= NOT \ram_mips|memRAM~527_q\;
+\ram_mips|ALT_INV_memRAM~2566_combout\ <= NOT \ram_mips|memRAM~2566_combout\;
+\ram_mips|ALT_INV_memRAM~2031_q\ <= NOT \ram_mips|memRAM~2031_q\;
+\ram_mips|ALT_INV_memRAM~1519_q\ <= NOT \ram_mips|memRAM~1519_q\;
+\ram_mips|ALT_INV_memRAM~1007_q\ <= NOT \ram_mips|memRAM~1007_q\;
+\ram_mips|ALT_INV_memRAM~495_q\ <= NOT \ram_mips|memRAM~495_q\;
+\ram_mips|ALT_INV_memRAM~2565_combout\ <= NOT \ram_mips|memRAM~2565_combout\;
+\ram_mips|ALT_INV_memRAM~1999_q\ <= NOT \ram_mips|memRAM~1999_q\;
+\ram_mips|ALT_INV_memRAM~1487_q\ <= NOT \ram_mips|memRAM~1487_q\;
+\ram_mips|ALT_INV_memRAM~975_q\ <= NOT \ram_mips|memRAM~975_q\;
+\ram_mips|ALT_INV_memRAM~463_q\ <= NOT \ram_mips|memRAM~463_q\;
+\ram_mips|ALT_INV_memRAM~2564_combout\ <= NOT \ram_mips|memRAM~2564_combout\;
+\ram_mips|ALT_INV_memRAM~1967_q\ <= NOT \ram_mips|memRAM~1967_q\;
+\ram_mips|ALT_INV_memRAM~1455_q\ <= NOT \ram_mips|memRAM~1455_q\;
+\ram_mips|ALT_INV_memRAM~943_q\ <= NOT \ram_mips|memRAM~943_q\;
+\ram_mips|ALT_INV_memRAM~431_q\ <= NOT \ram_mips|memRAM~431_q\;
+\ram_mips|ALT_INV_memRAM~2563_combout\ <= NOT \ram_mips|memRAM~2563_combout\;
+\ram_mips|ALT_INV_memRAM~2562_combout\ <= NOT \ram_mips|memRAM~2562_combout\;
+\ram_mips|ALT_INV_memRAM~1935_q\ <= NOT \ram_mips|memRAM~1935_q\;
+\ram_mips|ALT_INV_memRAM~1903_q\ <= NOT \ram_mips|memRAM~1903_q\;
+\ram_mips|ALT_INV_memRAM~1871_q\ <= NOT \ram_mips|memRAM~1871_q\;
+\ram_mips|ALT_INV_memRAM~1839_q\ <= NOT \ram_mips|memRAM~1839_q\;
+\ram_mips|ALT_INV_memRAM~2561_combout\ <= NOT \ram_mips|memRAM~2561_combout\;
+\ram_mips|ALT_INV_memRAM~1423_q\ <= NOT \ram_mips|memRAM~1423_q\;
+\ram_mips|ALT_INV_memRAM~1391_q\ <= NOT \ram_mips|memRAM~1391_q\;
+\ram_mips|ALT_INV_memRAM~1359_q\ <= NOT \ram_mips|memRAM~1359_q\;
+\ram_mips|ALT_INV_memRAM~1327_q\ <= NOT \ram_mips|memRAM~1327_q\;
+\ram_mips|ALT_INV_memRAM~2560_combout\ <= NOT \ram_mips|memRAM~2560_combout\;
+\ram_mips|ALT_INV_memRAM~911_q\ <= NOT \ram_mips|memRAM~911_q\;
+\ram_mips|ALT_INV_memRAM~879_q\ <= NOT \ram_mips|memRAM~879_q\;
+\ram_mips|ALT_INV_memRAM~847_q\ <= NOT \ram_mips|memRAM~847_q\;
+\ram_mips|ALT_INV_memRAM~815_q\ <= NOT \ram_mips|memRAM~815_q\;
+\ram_mips|ALT_INV_memRAM~2559_combout\ <= NOT \ram_mips|memRAM~2559_combout\;
+\ram_mips|ALT_INV_memRAM~399_q\ <= NOT \ram_mips|memRAM~399_q\;
+\ram_mips|ALT_INV_memRAM~367_q\ <= NOT \ram_mips|memRAM~367_q\;
+\ram_mips|ALT_INV_memRAM~335_q\ <= NOT \ram_mips|memRAM~335_q\;
+\ram_mips|ALT_INV_memRAM~303_q\ <= NOT \ram_mips|memRAM~303_q\;
+\ram_mips|ALT_INV_memRAM~2558_combout\ <= NOT \ram_mips|memRAM~2558_combout\;
+\ram_mips|ALT_INV_memRAM~2557_combout\ <= NOT \ram_mips|memRAM~2557_combout\;
+\ram_mips|ALT_INV_memRAM~1807_q\ <= NOT \ram_mips|memRAM~1807_q\;
+\ram_mips|ALT_INV_memRAM~1775_q\ <= NOT \ram_mips|memRAM~1775_q\;
+\ram_mips|ALT_INV_memRAM~1743_q\ <= NOT \ram_mips|memRAM~1743_q\;
+\ram_mips|ALT_INV_memRAM~1711_q\ <= NOT \ram_mips|memRAM~1711_q\;
+\ram_mips|ALT_INV_memRAM~2556_combout\ <= NOT \ram_mips|memRAM~2556_combout\;
+\ram_mips|ALT_INV_memRAM~1295_q\ <= NOT \ram_mips|memRAM~1295_q\;
+\ram_mips|ALT_INV_memRAM~1263_q\ <= NOT \ram_mips|memRAM~1263_q\;
+\ram_mips|ALT_INV_memRAM~1231_q\ <= NOT \ram_mips|memRAM~1231_q\;
+\ram_mips|ALT_INV_memRAM~1199_q\ <= NOT \ram_mips|memRAM~1199_q\;
+\ram_mips|ALT_INV_memRAM~2555_combout\ <= NOT \ram_mips|memRAM~2555_combout\;
+\ram_mips|ALT_INV_memRAM~783_q\ <= NOT \ram_mips|memRAM~783_q\;
+\ram_mips|ALT_INV_memRAM~751_q\ <= NOT \ram_mips|memRAM~751_q\;
+\ram_mips|ALT_INV_memRAM~719_q\ <= NOT \ram_mips|memRAM~719_q\;
+\ram_mips|ALT_INV_memRAM~687_q\ <= NOT \ram_mips|memRAM~687_q\;
+\ram_mips|ALT_INV_memRAM~2554_combout\ <= NOT \ram_mips|memRAM~2554_combout\;
+\ram_mips|ALT_INV_memRAM~271_q\ <= NOT \ram_mips|memRAM~271_q\;
+\ram_mips|ALT_INV_memRAM~239_q\ <= NOT \ram_mips|memRAM~239_q\;
+\ram_mips|ALT_INV_memRAM~207_q\ <= NOT \ram_mips|memRAM~207_q\;
+\ram_mips|ALT_INV_memRAM~175_q\ <= NOT \ram_mips|memRAM~175_q\;
+\ram_mips|ALT_INV_memRAM~2553_combout\ <= NOT \ram_mips|memRAM~2553_combout\;
+\ram_mips|ALT_INV_memRAM~2552_combout\ <= NOT \ram_mips|memRAM~2552_combout\;
+\ram_mips|ALT_INV_memRAM~1679_q\ <= NOT \ram_mips|memRAM~1679_q\;
+\ram_mips|ALT_INV_memRAM~1647_q\ <= NOT \ram_mips|memRAM~1647_q\;
+\ram_mips|ALT_INV_memRAM~1615_q\ <= NOT \ram_mips|memRAM~1615_q\;
+\ram_mips|ALT_INV_memRAM~1583_q\ <= NOT \ram_mips|memRAM~1583_q\;
+\ram_mips|ALT_INV_memRAM~2551_combout\ <= NOT \ram_mips|memRAM~2551_combout\;
+\ram_mips|ALT_INV_memRAM~1167_q\ <= NOT \ram_mips|memRAM~1167_q\;
+\ram_mips|ALT_INV_memRAM~1135_q\ <= NOT \ram_mips|memRAM~1135_q\;
+\ram_mips|ALT_INV_memRAM~1103_q\ <= NOT \ram_mips|memRAM~1103_q\;
+\ram_mips|ALT_INV_memRAM~1071_q\ <= NOT \ram_mips|memRAM~1071_q\;
+\ram_mips|ALT_INV_memRAM~2550_combout\ <= NOT \ram_mips|memRAM~2550_combout\;
 \ram_mips|ALT_INV_memRAM~2531_combout\ <= NOT \ram_mips|memRAM~2531_combout\;
 \ram_mips|ALT_INV_memRAM~1968_q\ <= NOT \ram_mips|memRAM~1968_q\;
 \ram_mips|ALT_INV_memRAM~1456_q\ <= NOT \ram_mips|memRAM~1456_q\;
@@ -7925,10 +7846,9 @@ ww_devpor <= devpor;
 \ram_mips|ALT_INV_memRAM~661_q\ <= NOT \ram_mips|memRAM~661_q\;
 \ram_mips|ALT_INV_memRAM~629_q\ <= NOT \ram_mips|memRAM~629_q\;
 \ram_mips|ALT_INV_memRAM~597_q\ <= NOT \ram_mips|memRAM~597_q\;
-\ram_mips|ALT_INV_memRAM~950_q\ <= NOT \ram_mips|memRAM~950_q\;
-\ram_mips|ALT_INV_memRAM~438_q\ <= NOT \ram_mips|memRAM~438_q\;
-\ram_mips|ALT_INV_memRAM~2404_combout\ <= NOT \ram_mips|memRAM~2404_combout\;
-\ram_mips|ALT_INV_memRAM~1846_q\ <= NOT \ram_mips|memRAM~1846_q\;
+\ram_mips|ALT_INV_memRAM~565_q\ <= NOT \ram_mips|memRAM~565_q\;
+\ram_mips|ALT_INV_memRAM~2423_combout\ <= NOT \ram_mips|memRAM~2423_combout\;
+\ram_mips|ALT_INV_memRAM~149_q\ <= NOT \ram_mips|memRAM~149_q\;
 \ram_mips|ALT_INV_memRAM~1334_q\ <= NOT \ram_mips|memRAM~1334_q\;
 \ram_mips|ALT_INV_memRAM~822_q\ <= NOT \ram_mips|memRAM~822_q\;
 \ram_mips|ALT_INV_memRAM~310_q\ <= NOT \ram_mips|memRAM~310_q\;
@@ -7999,9 +7919,10 @@ ww_devpor <= devpor;
 \ram_mips|ALT_INV_memRAM~631_q\ <= NOT \ram_mips|memRAM~631_q\;
 \ram_mips|ALT_INV_memRAM~2387_combout\ <= NOT \ram_mips|memRAM~2387_combout\;
 \ram_mips|ALT_INV_memRAM~983_q\ <= NOT \ram_mips|memRAM~983_q\;
-\ram_mips|ALT_INV_memRAM~565_q\ <= NOT \ram_mips|memRAM~565_q\;
-\ram_mips|ALT_INV_memRAM~2423_combout\ <= NOT \ram_mips|memRAM~2423_combout\;
-\ram_mips|ALT_INV_memRAM~149_q\ <= NOT \ram_mips|memRAM~149_q\;
+\ram_mips|ALT_INV_memRAM~855_q\ <= NOT \ram_mips|memRAM~855_q\;
+\ram_mips|ALT_INV_memRAM~727_q\ <= NOT \ram_mips|memRAM~727_q\;
+\ram_mips|ALT_INV_memRAM~599_q\ <= NOT \ram_mips|memRAM~599_q\;
+\ram_mips|ALT_INV_memRAM~2386_combout\ <= NOT \ram_mips|memRAM~2386_combout\;
 \ram_mips|ALT_INV_memRAM~117_q\ <= NOT \ram_mips|memRAM~117_q\;
 \ram_mips|ALT_INV_memRAM~85_q\ <= NOT \ram_mips|memRAM~85_q\;
 \ram_mips|ALT_INV_memRAM~53_q\ <= NOT \ram_mips|memRAM~53_q\;
@@ -8074,10 +7995,10 @@ ww_devpor <= devpor;
 \ram_mips|ALT_INV_memRAM~2405_combout\ <= NOT \ram_mips|memRAM~2405_combout\;
 \ram_mips|ALT_INV_memRAM~1974_q\ <= NOT \ram_mips|memRAM~1974_q\;
 \ram_mips|ALT_INV_memRAM~1462_q\ <= NOT \ram_mips|memRAM~1462_q\;
-\ram_mips|ALT_INV_memRAM~855_q\ <= NOT \ram_mips|memRAM~855_q\;
-\ram_mips|ALT_INV_memRAM~727_q\ <= NOT \ram_mips|memRAM~727_q\;
-\ram_mips|ALT_INV_memRAM~599_q\ <= NOT \ram_mips|memRAM~599_q\;
-\ram_mips|ALT_INV_memRAM~2386_combout\ <= NOT \ram_mips|memRAM~2386_combout\;
+\ram_mips|ALT_INV_memRAM~950_q\ <= NOT \ram_mips|memRAM~950_q\;
+\ram_mips|ALT_INV_memRAM~438_q\ <= NOT \ram_mips|memRAM~438_q\;
+\ram_mips|ALT_INV_memRAM~2404_combout\ <= NOT \ram_mips|memRAM~2404_combout\;
+\ram_mips|ALT_INV_memRAM~1846_q\ <= NOT \ram_mips|memRAM~1846_q\;
 \ram_mips|ALT_INV_memRAM~951_q\ <= NOT \ram_mips|memRAM~951_q\;
 \ram_mips|ALT_INV_memRAM~823_q\ <= NOT \ram_mips|memRAM~823_q\;
 \ram_mips|ALT_INV_memRAM~695_q\ <= NOT \ram_mips|memRAM~695_q\;
@@ -8970,6 +8891,84 @@ ww_devpor <= devpor;
 \ram_mips|ALT_INV_memRAM~2082_q\ <= NOT \ram_mips|memRAM~2082_q\;
 \ram_mips|ALT_INV_memRAM~1954_q\ <= NOT \ram_mips|memRAM~1954_q\;
 \ram_mips|ALT_INV_memRAM~1826_q\ <= NOT \ram_mips|memRAM~1826_q\;
+\ram_mips|ALT_INV_memRAM~1698_q\ <= NOT \ram_mips|memRAM~1698_q\;
+\ram_mips|ALT_INV_memRAM~2167_combout\ <= NOT \ram_mips|memRAM~2167_combout\;
+\ram_mips|ALT_INV_memRAM~1570_q\ <= NOT \ram_mips|memRAM~1570_q\;
+\ram_mips|ALT_INV_memRAM~1442_q\ <= NOT \ram_mips|memRAM~1442_q\;
+\ram_mips|ALT_INV_memRAM~1314_q\ <= NOT \ram_mips|memRAM~1314_q\;
+\ram_mips|ALT_INV_memRAM~1186_q\ <= NOT \ram_mips|memRAM~1186_q\;
+\ram_mips|ALT_INV_memRAM~2166_combout\ <= NOT \ram_mips|memRAM~2166_combout\;
+\ram_mips|ALT_INV_memRAM~1058_q\ <= NOT \ram_mips|memRAM~1058_q\;
+\ram_mips|ALT_INV_memRAM~930_q\ <= NOT \ram_mips|memRAM~930_q\;
+\ram_mips|ALT_INV_memRAM~802_q\ <= NOT \ram_mips|memRAM~802_q\;
+\ram_mips|ALT_INV_memRAM~674_q\ <= NOT \ram_mips|memRAM~674_q\;
+\ram_mips|ALT_INV_memRAM~2165_combout\ <= NOT \ram_mips|memRAM~2165_combout\;
+\ram_mips|ALT_INV_memRAM~546_q\ <= NOT \ram_mips|memRAM~546_q\;
+\ram_mips|ALT_INV_memRAM~418_q\ <= NOT \ram_mips|memRAM~418_q\;
+\ram_mips|ALT_INV_memRAM~290_q\ <= NOT \ram_mips|memRAM~290_q\;
+\ram_mips|ALT_INV_memRAM~162_q\ <= NOT \ram_mips|memRAM~162_q\;
+\ram_mips|ALT_INV_memRAM~2164_combout\ <= NOT \ram_mips|memRAM~2164_combout\;
+\ram_mips|ALT_INV_memRAM~2163_combout\ <= NOT \ram_mips|memRAM~2163_combout\;
+\ram_mips|ALT_INV_memRAM~2050_q\ <= NOT \ram_mips|memRAM~2050_q\;
+\ram_mips|ALT_INV_memRAM~1538_q\ <= NOT \ram_mips|memRAM~1538_q\;
+\ram_mips|ALT_INV_memRAM~1026_q\ <= NOT \ram_mips|memRAM~1026_q\;
+\ram_mips|ALT_INV_memRAM~514_q\ <= NOT \ram_mips|memRAM~514_q\;
+\ram_mips|ALT_INV_memRAM~2162_combout\ <= NOT \ram_mips|memRAM~2162_combout\;
+\ram_mips|ALT_INV_memRAM~1922_q\ <= NOT \ram_mips|memRAM~1922_q\;
+\ram_mips|ALT_INV_memRAM~1410_q\ <= NOT \ram_mips|memRAM~1410_q\;
+\ram_mips|ALT_INV_memRAM~898_q\ <= NOT \ram_mips|memRAM~898_q\;
+\ram_mips|ALT_INV_memRAM~386_q\ <= NOT \ram_mips|memRAM~386_q\;
+\ram_mips|ALT_INV_memRAM~2161_combout\ <= NOT \ram_mips|memRAM~2161_combout\;
+\ram_mips|ALT_INV_memRAM~1794_q\ <= NOT \ram_mips|memRAM~1794_q\;
+\ram_mips|ALT_INV_memRAM~1282_q\ <= NOT \ram_mips|memRAM~1282_q\;
+\ram_mips|ALT_INV_memRAM~770_q\ <= NOT \ram_mips|memRAM~770_q\;
+\ram_mips|ALT_INV_memRAM~258_q\ <= NOT \ram_mips|memRAM~258_q\;
+\ram_mips|ALT_INV_memRAM~2160_combout\ <= NOT \ram_mips|memRAM~2160_combout\;
+\ram_mips|ALT_INV_memRAM~1666_q\ <= NOT \ram_mips|memRAM~1666_q\;
+\ram_mips|ALT_INV_memRAM~1154_q\ <= NOT \ram_mips|memRAM~1154_q\;
+\ram_mips|ALT_INV_memRAM~642_q\ <= NOT \ram_mips|memRAM~642_q\;
+\ram_mips|ALT_INV_memRAM~130_q\ <= NOT \ram_mips|memRAM~130_q\;
+\ram_mips|ALT_INV_memRAM~2159_combout\ <= NOT \ram_mips|memRAM~2159_combout\;
+\ram_mips|ALT_INV_memRAM~2158_combout\ <= NOT \ram_mips|memRAM~2158_combout\;
+\ram_mips|ALT_INV_memRAM~2018_q\ <= NOT \ram_mips|memRAM~2018_q\;
+\ram_mips|ALT_INV_memRAM~1506_q\ <= NOT \ram_mips|memRAM~1506_q\;
+\ram_mips|ALT_INV_memRAM~994_q\ <= NOT \ram_mips|memRAM~994_q\;
+\ram_mips|ALT_INV_memRAM~482_q\ <= NOT \ram_mips|memRAM~482_q\;
+\ram_mips|ALT_INV_memRAM~2157_combout\ <= NOT \ram_mips|memRAM~2157_combout\;
+\ram_mips|ALT_INV_memRAM~1890_q\ <= NOT \ram_mips|memRAM~1890_q\;
+\ram_mips|ALT_INV_memRAM~1378_q\ <= NOT \ram_mips|memRAM~1378_q\;
+\ram_mips|ALT_INV_memRAM~866_q\ <= NOT \ram_mips|memRAM~866_q\;
+\ram_mips|ALT_INV_memRAM~354_q\ <= NOT \ram_mips|memRAM~354_q\;
+\ram_mips|ALT_INV_memRAM~2156_combout\ <= NOT \ram_mips|memRAM~2156_combout\;
+\ram_mips|ALT_INV_memRAM~1762_q\ <= NOT \ram_mips|memRAM~1762_q\;
+\ram_mips|ALT_INV_memRAM~1250_q\ <= NOT \ram_mips|memRAM~1250_q\;
+\ram_mips|ALT_INV_memRAM~738_q\ <= NOT \ram_mips|memRAM~738_q\;
+\ram_mips|ALT_INV_memRAM~226_q\ <= NOT \ram_mips|memRAM~226_q\;
+\ram_mips|ALT_INV_memRAM~2155_combout\ <= NOT \ram_mips|memRAM~2155_combout\;
+\ram_mips|ALT_INV_memRAM~1634_q\ <= NOT \ram_mips|memRAM~1634_q\;
+\ram_mips|ALT_INV_memRAM~1122_q\ <= NOT \ram_mips|memRAM~1122_q\;
+\ram_mips|ALT_INV_memRAM~610_q\ <= NOT \ram_mips|memRAM~610_q\;
+\ram_mips|ALT_INV_memRAM~98_q\ <= NOT \ram_mips|memRAM~98_q\;
+\ram_mips|ALT_INV_memRAM~2154_combout\ <= NOT \ram_mips|memRAM~2154_combout\;
+\ram_mips|ALT_INV_memRAM~2153_combout\ <= NOT \ram_mips|memRAM~2153_combout\;
+\ram_mips|ALT_INV_memRAM~1986_q\ <= NOT \ram_mips|memRAM~1986_q\;
+\ram_mips|ALT_INV_memRAM~1474_q\ <= NOT \ram_mips|memRAM~1474_q\;
+\ram_mips|ALT_INV_memRAM~962_q\ <= NOT \ram_mips|memRAM~962_q\;
+\ram_mips|ALT_INV_memRAM~450_q\ <= NOT \ram_mips|memRAM~450_q\;
+\ram_mips|ALT_INV_memRAM~2152_combout\ <= NOT \ram_mips|memRAM~2152_combout\;
+\ram_mips|ALT_INV_memRAM~1858_q\ <= NOT \ram_mips|memRAM~1858_q\;
+\ram_mips|ALT_INV_memRAM~1346_q\ <= NOT \ram_mips|memRAM~1346_q\;
+\ram_mips|ALT_INV_memRAM~834_q\ <= NOT \ram_mips|memRAM~834_q\;
+\ram_mips|ALT_INV_memRAM~322_q\ <= NOT \ram_mips|memRAM~322_q\;
+\ram_mips|ALT_INV_memRAM~2151_combout\ <= NOT \ram_mips|memRAM~2151_combout\;
+\ram_mips|ALT_INV_memRAM~1730_q\ <= NOT \ram_mips|memRAM~1730_q\;
+\ram_mips|ALT_INV_memRAM~1218_q\ <= NOT \ram_mips|memRAM~1218_q\;
+\ram_mips|ALT_INV_memRAM~706_q\ <= NOT \ram_mips|memRAM~706_q\;
+\ram_mips|ALT_INV_memRAM~194_q\ <= NOT \ram_mips|memRAM~194_q\;
+\ram_mips|ALT_INV_memRAM~2150_combout\ <= NOT \ram_mips|memRAM~2150_combout\;
+\ram_mips|ALT_INV_memRAM~1602_q\ <= NOT \ram_mips|memRAM~1602_q\;
+\ram_mips|ALT_INV_memRAM~1090_q\ <= NOT \ram_mips|memRAM~1090_q\;
+\ram_mips|ALT_INV_memRAM~578_q\ <= NOT \ram_mips|memRAM~578_q\;
 \banco_regs|ALT_INV_Equal0~0_combout\ <= NOT \banco_regs|Equal0~0_combout\;
 \unidade_de_controle_ULA|ALT_INV_ULActrl[0]~5_combout\ <= NOT \unidade_de_controle_ULA|ULActrl[0]~5_combout\;
 \ula_bit_a_bit_MIPS|SOMADOR_27|ALT_INV_C_out~2_combout\ <= NOT \ula_bit_a_bit_MIPS|SOMADOR_27|C_out~2_combout\;
@@ -9016,6 +9015,58 @@ ww_devpor <= devpor;
 \ram_mips|ALT_INV_memRAM~2816_combout\ <= NOT \ram_mips|memRAM~2816_combout\;
 \ram_mips|ALT_INV_memRAM~2814_combout\ <= NOT \ram_mips|memRAM~2814_combout\;
 \ram_mips|ALT_INV_memRAM~2812_combout\ <= NOT \ram_mips|memRAM~2812_combout\;
+\ram_mips|ALT_INV_memRAM~2810_combout\ <= NOT \ram_mips|memRAM~2810_combout\;
+\ram_mips|ALT_INV_memRAM~2808_combout\ <= NOT \ram_mips|memRAM~2808_combout\;
+\ram_mips|ALT_INV_memRAM~2806_combout\ <= NOT \ram_mips|memRAM~2806_combout\;
+\ram_mips|ALT_INV_memRAM~2804_combout\ <= NOT \ram_mips|memRAM~2804_combout\;
+\ram_mips|ALT_INV_memRAM~2802_combout\ <= NOT \ram_mips|memRAM~2802_combout\;
+\ram_mips|ALT_INV_memRAM~2800_combout\ <= NOT \ram_mips|memRAM~2800_combout\;
+\ram_mips|ALT_INV_memRAM~2798_combout\ <= NOT \ram_mips|memRAM~2798_combout\;
+\ram_mips|ALT_INV_memRAM~2796_combout\ <= NOT \ram_mips|memRAM~2796_combout\;
+\ram_mips|ALT_INV_memRAM~2794_combout\ <= NOT \ram_mips|memRAM~2794_combout\;
+\ram_mips|ALT_INV_memRAM~2792_combout\ <= NOT \ram_mips|memRAM~2792_combout\;
+\ram_mips|ALT_INV_memRAM~2790_combout\ <= NOT \ram_mips|memRAM~2790_combout\;
+\ram_mips|ALT_INV_memRAM~2788_combout\ <= NOT \ram_mips|memRAM~2788_combout\;
+\ram_mips|ALT_INV_memRAM~2786_combout\ <= NOT \ram_mips|memRAM~2786_combout\;
+\ram_mips|ALT_INV_memRAM~2784_combout\ <= NOT \ram_mips|memRAM~2784_combout\;
+\ram_mips|ALT_INV_memRAM~2782_combout\ <= NOT \ram_mips|memRAM~2782_combout\;
+\ram_mips|ALT_INV_memRAM~2780_combout\ <= NOT \ram_mips|memRAM~2780_combout\;
+\ram_mips|ALT_INV_memRAM~2778_combout\ <= NOT \ram_mips|memRAM~2778_combout\;
+\ram_mips|ALT_INV_memRAM~2776_combout\ <= NOT \ram_mips|memRAM~2776_combout\;
+\ram_mips|ALT_INV_memRAM~2774_combout\ <= NOT \ram_mips|memRAM~2774_combout\;
+\ram_mips|ALT_INV_memRAM~2772_combout\ <= NOT \ram_mips|memRAM~2772_combout\;
+\ram_mips|ALT_INV_memRAM~2770_combout\ <= NOT \ram_mips|memRAM~2770_combout\;
+\ram_mips|ALT_INV_memRAM~2768_combout\ <= NOT \ram_mips|memRAM~2768_combout\;
+\ram_mips|ALT_INV_memRAM~2766_combout\ <= NOT \ram_mips|memRAM~2766_combout\;
+\ram_mips|ALT_INV_memRAM~2764_combout\ <= NOT \ram_mips|memRAM~2764_combout\;
+\ram_mips|ALT_INV_memRAM~2762_combout\ <= NOT \ram_mips|memRAM~2762_combout\;
+\ram_mips|ALT_INV_memRAM~2760_combout\ <= NOT \ram_mips|memRAM~2760_combout\;
+\ram_mips|ALT_INV_memRAM~2758_combout\ <= NOT \ram_mips|memRAM~2758_combout\;
+\ram_mips|ALT_INV_memRAM~2756_combout\ <= NOT \ram_mips|memRAM~2756_combout\;
+\ram_mips|ALT_INV_memRAM~2755_combout\ <= NOT \ram_mips|memRAM~2755_combout\;
+\ram_mips|ALT_INV_memRAM~2754_combout\ <= NOT \ram_mips|memRAM~2754_combout\;
+\ram_mips|ALT_INV_memRAM~2753_combout\ <= NOT \ram_mips|memRAM~2753_combout\;
+\ram_mips|ALT_INV_memRAM~2086_q\ <= NOT \ram_mips|memRAM~2086_q\;
+\ram_mips|ALT_INV_memRAM~1958_q\ <= NOT \ram_mips|memRAM~1958_q\;
+\ram_mips|ALT_INV_memRAM~1830_q\ <= NOT \ram_mips|memRAM~1830_q\;
+\ram_mips|ALT_INV_memRAM~1702_q\ <= NOT \ram_mips|memRAM~1702_q\;
+\ram_mips|ALT_INV_memRAM~2752_combout\ <= NOT \ram_mips|memRAM~2752_combout\;
+\ram_mips|ALT_INV_memRAM~1574_q\ <= NOT \ram_mips|memRAM~1574_q\;
+\ram_mips|ALT_INV_memRAM~1446_q\ <= NOT \ram_mips|memRAM~1446_q\;
+\ram_mips|ALT_INV_memRAM~1318_q\ <= NOT \ram_mips|memRAM~1318_q\;
+\ram_mips|ALT_INV_memRAM~1190_q\ <= NOT \ram_mips|memRAM~1190_q\;
+\ram_mips|ALT_INV_memRAM~2751_combout\ <= NOT \ram_mips|memRAM~2751_combout\;
+\ram_mips|ALT_INV_memRAM~1062_q\ <= NOT \ram_mips|memRAM~1062_q\;
+\ram_mips|ALT_INV_memRAM~934_q\ <= NOT \ram_mips|memRAM~934_q\;
+\ram_mips|ALT_INV_memRAM~806_q\ <= NOT \ram_mips|memRAM~806_q\;
+\ram_mips|ALT_INV_memRAM~678_q\ <= NOT \ram_mips|memRAM~678_q\;
+\ram_mips|ALT_INV_memRAM~2750_combout\ <= NOT \ram_mips|memRAM~2750_combout\;
+\ram_mips|ALT_INV_memRAM~550_q\ <= NOT \ram_mips|memRAM~550_q\;
+\ram_mips|ALT_INV_memRAM~422_q\ <= NOT \ram_mips|memRAM~422_q\;
+\ram_mips|ALT_INV_memRAM~294_q\ <= NOT \ram_mips|memRAM~294_q\;
+\ram_mips|ALT_INV_memRAM~166_q\ <= NOT \ram_mips|memRAM~166_q\;
+\ram_mips|ALT_INV_memRAM~2749_combout\ <= NOT \ram_mips|memRAM~2749_combout\;
+\ram_mips|ALT_INV_memRAM~2748_combout\ <= NOT \ram_mips|memRAM~2748_combout\;
 \ram_mips|ALT_INV_memRAM~2054_q\ <= NOT \ram_mips|memRAM~2054_q\;
 \ram_mips|ALT_INV_memRAM~1542_q\ <= NOT \ram_mips|memRAM~1542_q\;
 \ram_mips|ALT_INV_memRAM~1030_q\ <= NOT \ram_mips|memRAM~1030_q\;
@@ -9091,58 +9142,6 @@ ww_devpor <= devpor;
 \ram_mips|ALT_INV_memRAM~1895_q\ <= NOT \ram_mips|memRAM~1895_q\;
 \ram_mips|ALT_INV_memRAM~1863_q\ <= NOT \ram_mips|memRAM~1863_q\;
 \ram_mips|ALT_INV_memRAM~1831_q\ <= NOT \ram_mips|memRAM~1831_q\;
-\ram_mips|ALT_INV_memRAM~2810_combout\ <= NOT \ram_mips|memRAM~2810_combout\;
-\ram_mips|ALT_INV_memRAM~2808_combout\ <= NOT \ram_mips|memRAM~2808_combout\;
-\ram_mips|ALT_INV_memRAM~2806_combout\ <= NOT \ram_mips|memRAM~2806_combout\;
-\ram_mips|ALT_INV_memRAM~2804_combout\ <= NOT \ram_mips|memRAM~2804_combout\;
-\ram_mips|ALT_INV_memRAM~2802_combout\ <= NOT \ram_mips|memRAM~2802_combout\;
-\ram_mips|ALT_INV_memRAM~2800_combout\ <= NOT \ram_mips|memRAM~2800_combout\;
-\ram_mips|ALT_INV_memRAM~2798_combout\ <= NOT \ram_mips|memRAM~2798_combout\;
-\ram_mips|ALT_INV_memRAM~2796_combout\ <= NOT \ram_mips|memRAM~2796_combout\;
-\ram_mips|ALT_INV_memRAM~2794_combout\ <= NOT \ram_mips|memRAM~2794_combout\;
-\ram_mips|ALT_INV_memRAM~2792_combout\ <= NOT \ram_mips|memRAM~2792_combout\;
-\ram_mips|ALT_INV_memRAM~2790_combout\ <= NOT \ram_mips|memRAM~2790_combout\;
-\ram_mips|ALT_INV_memRAM~2788_combout\ <= NOT \ram_mips|memRAM~2788_combout\;
-\ram_mips|ALT_INV_memRAM~2786_combout\ <= NOT \ram_mips|memRAM~2786_combout\;
-\ram_mips|ALT_INV_memRAM~2784_combout\ <= NOT \ram_mips|memRAM~2784_combout\;
-\ram_mips|ALT_INV_memRAM~2782_combout\ <= NOT \ram_mips|memRAM~2782_combout\;
-\ram_mips|ALT_INV_memRAM~2780_combout\ <= NOT \ram_mips|memRAM~2780_combout\;
-\ram_mips|ALT_INV_memRAM~2778_combout\ <= NOT \ram_mips|memRAM~2778_combout\;
-\ram_mips|ALT_INV_memRAM~2776_combout\ <= NOT \ram_mips|memRAM~2776_combout\;
-\ram_mips|ALT_INV_memRAM~2774_combout\ <= NOT \ram_mips|memRAM~2774_combout\;
-\ram_mips|ALT_INV_memRAM~2772_combout\ <= NOT \ram_mips|memRAM~2772_combout\;
-\ram_mips|ALT_INV_memRAM~2770_combout\ <= NOT \ram_mips|memRAM~2770_combout\;
-\ram_mips|ALT_INV_memRAM~2768_combout\ <= NOT \ram_mips|memRAM~2768_combout\;
-\ram_mips|ALT_INV_memRAM~2766_combout\ <= NOT \ram_mips|memRAM~2766_combout\;
-\ram_mips|ALT_INV_memRAM~2764_combout\ <= NOT \ram_mips|memRAM~2764_combout\;
-\ram_mips|ALT_INV_memRAM~2762_combout\ <= NOT \ram_mips|memRAM~2762_combout\;
-\ram_mips|ALT_INV_memRAM~2760_combout\ <= NOT \ram_mips|memRAM~2760_combout\;
-\ram_mips|ALT_INV_memRAM~2758_combout\ <= NOT \ram_mips|memRAM~2758_combout\;
-\ram_mips|ALT_INV_memRAM~2756_combout\ <= NOT \ram_mips|memRAM~2756_combout\;
-\ram_mips|ALT_INV_memRAM~2755_combout\ <= NOT \ram_mips|memRAM~2755_combout\;
-\ram_mips|ALT_INV_memRAM~2754_combout\ <= NOT \ram_mips|memRAM~2754_combout\;
-\ram_mips|ALT_INV_memRAM~2753_combout\ <= NOT \ram_mips|memRAM~2753_combout\;
-\ram_mips|ALT_INV_memRAM~2086_q\ <= NOT \ram_mips|memRAM~2086_q\;
-\ram_mips|ALT_INV_memRAM~1958_q\ <= NOT \ram_mips|memRAM~1958_q\;
-\ram_mips|ALT_INV_memRAM~1830_q\ <= NOT \ram_mips|memRAM~1830_q\;
-\ram_mips|ALT_INV_memRAM~1702_q\ <= NOT \ram_mips|memRAM~1702_q\;
-\ram_mips|ALT_INV_memRAM~2752_combout\ <= NOT \ram_mips|memRAM~2752_combout\;
-\ram_mips|ALT_INV_memRAM~1574_q\ <= NOT \ram_mips|memRAM~1574_q\;
-\ram_mips|ALT_INV_memRAM~1446_q\ <= NOT \ram_mips|memRAM~1446_q\;
-\ram_mips|ALT_INV_memRAM~1318_q\ <= NOT \ram_mips|memRAM~1318_q\;
-\ram_mips|ALT_INV_memRAM~1190_q\ <= NOT \ram_mips|memRAM~1190_q\;
-\ram_mips|ALT_INV_memRAM~2751_combout\ <= NOT \ram_mips|memRAM~2751_combout\;
-\ram_mips|ALT_INV_memRAM~1062_q\ <= NOT \ram_mips|memRAM~1062_q\;
-\ram_mips|ALT_INV_memRAM~934_q\ <= NOT \ram_mips|memRAM~934_q\;
-\ram_mips|ALT_INV_memRAM~806_q\ <= NOT \ram_mips|memRAM~806_q\;
-\ram_mips|ALT_INV_memRAM~678_q\ <= NOT \ram_mips|memRAM~678_q\;
-\ram_mips|ALT_INV_memRAM~2750_combout\ <= NOT \ram_mips|memRAM~2750_combout\;
-\ram_mips|ALT_INV_memRAM~550_q\ <= NOT \ram_mips|memRAM~550_q\;
-\ram_mips|ALT_INV_memRAM~422_q\ <= NOT \ram_mips|memRAM~422_q\;
-\ram_mips|ALT_INV_memRAM~294_q\ <= NOT \ram_mips|memRAM~294_q\;
-\ram_mips|ALT_INV_memRAM~166_q\ <= NOT \ram_mips|memRAM~166_q\;
-\ram_mips|ALT_INV_memRAM~2749_combout\ <= NOT \ram_mips|memRAM~2749_combout\;
-\ram_mips|ALT_INV_memRAM~2748_combout\ <= NOT \ram_mips|memRAM~2748_combout\;
 \ram_mips|ALT_INV_memRAM~2730_combout\ <= NOT \ram_mips|memRAM~2730_combout\;
 \ram_mips|ALT_INV_memRAM~1799_q\ <= NOT \ram_mips|memRAM~1799_q\;
 \ram_mips|ALT_INV_memRAM~1767_q\ <= NOT \ram_mips|memRAM~1767_q\;
@@ -9440,84 +9439,85 @@ ww_devpor <= devpor;
 \ram_mips|ALT_INV_memRAM~1866_q\ <= NOT \ram_mips|memRAM~1866_q\;
 \ram_mips|ALT_INV_memRAM~1354_q\ <= NOT \ram_mips|memRAM~1354_q\;
 \ram_mips|ALT_INV_memRAM~842_q\ <= NOT \ram_mips|memRAM~842_q\;
-\ram_mips|ALT_INV_memRAM~1698_q\ <= NOT \ram_mips|memRAM~1698_q\;
-\ram_mips|ALT_INV_memRAM~2167_combout\ <= NOT \ram_mips|memRAM~2167_combout\;
-\ram_mips|ALT_INV_memRAM~1570_q\ <= NOT \ram_mips|memRAM~1570_q\;
-\ram_mips|ALT_INV_memRAM~1442_q\ <= NOT \ram_mips|memRAM~1442_q\;
-\ram_mips|ALT_INV_memRAM~1314_q\ <= NOT \ram_mips|memRAM~1314_q\;
-\ram_mips|ALT_INV_memRAM~1186_q\ <= NOT \ram_mips|memRAM~1186_q\;
-\ram_mips|ALT_INV_memRAM~2166_combout\ <= NOT \ram_mips|memRAM~2166_combout\;
-\ram_mips|ALT_INV_memRAM~1058_q\ <= NOT \ram_mips|memRAM~1058_q\;
-\ram_mips|ALT_INV_memRAM~930_q\ <= NOT \ram_mips|memRAM~930_q\;
-\ram_mips|ALT_INV_memRAM~802_q\ <= NOT \ram_mips|memRAM~802_q\;
-\ram_mips|ALT_INV_memRAM~674_q\ <= NOT \ram_mips|memRAM~674_q\;
-\ram_mips|ALT_INV_memRAM~2165_combout\ <= NOT \ram_mips|memRAM~2165_combout\;
-\ram_mips|ALT_INV_memRAM~546_q\ <= NOT \ram_mips|memRAM~546_q\;
-\ram_mips|ALT_INV_memRAM~418_q\ <= NOT \ram_mips|memRAM~418_q\;
-\ram_mips|ALT_INV_memRAM~290_q\ <= NOT \ram_mips|memRAM~290_q\;
-\ram_mips|ALT_INV_memRAM~162_q\ <= NOT \ram_mips|memRAM~162_q\;
-\ram_mips|ALT_INV_memRAM~2164_combout\ <= NOT \ram_mips|memRAM~2164_combout\;
-\ram_mips|ALT_INV_memRAM~2163_combout\ <= NOT \ram_mips|memRAM~2163_combout\;
-\ram_mips|ALT_INV_memRAM~2050_q\ <= NOT \ram_mips|memRAM~2050_q\;
-\ram_mips|ALT_INV_memRAM~1538_q\ <= NOT \ram_mips|memRAM~1538_q\;
-\ram_mips|ALT_INV_memRAM~1026_q\ <= NOT \ram_mips|memRAM~1026_q\;
-\ram_mips|ALT_INV_memRAM~514_q\ <= NOT \ram_mips|memRAM~514_q\;
-\ram_mips|ALT_INV_memRAM~2162_combout\ <= NOT \ram_mips|memRAM~2162_combout\;
-\ram_mips|ALT_INV_memRAM~1922_q\ <= NOT \ram_mips|memRAM~1922_q\;
-\ram_mips|ALT_INV_memRAM~1410_q\ <= NOT \ram_mips|memRAM~1410_q\;
-\ram_mips|ALT_INV_memRAM~898_q\ <= NOT \ram_mips|memRAM~898_q\;
-\ram_mips|ALT_INV_memRAM~386_q\ <= NOT \ram_mips|memRAM~386_q\;
-\ram_mips|ALT_INV_memRAM~2161_combout\ <= NOT \ram_mips|memRAM~2161_combout\;
-\ram_mips|ALT_INV_memRAM~1794_q\ <= NOT \ram_mips|memRAM~1794_q\;
-\ram_mips|ALT_INV_memRAM~1282_q\ <= NOT \ram_mips|memRAM~1282_q\;
-\ram_mips|ALT_INV_memRAM~770_q\ <= NOT \ram_mips|memRAM~770_q\;
-\ram_mips|ALT_INV_memRAM~258_q\ <= NOT \ram_mips|memRAM~258_q\;
-\ram_mips|ALT_INV_memRAM~2160_combout\ <= NOT \ram_mips|memRAM~2160_combout\;
-\ram_mips|ALT_INV_memRAM~1666_q\ <= NOT \ram_mips|memRAM~1666_q\;
-\ram_mips|ALT_INV_memRAM~1154_q\ <= NOT \ram_mips|memRAM~1154_q\;
-\ram_mips|ALT_INV_memRAM~642_q\ <= NOT \ram_mips|memRAM~642_q\;
-\ram_mips|ALT_INV_memRAM~130_q\ <= NOT \ram_mips|memRAM~130_q\;
-\ram_mips|ALT_INV_memRAM~2159_combout\ <= NOT \ram_mips|memRAM~2159_combout\;
-\ram_mips|ALT_INV_memRAM~2158_combout\ <= NOT \ram_mips|memRAM~2158_combout\;
-\ram_mips|ALT_INV_memRAM~2018_q\ <= NOT \ram_mips|memRAM~2018_q\;
-\ram_mips|ALT_INV_memRAM~1506_q\ <= NOT \ram_mips|memRAM~1506_q\;
-\ram_mips|ALT_INV_memRAM~994_q\ <= NOT \ram_mips|memRAM~994_q\;
-\ram_mips|ALT_INV_memRAM~482_q\ <= NOT \ram_mips|memRAM~482_q\;
-\ram_mips|ALT_INV_memRAM~2157_combout\ <= NOT \ram_mips|memRAM~2157_combout\;
-\ram_mips|ALT_INV_memRAM~1890_q\ <= NOT \ram_mips|memRAM~1890_q\;
-\ram_mips|ALT_INV_memRAM~1378_q\ <= NOT \ram_mips|memRAM~1378_q\;
-\ram_mips|ALT_INV_memRAM~866_q\ <= NOT \ram_mips|memRAM~866_q\;
-\ram_mips|ALT_INV_memRAM~354_q\ <= NOT \ram_mips|memRAM~354_q\;
-\ram_mips|ALT_INV_memRAM~2156_combout\ <= NOT \ram_mips|memRAM~2156_combout\;
-\ram_mips|ALT_INV_memRAM~1762_q\ <= NOT \ram_mips|memRAM~1762_q\;
-\ram_mips|ALT_INV_memRAM~1250_q\ <= NOT \ram_mips|memRAM~1250_q\;
-\ram_mips|ALT_INV_memRAM~738_q\ <= NOT \ram_mips|memRAM~738_q\;
-\ram_mips|ALT_INV_memRAM~226_q\ <= NOT \ram_mips|memRAM~226_q\;
-\ram_mips|ALT_INV_memRAM~2155_combout\ <= NOT \ram_mips|memRAM~2155_combout\;
-\ram_mips|ALT_INV_memRAM~1634_q\ <= NOT \ram_mips|memRAM~1634_q\;
-\ram_mips|ALT_INV_memRAM~1122_q\ <= NOT \ram_mips|memRAM~1122_q\;
-\ram_mips|ALT_INV_memRAM~610_q\ <= NOT \ram_mips|memRAM~610_q\;
-\ram_mips|ALT_INV_memRAM~98_q\ <= NOT \ram_mips|memRAM~98_q\;
-\ram_mips|ALT_INV_memRAM~2154_combout\ <= NOT \ram_mips|memRAM~2154_combout\;
-\ram_mips|ALT_INV_memRAM~2153_combout\ <= NOT \ram_mips|memRAM~2153_combout\;
-\ram_mips|ALT_INV_memRAM~1986_q\ <= NOT \ram_mips|memRAM~1986_q\;
-\ram_mips|ALT_INV_memRAM~1474_q\ <= NOT \ram_mips|memRAM~1474_q\;
-\ram_mips|ALT_INV_memRAM~962_q\ <= NOT \ram_mips|memRAM~962_q\;
-\ram_mips|ALT_INV_memRAM~450_q\ <= NOT \ram_mips|memRAM~450_q\;
-\ram_mips|ALT_INV_memRAM~2152_combout\ <= NOT \ram_mips|memRAM~2152_combout\;
-\ram_mips|ALT_INV_memRAM~1858_q\ <= NOT \ram_mips|memRAM~1858_q\;
-\ram_mips|ALT_INV_memRAM~1346_q\ <= NOT \ram_mips|memRAM~1346_q\;
-\ram_mips|ALT_INV_memRAM~834_q\ <= NOT \ram_mips|memRAM~834_q\;
-\ram_mips|ALT_INV_memRAM~322_q\ <= NOT \ram_mips|memRAM~322_q\;
-\ram_mips|ALT_INV_memRAM~2151_combout\ <= NOT \ram_mips|memRAM~2151_combout\;
-\ram_mips|ALT_INV_memRAM~1730_q\ <= NOT \ram_mips|memRAM~1730_q\;
-\ram_mips|ALT_INV_memRAM~1218_q\ <= NOT \ram_mips|memRAM~1218_q\;
-\ram_mips|ALT_INV_memRAM~706_q\ <= NOT \ram_mips|memRAM~706_q\;
-\ram_mips|ALT_INV_memRAM~194_q\ <= NOT \ram_mips|memRAM~194_q\;
-\ram_mips|ALT_INV_memRAM~2150_combout\ <= NOT \ram_mips|memRAM~2150_combout\;
-\ram_mips|ALT_INV_memRAM~1602_q\ <= NOT \ram_mips|memRAM~1602_q\;
-\ram_mips|ALT_INV_memRAM~1090_q\ <= NOT \ram_mips|memRAM~1090_q\;
-\ram_mips|ALT_INV_memRAM~578_q\ <= NOT \ram_mips|memRAM~578_q\;
+\ram_mips|ALT_INV_memRAM~330_q\ <= NOT \ram_mips|memRAM~330_q\;
+\ram_mips|ALT_INV_memRAM~2658_combout\ <= NOT \ram_mips|memRAM~2658_combout\;
+\ram_mips|ALT_INV_memRAM~1738_q\ <= NOT \ram_mips|memRAM~1738_q\;
+\ram_mips|ALT_INV_memRAM~1226_q\ <= NOT \ram_mips|memRAM~1226_q\;
+\ram_mips|ALT_INV_memRAM~714_q\ <= NOT \ram_mips|memRAM~714_q\;
+\ram_mips|ALT_INV_memRAM~202_q\ <= NOT \ram_mips|memRAM~202_q\;
+\ram_mips|ALT_INV_memRAM~2657_combout\ <= NOT \ram_mips|memRAM~2657_combout\;
+\ram_mips|ALT_INV_memRAM~1610_q\ <= NOT \ram_mips|memRAM~1610_q\;
+\ram_mips|ALT_INV_memRAM~1098_q\ <= NOT \ram_mips|memRAM~1098_q\;
+\ram_mips|ALT_INV_memRAM~586_q\ <= NOT \ram_mips|memRAM~586_q\;
+\ram_mips|ALT_INV_memRAM~74_q\ <= NOT \ram_mips|memRAM~74_q\;
+\ram_mips|ALT_INV_memRAM~2656_combout\ <= NOT \ram_mips|memRAM~2656_combout\;
+\ram_mips|ALT_INV_memRAM~2655_combout\ <= NOT \ram_mips|memRAM~2655_combout\;
+\ram_mips|ALT_INV_memRAM~1962_q\ <= NOT \ram_mips|memRAM~1962_q\;
+\ram_mips|ALT_INV_memRAM~1450_q\ <= NOT \ram_mips|memRAM~1450_q\;
+\ram_mips|ALT_INV_memRAM~938_q\ <= NOT \ram_mips|memRAM~938_q\;
+\ram_mips|ALT_INV_memRAM~426_q\ <= NOT \ram_mips|memRAM~426_q\;
+\ram_mips|ALT_INV_memRAM~2654_combout\ <= NOT \ram_mips|memRAM~2654_combout\;
+\ram_mips|ALT_INV_memRAM~1834_q\ <= NOT \ram_mips|memRAM~1834_q\;
+\ram_mips|ALT_INV_memRAM~1322_q\ <= NOT \ram_mips|memRAM~1322_q\;
+\ram_mips|ALT_INV_memRAM~810_q\ <= NOT \ram_mips|memRAM~810_q\;
+\ram_mips|ALT_INV_memRAM~298_q\ <= NOT \ram_mips|memRAM~298_q\;
+\ram_mips|ALT_INV_memRAM~2653_combout\ <= NOT \ram_mips|memRAM~2653_combout\;
+\ram_mips|ALT_INV_memRAM~1706_q\ <= NOT \ram_mips|memRAM~1706_q\;
+\ram_mips|ALT_INV_memRAM~1194_q\ <= NOT \ram_mips|memRAM~1194_q\;
+\ram_mips|ALT_INV_memRAM~682_q\ <= NOT \ram_mips|memRAM~682_q\;
+\ram_mips|ALT_INV_memRAM~170_q\ <= NOT \ram_mips|memRAM~170_q\;
+\ram_mips|ALT_INV_memRAM~2652_combout\ <= NOT \ram_mips|memRAM~2652_combout\;
+\ram_mips|ALT_INV_memRAM~1578_q\ <= NOT \ram_mips|memRAM~1578_q\;
+\ram_mips|ALT_INV_memRAM~1066_q\ <= NOT \ram_mips|memRAM~1066_q\;
+\ram_mips|ALT_INV_memRAM~554_q\ <= NOT \ram_mips|memRAM~554_q\;
+\ram_mips|ALT_INV_memRAM~42_q\ <= NOT \ram_mips|memRAM~42_q\;
+\banco_regs|ALT_INV_registrador~1251_combout\ <= NOT \banco_regs|registrador~1251_combout\;
+\ram_mips|ALT_INV_memRAM~2651_combout\ <= NOT \ram_mips|memRAM~2651_combout\;
+\ram_mips|ALT_INV_memRAM~2650_combout\ <= NOT \ram_mips|memRAM~2650_combout\;
+\ram_mips|ALT_INV_memRAM~2649_combout\ <= NOT \ram_mips|memRAM~2649_combout\;
+\ram_mips|ALT_INV_memRAM~2059_q\ <= NOT \ram_mips|memRAM~2059_q\;
+\ram_mips|ALT_INV_memRAM~1931_q\ <= NOT \ram_mips|memRAM~1931_q\;
+\ram_mips|ALT_INV_memRAM~1803_q\ <= NOT \ram_mips|memRAM~1803_q\;
+\ram_mips|ALT_INV_memRAM~1675_q\ <= NOT \ram_mips|memRAM~1675_q\;
+\ram_mips|ALT_INV_memRAM~2648_combout\ <= NOT \ram_mips|memRAM~2648_combout\;
+\ram_mips|ALT_INV_memRAM~2027_q\ <= NOT \ram_mips|memRAM~2027_q\;
+\ram_mips|ALT_INV_memRAM~1899_q\ <= NOT \ram_mips|memRAM~1899_q\;
+\ram_mips|ALT_INV_memRAM~1771_q\ <= NOT \ram_mips|memRAM~1771_q\;
+\ram_mips|ALT_INV_memRAM~1643_q\ <= NOT \ram_mips|memRAM~1643_q\;
+\ram_mips|ALT_INV_memRAM~2647_combout\ <= NOT \ram_mips|memRAM~2647_combout\;
+\ram_mips|ALT_INV_memRAM~1995_q\ <= NOT \ram_mips|memRAM~1995_q\;
+\ram_mips|ALT_INV_memRAM~1867_q\ <= NOT \ram_mips|memRAM~1867_q\;
+\ram_mips|ALT_INV_memRAM~1739_q\ <= NOT \ram_mips|memRAM~1739_q\;
+\ram_mips|ALT_INV_memRAM~1611_q\ <= NOT \ram_mips|memRAM~1611_q\;
+\ram_mips|ALT_INV_memRAM~2646_combout\ <= NOT \ram_mips|memRAM~2646_combout\;
+\ram_mips|ALT_INV_memRAM~1963_q\ <= NOT \ram_mips|memRAM~1963_q\;
+\ram_mips|ALT_INV_memRAM~1835_q\ <= NOT \ram_mips|memRAM~1835_q\;
+\ram_mips|ALT_INV_memRAM~1707_q\ <= NOT \ram_mips|memRAM~1707_q\;
+\ram_mips|ALT_INV_memRAM~1579_q\ <= NOT \ram_mips|memRAM~1579_q\;
+\ram_mips|ALT_INV_memRAM~2645_combout\ <= NOT \ram_mips|memRAM~2645_combout\;
+\ram_mips|ALT_INV_memRAM~2644_combout\ <= NOT \ram_mips|memRAM~2644_combout\;
+\ram_mips|ALT_INV_memRAM~1547_q\ <= NOT \ram_mips|memRAM~1547_q\;
+\ram_mips|ALT_INV_memRAM~1515_q\ <= NOT \ram_mips|memRAM~1515_q\;
+\ram_mips|ALT_INV_memRAM~1483_q\ <= NOT \ram_mips|memRAM~1483_q\;
+\ram_mips|ALT_INV_memRAM~1451_q\ <= NOT \ram_mips|memRAM~1451_q\;
+\ram_mips|ALT_INV_memRAM~2643_combout\ <= NOT \ram_mips|memRAM~2643_combout\;
+\ram_mips|ALT_INV_memRAM~1419_q\ <= NOT \ram_mips|memRAM~1419_q\;
+\ram_mips|ALT_INV_memRAM~1387_q\ <= NOT \ram_mips|memRAM~1387_q\;
+\ram_mips|ALT_INV_memRAM~1355_q\ <= NOT \ram_mips|memRAM~1355_q\;
+\ram_mips|ALT_INV_memRAM~1323_q\ <= NOT \ram_mips|memRAM~1323_q\;
+\ram_mips|ALT_INV_memRAM~2642_combout\ <= NOT \ram_mips|memRAM~2642_combout\;
+\ram_mips|ALT_INV_memRAM~1291_q\ <= NOT \ram_mips|memRAM~1291_q\;
+\ram_mips|ALT_INV_memRAM~1259_q\ <= NOT \ram_mips|memRAM~1259_q\;
+\ram_mips|ALT_INV_memRAM~1227_q\ <= NOT \ram_mips|memRAM~1227_q\;
+\ram_mips|ALT_INV_memRAM~1195_q\ <= NOT \ram_mips|memRAM~1195_q\;
+\ram_mips|ALT_INV_memRAM~2641_combout\ <= NOT \ram_mips|memRAM~2641_combout\;
+\ram_mips|ALT_INV_memRAM~1163_q\ <= NOT \ram_mips|memRAM~1163_q\;
+\ram_mips|ALT_INV_memRAM~1131_q\ <= NOT \ram_mips|memRAM~1131_q\;
+\ram_mips|ALT_INV_memRAM~1099_q\ <= NOT \ram_mips|memRAM~1099_q\;
+\ram_mips|ALT_INV_memRAM~1067_q\ <= NOT \ram_mips|memRAM~1067_q\;
+\ram_mips|ALT_INV_memRAM~2640_combout\ <= NOT \ram_mips|memRAM~2640_combout\;
+\ram_mips|ALT_INV_memRAM~2639_combout\ <= NOT \ram_mips|memRAM~2639_combout\;
+\ram_mips|ALT_INV_memRAM~1035_q\ <= NOT \ram_mips|memRAM~1035_q\;
 \ram_mips|ALT_INV_memRAM~66_q\ <= NOT \ram_mips|memRAM~66_q\;
 \banco_regs|ALT_INV_registrador~1227_combout\ <= NOT \banco_regs|registrador~1227_combout\;
 \ram_mips|ALT_INV_memRAM~2149_combout\ <= NOT \ram_mips|memRAM~2149_combout\;
@@ -9819,10 +9819,10 @@ ww_devpor <= devpor;
 \PC|ALT_INV_DOUT\(9) <= NOT \PC|DOUT\(9);
 \PC|ALT_INV_DOUT\(8) <= NOT \PC|DOUT\(8);
 \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\ <= NOT \unidade_de_controle_FD|saida[8]~3_combout\;
-\unidade_de_controle_FD|ALT_INV_Equal3~1_combout\ <= NOT \unidade_de_controle_FD|Equal3~1_combout\;
-\unidade_de_controle_FD|ALT_INV_saida[8]~2_combout\ <= NOT \unidade_de_controle_FD|saida[8]~2_combout\;
-\unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\ <= NOT \unidade_de_controle_FD|saida[0]~1_combout\;
 \ROM_MIPS|ALT_INV_memROM~15_combout\ <= NOT \ROM_MIPS|memROM~15_combout\;
+\unidade_de_controle_FD|ALT_INV_saida[0]~2_combout\ <= NOT \unidade_de_controle_FD|saida[0]~2_combout\;
+\unidade_de_controle_FD|ALT_INV_Equal3~1_combout\ <= NOT \unidade_de_controle_FD|Equal3~1_combout\;
+\unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\ <= NOT \unidade_de_controle_FD|saida[0]~1_combout\;
 \ula_bit_a_bit_MIPS|MUX_reseultado31|ALT_INV_saida_MUX~0_combout\ <= NOT \ula_bit_a_bit_MIPS|MUX_reseultado31|saida_MUX~0_combout\;
 \ula_bit_a_bit_MIPS|SOMADOR_31|ALT_INV_soma~0_combout\ <= NOT \ula_bit_a_bit_MIPS|SOMADOR_31|soma~0_combout\;
 \ula_bit_a_bit_MIPS|MUX_reseultado30|ALT_INV_saida_MUX~0_combout\ <= NOT \ula_bit_a_bit_MIPS|MUX_reseultado30|saida_MUX~0_combout\;
@@ -10110,7 +10110,7 @@ ww_devpor <= devpor;
 \ula_bit_a_bit_MIPS|MUX_B_30|ALT_INV_saida_MUX~0_combout\ <= NOT \ula_bit_a_bit_MIPS|MUX_B_30|saida_MUX~0_combout\;
 \MUX_register_bank_out|ALT_INV_saida_MUX[30]~0_combout\ <= NOT \MUX_register_bank_out|saida_MUX[30]~0_combout\;
 \banco_regs|ALT_INV_saidaB[30]~0_combout\ <= NOT \banco_regs|saidaB[30]~0_combout\;
-\unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\ <= NOT \unidade_de_controle_FD|saida[3]~0_combout\;
+\unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\ <= NOT \unidade_de_controle_FD|saida[5]~0_combout\;
 \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\ <= NOT \unidade_de_controle_ULA|ULActrl[2]~3_combout\;
 \unidade_de_controle_ULA|ALT_INV_ULActrl[1]~2_combout\ <= NOT \unidade_de_controle_ULA|ULActrl[1]~2_combout\;
 \unidade_de_controle_ULA|ALT_INV_ULActrl~1_combout\ <= NOT \unidade_de_controle_ULA|ULActrl~1_combout\;
@@ -10620,7 +10620,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	i => \unidade_de_controle_FD|saida[0]~1_combout\,
 	devoe => ww_devoe,
 	o => \simu_decoder_out[0]~output_o\);
 
@@ -10632,7 +10632,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \unidade_de_controle_FD|Equal4~0_combout\,
+	i => \unidade_de_controle_FD|Equal3~1_combout\,
 	devoe => ww_devoe,
 	o => \simu_decoder_out[1]~output_o\);
 
@@ -10644,7 +10644,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \unidade_de_controle_FD|saida[8]~2_combout\,
+	i => \unidade_de_controle_ULA|ULActrl~0_combout\,
 	devoe => ww_devoe,
 	o => \simu_decoder_out[2]~output_o\);
 
@@ -10656,7 +10656,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \unidade_de_controle_FD|saida[3]~0_combout\,
+	i => \unidade_de_controle_FD|Equal3~1_combout\,
 	devoe => ww_devoe,
 	o => \simu_decoder_out[3]~output_o\);
 
@@ -10680,7 +10680,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \unidade_de_controle_FD|Equal3~1_combout\,
+	i => \unidade_de_controle_FD|saida[5]~0_combout\,
 	devoe => ww_devoe,
 	o => \simu_decoder_out[5]~output_o\);
 
@@ -10692,7 +10692,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \unidade_de_controle_ULA|ULActrl~0_combout\,
+	i => \unidade_de_controle_FD|saida[0]~2_combout\,
 	devoe => ww_devoe,
 	o => \simu_decoder_out[6]~output_o\);
 
@@ -10704,7 +10704,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \unidade_de_controle_FD|Equal3~1_combout\,
+	i => \unidade_de_controle_FD|Equal4~0_combout\,
 	devoe => ww_devoe,
 	o => \simu_decoder_out[7]~output_o\);
 
@@ -10716,7 +10716,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \unidade_de_controle_FD|saida[8]~3_combout\,
+	i => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	devoe => ww_devoe,
 	o => \simu_decoder_out[8]~output_o\);
 
@@ -12497,7 +12497,7 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[5]~44\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[5]~44_combout\ = ( !\unidade_de_controle_FD|saida[0]~1_combout\ & ( (((!\ROM_MIPS|memROM~6_combout\))) ) ) # ( \unidade_de_controle_FD|saida[0]~1_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
+-- \MUX_proxPC|saida_MUX[5]~44_combout\ = ( !\unidade_de_controle_FD|saida[8]~3_combout\ & ( (((!\ROM_MIPS|memROM~6_combout\))) ) ) # ( \unidade_de_controle_FD|saida[8]~3_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
 -- ((!\unidade_de_controle_ULA|ULActrl~0_combout\ & (\proxPC|Add0~17_sumout\)) # (\unidade_de_controle_ULA|ULActrl~0_combout\ & ((\add_extended_signal_and_PC|Add0~17_sumout\))))) # (\ula_bit_a_bit_MIPS|Z~8_combout\ & (\proxPC|Add0~17_sumout\)))) # 
 -- (\ula_bit_a_bit_MIPS|Z~9_combout\ & (((\proxPC|Add0~17_sumout\)))) ) )
 
@@ -12512,7 +12512,7 @@ PORT MAP (
 	datab => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datac => \proxPC|ALT_INV_Add0~17_sumout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datae => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datae => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	dataf => \add_extended_signal_and_PC|ALT_INV_Add0~17_sumout\,
 	datag => \ROM_MIPS|ALT_INV_memROM~6_combout\,
 	combout => \MUX_proxPC|saida_MUX[5]~44_combout\);
@@ -12568,7 +12568,7 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[4]~48\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[4]~48_combout\ = ( !\unidade_de_controle_FD|saida[0]~1_combout\ & ( (((\ROM_MIPS|memROM~11_combout\))) ) ) # ( \unidade_de_controle_FD|saida[0]~1_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
+-- \MUX_proxPC|saida_MUX[4]~48_combout\ = ( !\unidade_de_controle_FD|saida[8]~3_combout\ & ( (((\ROM_MIPS|memROM~11_combout\))) ) ) # ( \unidade_de_controle_FD|saida[8]~3_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
 -- ((!\unidade_de_controle_ULA|ULActrl~0_combout\ & (\proxPC|Add0~13_sumout\)) # (\unidade_de_controle_ULA|ULActrl~0_combout\ & ((\add_extended_signal_and_PC|Add0~13_sumout\))))) # (\ula_bit_a_bit_MIPS|Z~8_combout\ & (\proxPC|Add0~13_sumout\)))) # 
 -- (\ula_bit_a_bit_MIPS|Z~9_combout\ & (((\proxPC|Add0~13_sumout\)))) ) )
 
@@ -12583,7 +12583,7 @@ PORT MAP (
 	datab => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datac => \proxPC|ALT_INV_Add0~13_sumout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datae => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datae => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	dataf => \add_extended_signal_and_PC|ALT_INV_Add0~13_sumout\,
 	datag => \ROM_MIPS|ALT_INV_memROM~11_combout\,
 	combout => \MUX_proxPC|saida_MUX[4]~48_combout\);
@@ -12730,9 +12730,9 @@ PORT MAP (
 	datad => \PC|ALT_INV_DOUT\(5),
 	combout => \ROM_MIPS|memROM~1_combout\);
 
-\unidade_de_controle_FD|saida[3]~0\ : cyclonev_lcell_comb
+\unidade_de_controle_FD|saida[5]~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \unidade_de_controle_FD|saida[3]~0_combout\ = ( \ROM_MIPS|memROM~1_combout\ & ( ((!\PC|DOUT\(7) & (!\PC|DOUT\(6) & \ROM_MIPS|memROM~0_combout\))) # (\ROM_MIPS|memROM~9_combout\) ) )
+-- \unidade_de_controle_FD|saida[5]~0_combout\ = ( \ROM_MIPS|memROM~1_combout\ & ( ((!\PC|DOUT\(7) & (!\PC|DOUT\(6) & \ROM_MIPS|memROM~0_combout\))) # (\ROM_MIPS|memROM~9_combout\) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -12746,7 +12746,7 @@ PORT MAP (
 	datac => \ROM_MIPS|ALT_INV_memROM~9_combout\,
 	datad => \ROM_MIPS|ALT_INV_memROM~0_combout\,
 	datae => \ROM_MIPS|ALT_INV_memROM~1_combout\,
-	combout => \unidade_de_controle_FD|saida[3]~0_combout\);
+	combout => \unidade_de_controle_FD|saida[5]~0_combout\);
 
 \banco_regs|Equal0~0\ : cyclonev_lcell_comb
 -- Equation(s):
@@ -12891,9 +12891,9 @@ PORT MAP (
 	dataf => \PC|ALT_INV_DOUT\(6),
 	combout => \ROM_MIPS|memROM~2_combout\);
 
-\unidade_de_controle_FD|saida[8]~2\ : cyclonev_lcell_comb
+\unidade_de_controle_FD|saida[0]~2\ : cyclonev_lcell_comb
 -- Equation(s):
--- \unidade_de_controle_FD|saida[8]~2_combout\ = ( \ROM_MIPS|memROM~1_combout\ & ( \ROM_MIPS|memROM~2_combout\ & ( (!\PC|DOUT\(7) & (!\PC|DOUT\(6) & (!\ROM_MIPS|memROM~9_combout\ & \ROM_MIPS|memROM~0_combout\))) ) ) ) # ( \ROM_MIPS|memROM~1_combout\ & ( 
+-- \unidade_de_controle_FD|saida[0]~2_combout\ = ( \ROM_MIPS|memROM~1_combout\ & ( \ROM_MIPS|memROM~2_combout\ & ( (!\PC|DOUT\(7) & (!\PC|DOUT\(6) & (!\ROM_MIPS|memROM~9_combout\ & \ROM_MIPS|memROM~0_combout\))) ) ) ) # ( \ROM_MIPS|memROM~1_combout\ & ( 
 -- !\ROM_MIPS|memROM~2_combout\ & ( (!\ROM_MIPS|memROM~9_combout\ & (!\ROM_MIPS|memROM~0_combout\ $ (((!\PC|DOUT\(7) & !\PC|DOUT\(6)))))) ) ) ) # ( !\ROM_MIPS|memROM~1_combout\ & ( !\ROM_MIPS|memROM~2_combout\ & ( (!\ROM_MIPS|memROM~9_combout\ & 
 -- !\ROM_MIPS|memROM~0_combout\) ) ) )
 
@@ -12910,11 +12910,11 @@ PORT MAP (
 	datad => \ROM_MIPS|ALT_INV_memROM~0_combout\,
 	datae => \ROM_MIPS|ALT_INV_memROM~1_combout\,
 	dataf => \ROM_MIPS|ALT_INV_memROM~2_combout\,
-	combout => \unidade_de_controle_FD|saida[8]~2_combout\);
+	combout => \unidade_de_controle_FD|saida[0]~2_combout\);
 
 \banco_regs|registrador~1223\ : cyclonev_lcell_comb
 -- Equation(s):
--- \banco_regs|registrador~1223_combout\ = ( \unidade_de_controle_FD|saida[8]~2_combout\ & ( (!\ROM_MIPS|memROM~8_combout\ & (((\ROM_MIPS|memROM~16_combout\ & !\ROM_MIPS|memROM~17_combout\)) # (\unidade_de_controle_FD|Equal4~0_combout\))) ) )
+-- \banco_regs|registrador~1223_combout\ = ( \unidade_de_controle_FD|saida[0]~2_combout\ & ( (!\ROM_MIPS|memROM~8_combout\ & (((\ROM_MIPS|memROM~16_combout\ & !\ROM_MIPS|memROM~17_combout\)) # (\unidade_de_controle_FD|Equal4~0_combout\))) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -12927,7 +12927,7 @@ PORT MAP (
 	datab => \ROM_MIPS|ALT_INV_memROM~8_combout\,
 	datac => \ROM_MIPS|ALT_INV_memROM~17_combout\,
 	datad => \unidade_de_controle_FD|ALT_INV_Equal4~0_combout\,
-	datae => \unidade_de_controle_FD|ALT_INV_saida[8]~2_combout\,
+	datae => \unidade_de_controle_FD|ALT_INV_saida[0]~2_combout\,
 	combout => \banco_regs|registrador~1223_combout\);
 
 \banco_regs|registrador~62\ : dffeas
@@ -13379,7 +13379,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[13]~19\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[13]~19_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[13]~17_combout\)
+-- \MUX_register_bank_out|saida_MUX[13]~19_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[13]~17_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -13388,7 +13388,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[13]~17_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[13]~19_combout\);
 
@@ -13664,7 +13664,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[8]~18\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[8]~18_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[8]~19_combout\)
+-- \MUX_register_bank_out|saida_MUX[8]~18_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[8]~19_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -13673,7 +13673,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[8]~19_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[8]~18_combout\);
 
@@ -13740,9 +13740,9 @@ PORT MAP (
 	datab => \banco_regs|ALT_INV_registrador~1177_combout\,
 	combout => \banco_regs|saidaB[7]~24_combout\);
 
-\unidade_de_controle_FD|saida[8]~3\ : cyclonev_lcell_comb
+\unidade_de_controle_FD|saida[0]~1\ : cyclonev_lcell_comb
 -- Equation(s):
--- \unidade_de_controle_FD|saida[8]~3_combout\ = (\ROM_MIPS|memROM~9_combout\ & \ROM_MIPS|memROM~1_combout\)
+-- \unidade_de_controle_FD|saida[0]~1_combout\ = (\ROM_MIPS|memROM~9_combout\ & \ROM_MIPS|memROM~1_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -13753,7 +13753,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \ROM_MIPS|ALT_INV_memROM~9_combout\,
 	datab => \ROM_MIPS|ALT_INV_memROM~1_combout\,
-	combout => \unidade_de_controle_FD|saida[8]~3_combout\);
+	combout => \unidade_de_controle_FD|saida[0]~1_combout\);
 
 \banco_regs|saidaB[2]~29\ : cyclonev_lcell_comb
 -- Equation(s):
@@ -13936,9 +13936,9 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|SOMADOR_7|C_out~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|SOMADOR_7|C_out~0_combout\ = ( \banco_regs|saidaA[7]~23_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[3]~0_combout\ & 
+-- \ula_bit_a_bit_MIPS|SOMADOR_7|C_out~0_combout\ = ( \banco_regs|saidaA[7]~23_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[5]~0_combout\ & 
 -- \banco_regs|registrador~1177_combout\)))) ) ) # ( !\banco_regs|saidaA[7]~23_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1177_combout\) # 
--- (\unidade_de_controle_FD|saida[3]~0_combout\)))) ) )
+-- (\unidade_de_controle_FD|saida[5]~0_combout\)))) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -13948,7 +13948,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1177_combout\,
 	datae => \banco_regs|ALT_INV_saidaA[7]~23_combout\,
@@ -14149,11 +14149,11 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|SOMADOR_3|C_out~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|SOMADOR_3|C_out~0_combout\ = ( \banco_regs|registrador~1197_combout\ & ( \banco_regs|saidaA[3]~27_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[3]~0_combout\ & 
--- (\banco_regs|Equal0~0_combout\)) # (\unidade_de_controle_FD|saida[3]~0_combout\ & ((!\ROM_MIPS|memROM~6_combout\))))) ) ) ) # ( !\banco_regs|registrador~1197_combout\ & ( \banco_regs|saidaA[3]~27_combout\ & ( 
--- !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((\unidade_de_controle_FD|saida[3]~0_combout\ & !\ROM_MIPS|memROM~6_combout\))) ) ) ) # ( \banco_regs|registrador~1197_combout\ & ( !\banco_regs|saidaA[3]~27_combout\ & ( 
--- !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[3]~0_combout\ & (!\banco_regs|Equal0~0_combout\)) # (\unidade_de_controle_FD|saida[3]~0_combout\ & ((\ROM_MIPS|memROM~6_combout\))))) ) ) ) # ( 
--- !\banco_regs|registrador~1197_combout\ & ( !\banco_regs|saidaA[3]~27_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[3]~0_combout\) # (\ROM_MIPS|memROM~6_combout\))) ) ) )
+-- \ula_bit_a_bit_MIPS|SOMADOR_3|C_out~0_combout\ = ( \banco_regs|registrador~1197_combout\ & ( \banco_regs|saidaA[3]~27_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[5]~0_combout\ & 
+-- (\banco_regs|Equal0~0_combout\)) # (\unidade_de_controle_FD|saida[5]~0_combout\ & ((!\ROM_MIPS|memROM~6_combout\))))) ) ) ) # ( !\banco_regs|registrador~1197_combout\ & ( \banco_regs|saidaA[3]~27_combout\ & ( 
+-- !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((\unidade_de_controle_FD|saida[5]~0_combout\ & !\ROM_MIPS|memROM~6_combout\))) ) ) ) # ( \banco_regs|registrador~1197_combout\ & ( !\banco_regs|saidaA[3]~27_combout\ & ( 
+-- !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[5]~0_combout\ & (!\banco_regs|Equal0~0_combout\)) # (\unidade_de_controle_FD|saida[5]~0_combout\ & ((\ROM_MIPS|memROM~6_combout\))))) ) ) ) # ( 
+-- !\banco_regs|registrador~1197_combout\ & ( !\banco_regs|saidaA[3]~27_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[5]~0_combout\) # (\ROM_MIPS|memROM~6_combout\))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14163,7 +14163,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \ROM_MIPS|ALT_INV_memROM~6_combout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datae => \banco_regs|ALT_INV_registrador~1197_combout\,
@@ -14334,7 +14334,7 @@ PORT MAP (
 
 \banco_regs|registrador~1224\ : cyclonev_lcell_comb
 -- Equation(s):
--- \banco_regs|registrador~1224_combout\ = ( \unidade_de_controle_FD|saida[8]~2_combout\ & ( (!\ROM_MIPS|memROM~8_combout\ & (\ROM_MIPS|memROM~16_combout\ & (\ROM_MIPS|memROM~17_combout\ & !\unidade_de_controle_FD|Equal4~0_combout\))) # 
+-- \banco_regs|registrador~1224_combout\ = ( \unidade_de_controle_FD|saida[0]~2_combout\ & ( (!\ROM_MIPS|memROM~8_combout\ & (\ROM_MIPS|memROM~16_combout\ & (\ROM_MIPS|memROM~17_combout\ & !\unidade_de_controle_FD|Equal4~0_combout\))) # 
 -- (\ROM_MIPS|memROM~8_combout\ & (((\unidade_de_controle_FD|Equal4~0_combout\)))) ) )
 
 -- pragma translate_off
@@ -14348,7 +14348,7 @@ PORT MAP (
 	datab => \ROM_MIPS|ALT_INV_memROM~8_combout\,
 	datac => \ROM_MIPS|ALT_INV_memROM~17_combout\,
 	datad => \unidade_de_controle_FD|ALT_INV_Equal4~0_combout\,
-	datae => \unidade_de_controle_FD|ALT_INV_saida[8]~2_combout\,
+	datae => \unidade_de_controle_FD|ALT_INV_saida[0]~2_combout\,
 	combout => \banco_regs|registrador~1224_combout\);
 
 \banco_regs|registrador~294\ : dffeas
@@ -14404,7 +14404,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[0]~16\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[0]~16_combout\ = (\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|registrador~1213_combout\))
+-- \MUX_register_bank_out|saida_MUX[0]~16_combout\ = (\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|registrador~1213_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14414,7 +14414,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \banco_regs|ALT_INV_registrador~1213_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[0]~16_combout\);
 
@@ -14523,7 +14523,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2821\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2821_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2820_combout\)
+-- \ram_mips|memRAM~2821_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2820_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14532,7 +14532,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2820_combout\,
 	combout => \ram_mips|memRAM~2821_combout\);
 
@@ -14572,7 +14572,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2853\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2853_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2852_combout\)
+-- \ram_mips|memRAM~2853_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2852_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14581,7 +14581,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2852_combout\,
 	combout => \ram_mips|memRAM~2853_combout\);
 
@@ -14670,7 +14670,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2829\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2829_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2828_combout\)
+-- \ram_mips|memRAM~2829_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2828_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14679,7 +14679,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2828_combout\,
 	combout => \ram_mips|memRAM~2829_combout\);
 
@@ -14719,7 +14719,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2861\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2861_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2860_combout\)
+-- \ram_mips|memRAM~2861_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2860_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14728,7 +14728,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2860_combout\,
 	combout => \ram_mips|memRAM~2861_combout\);
 
@@ -14789,7 +14789,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2773\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2773_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2772_combout\)
+-- \ram_mips|memRAM~2773_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2772_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14798,7 +14798,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2772_combout\,
 	combout => \ram_mips|memRAM~2773_combout\);
 
@@ -14838,7 +14838,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2805\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2805_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2804_combout\)
+-- \ram_mips|memRAM~2805_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2804_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14847,7 +14847,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2804_combout\,
 	combout => \ram_mips|memRAM~2805_combout\);
 
@@ -14887,7 +14887,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2837\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2837_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2836_combout\)
+-- \ram_mips|memRAM~2837_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2836_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14896,7 +14896,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2836_combout\,
 	combout => \ram_mips|memRAM~2837_combout\);
 
@@ -14936,7 +14936,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2869\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2869_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2868_combout\)
+-- \ram_mips|memRAM~2869_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2868_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -14945,7 +14945,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2868_combout\,
 	combout => \ram_mips|memRAM~2869_combout\);
 
@@ -15006,7 +15006,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2781\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2781_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2780_combout\)
+-- \ram_mips|memRAM~2781_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2780_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15015,7 +15015,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2780_combout\,
 	combout => \ram_mips|memRAM~2781_combout\);
 
@@ -15055,7 +15055,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2813\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2813_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2812_combout\)
+-- \ram_mips|memRAM~2813_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2812_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15064,7 +15064,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2812_combout\,
 	combout => \ram_mips|memRAM~2813_combout\);
 
@@ -15104,7 +15104,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2845\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2845_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2844_combout\)
+-- \ram_mips|memRAM~2845_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2844_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15113,7 +15113,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2844_combout\,
 	combout => \ram_mips|memRAM~2845_combout\);
 
@@ -15153,7 +15153,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2877\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2877_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2876_combout\)
+-- \ram_mips|memRAM~2877_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2876_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15162,7 +15162,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2876_combout\,
 	combout => \ram_mips|memRAM~2877_combout\);
 
@@ -15258,7 +15258,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2791\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2791_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2790_combout\)
+-- \ram_mips|memRAM~2791_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2790_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15267,7 +15267,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2790_combout\,
 	combout => \ram_mips|memRAM~2791_combout\);
 
@@ -15307,7 +15307,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2823\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2823_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2822_combout\)
+-- \ram_mips|memRAM~2823_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2822_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15316,7 +15316,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2822_combout\,
 	combout => \ram_mips|memRAM~2823_combout\);
 
@@ -15356,7 +15356,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2855\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2855_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2854_combout\)
+-- \ram_mips|memRAM~2855_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2854_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15365,7 +15365,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2854_combout\,
 	combout => \ram_mips|memRAM~2855_combout\);
 
@@ -15426,7 +15426,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2767\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2767_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2766_combout\)
+-- \ram_mips|memRAM~2767_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2766_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15435,7 +15435,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2766_combout\,
 	combout => \ram_mips|memRAM~2767_combout\);
 
@@ -15475,7 +15475,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2799\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2799_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2798_combout\)
+-- \ram_mips|memRAM~2799_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2798_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15484,7 +15484,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2798_combout\,
 	combout => \ram_mips|memRAM~2799_combout\);
 
@@ -15524,7 +15524,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2831\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2831_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2830_combout\)
+-- \ram_mips|memRAM~2831_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2830_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15533,7 +15533,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2830_combout\,
 	combout => \ram_mips|memRAM~2831_combout\);
 
@@ -15573,7 +15573,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2863\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2863_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2862_combout\)
+-- \ram_mips|memRAM~2863_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2862_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15582,7 +15582,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2862_combout\,
 	combout => \ram_mips|memRAM~2863_combout\);
 
@@ -15643,7 +15643,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2775\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2775_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2774_combout\)
+-- \ram_mips|memRAM~2775_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2774_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15652,7 +15652,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2774_combout\,
 	combout => \ram_mips|memRAM~2775_combout\);
 
@@ -15692,7 +15692,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2807\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2807_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2806_combout\)
+-- \ram_mips|memRAM~2807_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2806_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15701,7 +15701,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2806_combout\,
 	combout => \ram_mips|memRAM~2807_combout\);
 
@@ -15741,7 +15741,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2839\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2839_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2838_combout\)
+-- \ram_mips|memRAM~2839_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2838_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15750,7 +15750,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2838_combout\,
 	combout => \ram_mips|memRAM~2839_combout\);
 
@@ -15790,7 +15790,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2871\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2871_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2870_combout\)
+-- \ram_mips|memRAM~2871_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2870_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15799,7 +15799,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2870_combout\,
 	combout => \ram_mips|memRAM~2871_combout\);
 
@@ -15860,7 +15860,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2783\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2783_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2782_combout\)
+-- \ram_mips|memRAM~2783_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2782_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15869,7 +15869,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2782_combout\,
 	combout => \ram_mips|memRAM~2783_combout\);
 
@@ -15909,7 +15909,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2815\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2815_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2814_combout\)
+-- \ram_mips|memRAM~2815_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2814_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15918,7 +15918,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2814_combout\,
 	combout => \ram_mips|memRAM~2815_combout\);
 
@@ -15958,7 +15958,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2847\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2847_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2846_combout\)
+-- \ram_mips|memRAM~2847_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2846_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -15967,7 +15967,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2846_combout\,
 	combout => \ram_mips|memRAM~2847_combout\);
 
@@ -16007,7 +16007,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2879\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2879_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2878_combout\)
+-- \ram_mips|memRAM~2879_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2878_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16016,7 +16016,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2878_combout\,
 	combout => \ram_mips|memRAM~2879_combout\);
 
@@ -16112,7 +16112,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2769\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2769_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2768_combout\)
+-- \ram_mips|memRAM~2769_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2768_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16121,7 +16121,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2768_combout\,
 	combout => \ram_mips|memRAM~2769_combout\);
 
@@ -16161,7 +16161,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2777\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2777_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2776_combout\)
+-- \ram_mips|memRAM~2777_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2776_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16170,7 +16170,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2776_combout\,
 	combout => \ram_mips|memRAM~2777_combout\);
 
@@ -16210,7 +16210,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2785\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2785_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2784_combout\)
+-- \ram_mips|memRAM~2785_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2784_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16219,7 +16219,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2784_combout\,
 	combout => \ram_mips|memRAM~2785_combout\);
 
@@ -16280,7 +16280,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2793\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2793_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2792_combout\)
+-- \ram_mips|memRAM~2793_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2792_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16289,7 +16289,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2792_combout\,
 	combout => \ram_mips|memRAM~2793_combout\);
 
@@ -16329,7 +16329,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2801\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2801_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2800_combout\)
+-- \ram_mips|memRAM~2801_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2800_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16338,7 +16338,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2800_combout\,
 	combout => \ram_mips|memRAM~2801_combout\);
 
@@ -16378,7 +16378,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2809\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2809_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2808_combout\)
+-- \ram_mips|memRAM~2809_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2808_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16387,7 +16387,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2808_combout\,
 	combout => \ram_mips|memRAM~2809_combout\);
 
@@ -16427,7 +16427,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2817\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2817_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2816_combout\)
+-- \ram_mips|memRAM~2817_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2816_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16436,7 +16436,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2816_combout\,
 	combout => \ram_mips|memRAM~2817_combout\);
 
@@ -16497,7 +16497,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2825\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2825_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2824_combout\)
+-- \ram_mips|memRAM~2825_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2824_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16506,7 +16506,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2824_combout\,
 	combout => \ram_mips|memRAM~2825_combout\);
 
@@ -16546,7 +16546,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2833\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2833_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2832_combout\)
+-- \ram_mips|memRAM~2833_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2832_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16555,7 +16555,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2832_combout\,
 	combout => \ram_mips|memRAM~2833_combout\);
 
@@ -16595,7 +16595,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2841\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2841_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2840_combout\)
+-- \ram_mips|memRAM~2841_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2840_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16604,7 +16604,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2840_combout\,
 	combout => \ram_mips|memRAM~2841_combout\);
 
@@ -16644,7 +16644,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2849\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2849_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2848_combout\)
+-- \ram_mips|memRAM~2849_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2848_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16653,7 +16653,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2848_combout\,
 	combout => \ram_mips|memRAM~2849_combout\);
 
@@ -16714,7 +16714,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2857\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2857_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2856_combout\)
+-- \ram_mips|memRAM~2857_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2856_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16723,7 +16723,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2856_combout\,
 	combout => \ram_mips|memRAM~2857_combout\);
 
@@ -16763,7 +16763,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2865\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2865_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2864_combout\)
+-- \ram_mips|memRAM~2865_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2864_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16772,7 +16772,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2864_combout\,
 	combout => \ram_mips|memRAM~2865_combout\);
 
@@ -16812,7 +16812,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2873\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2873_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2872_combout\)
+-- \ram_mips|memRAM~2873_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2872_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16821,7 +16821,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2872_combout\,
 	combout => \ram_mips|memRAM~2873_combout\);
 
@@ -16861,7 +16861,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2881\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2881_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2880_combout\)
+-- \ram_mips|memRAM~2881_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2880_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16870,7 +16870,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2880_combout\,
 	combout => \ram_mips|memRAM~2881_combout\);
 
@@ -16952,7 +16952,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2763\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2763_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2762_combout\)
+-- \ram_mips|memRAM~2763_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2762_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -16961,7 +16961,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2762_combout\,
 	combout => \ram_mips|memRAM~2763_combout\);
 
@@ -17001,7 +17001,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2795\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2795_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2794_combout\)
+-- \ram_mips|memRAM~2795_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2794_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17010,7 +17010,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2794_combout\,
 	combout => \ram_mips|memRAM~2795_combout\);
 
@@ -17050,7 +17050,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2827\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2827_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2826_combout\)
+-- \ram_mips|memRAM~2827_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2826_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17059,7 +17059,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2826_combout\,
 	combout => \ram_mips|memRAM~2827_combout\);
 
@@ -17099,7 +17099,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2859\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2859_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2858_combout\)
+-- \ram_mips|memRAM~2859_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2858_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17108,7 +17108,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2858_combout\,
 	combout => \ram_mips|memRAM~2859_combout\);
 
@@ -17169,7 +17169,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2771\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2771_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2770_combout\)
+-- \ram_mips|memRAM~2771_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2770_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17178,7 +17178,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2770_combout\,
 	combout => \ram_mips|memRAM~2771_combout\);
 
@@ -17218,7 +17218,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2803\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2803_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2802_combout\)
+-- \ram_mips|memRAM~2803_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2802_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17227,7 +17227,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2802_combout\,
 	combout => \ram_mips|memRAM~2803_combout\);
 
@@ -17267,7 +17267,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2835\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2835_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2834_combout\)
+-- \ram_mips|memRAM~2835_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2834_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17276,7 +17276,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2834_combout\,
 	combout => \ram_mips|memRAM~2835_combout\);
 
@@ -17316,7 +17316,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2867\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2867_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2866_combout\)
+-- \ram_mips|memRAM~2867_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2866_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17325,7 +17325,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2866_combout\,
 	combout => \ram_mips|memRAM~2867_combout\);
 
@@ -17386,7 +17386,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2779\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2779_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2778_combout\)
+-- \ram_mips|memRAM~2779_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2778_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17395,7 +17395,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2778_combout\,
 	combout => \ram_mips|memRAM~2779_combout\);
 
@@ -17435,7 +17435,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2811\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2811_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2810_combout\)
+-- \ram_mips|memRAM~2811_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2810_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17444,7 +17444,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2810_combout\,
 	combout => \ram_mips|memRAM~2811_combout\);
 
@@ -17484,7 +17484,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2843\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2843_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2842_combout\)
+-- \ram_mips|memRAM~2843_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2842_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17493,7 +17493,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2842_combout\,
 	combout => \ram_mips|memRAM~2843_combout\);
 
@@ -17533,7 +17533,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2875\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2875_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2874_combout\)
+-- \ram_mips|memRAM~2875_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2874_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17542,7 +17542,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2874_combout\,
 	combout => \ram_mips|memRAM~2875_combout\);
 
@@ -17603,7 +17603,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2787\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2787_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2786_combout\)
+-- \ram_mips|memRAM~2787_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2786_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17612,7 +17612,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2786_combout\,
 	combout => \ram_mips|memRAM~2787_combout\);
 
@@ -17652,7 +17652,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2819\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2819_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2818_combout\)
+-- \ram_mips|memRAM~2819_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2818_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17661,7 +17661,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2818_combout\,
 	combout => \ram_mips|memRAM~2819_combout\);
 
@@ -17701,7 +17701,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2851\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2851_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2850_combout\)
+-- \ram_mips|memRAM~2851_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2850_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17710,7 +17710,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2850_combout\,
 	combout => \ram_mips|memRAM~2851_combout\);
 
@@ -17750,7 +17750,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2883\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2883_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2882_combout\)
+-- \ram_mips|memRAM~2883_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2882_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -17759,7 +17759,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2882_combout\,
 	combout => \ram_mips|memRAM~2883_combout\);
 
@@ -17911,7 +17911,7 @@ PORT MAP (
 \ula_bit_a_bit_MIPS|SOMADOR_0|C_out~0\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \ula_bit_a_bit_MIPS|SOMADOR_0|C_out~0_combout\ = ( \banco_regs|registrador~1213_combout\ & ( (!\banco_regs|Equal0~0_combout\ & (((\unidade_de_controle_ULA|ULActrl[2]~3_combout\)))) # (\banco_regs|Equal0~0_combout\ & 
--- ((!\unidade_de_controle_FD|saida[3]~0_combout\ & ((\banco_regs|saidaA[0]~30_combout\))) # (\unidade_de_controle_FD|saida[3]~0_combout\ & (\unidade_de_controle_ULA|ULActrl[2]~3_combout\)))) ) ) # ( !\banco_regs|registrador~1213_combout\ & ( 
+-- ((!\unidade_de_controle_FD|saida[5]~0_combout\ & ((\banco_regs|saidaA[0]~30_combout\))) # (\unidade_de_controle_FD|saida[5]~0_combout\ & (\unidade_de_controle_ULA|ULActrl[2]~3_combout\)))) ) ) # ( !\banco_regs|registrador~1213_combout\ & ( 
 -- \unidade_de_controle_ULA|ULActrl[2]~3_combout\ ) )
 
 -- pragma translate_off
@@ -17922,7 +17922,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datad => \banco_regs|ALT_INV_saidaA[0]~30_combout\,
 	datae => \banco_regs|ALT_INV_registrador~1213_combout\,
@@ -19371,8 +19371,8 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|MUX_B_1|saida_MUX~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|MUX_B_1|saida_MUX~0_combout\ = ( \banco_regs|registrador~1207_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[3]~0_combout\ & (!\banco_regs|Equal0~0_combout\)) # 
--- (\unidade_de_controle_FD|saida[3]~0_combout\ & ((!\ROM_MIPS|memROM~4_combout\))))) ) ) # ( !\banco_regs|registrador~1207_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[3]~0_combout\) # 
+-- \ula_bit_a_bit_MIPS|MUX_B_1|saida_MUX~0_combout\ = ( \banco_regs|registrador~1207_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[5]~0_combout\ & (!\banco_regs|Equal0~0_combout\)) # 
+-- (\unidade_de_controle_FD|saida[5]~0_combout\ & ((!\ROM_MIPS|memROM~4_combout\))))) ) ) # ( !\banco_regs|registrador~1207_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[5]~0_combout\) # 
 -- (!\ROM_MIPS|memROM~4_combout\))) ) )
 
 -- pragma translate_off
@@ -19383,7 +19383,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \ROM_MIPS|ALT_INV_memROM~4_combout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datae => \banco_regs|ALT_INV_registrador~1207_combout\,
@@ -19415,9 +19415,9 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|SOMADOR_3|C_out~2\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|SOMADOR_3|C_out~2_combout\ = ( \banco_regs|registrador~1197_combout\ & ( \banco_regs|saidaA[3]~27_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[3]~0_combout\ & 
--- (!\banco_regs|Equal0~0_combout\)) # (\unidade_de_controle_FD|saida[3]~0_combout\ & ((\ROM_MIPS|memROM~6_combout\))))) ) ) ) # ( !\banco_regs|registrador~1197_combout\ & ( \banco_regs|saidaA[3]~27_combout\ & ( 
--- !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[3]~0_combout\) # (\ROM_MIPS|memROM~6_combout\))) ) ) )
+-- \ula_bit_a_bit_MIPS|SOMADOR_3|C_out~2_combout\ = ( \banco_regs|registrador~1197_combout\ & ( \banco_regs|saidaA[3]~27_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[5]~0_combout\ & 
+-- (!\banco_regs|Equal0~0_combout\)) # (\unidade_de_controle_FD|saida[5]~0_combout\ & ((\ROM_MIPS|memROM~6_combout\))))) ) ) ) # ( !\banco_regs|registrador~1197_combout\ & ( \banco_regs|saidaA[3]~27_combout\ & ( 
+-- !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[5]~0_combout\) # (\ROM_MIPS|memROM~6_combout\))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -19427,7 +19427,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \ROM_MIPS|ALT_INV_memROM~6_combout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datae => \banco_regs|ALT_INV_registrador~1197_combout\,
@@ -19523,7 +19523,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2761\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2761_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2760_combout\)
+-- \ram_mips|memRAM~2761_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2760_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -19532,7 +19532,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2760_combout\,
 	combout => \ram_mips|memRAM~2761_combout\);
 
@@ -20913,7 +20913,7 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|MUX_B_6|saida_MUX~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|MUX_B_6|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1182_combout\) # (\unidade_de_controle_FD|saida[3]~0_combout\))))
+-- \ula_bit_a_bit_MIPS|MUX_B_6|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1182_combout\) # (\unidade_de_controle_FD|saida[5]~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -20923,7 +20923,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1182_combout\,
 	combout => \ula_bit_a_bit_MIPS|MUX_B_6|saida_MUX~0_combout\);
@@ -20972,7 +20972,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2797\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2797_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2796_combout\)
+-- \ram_mips|memRAM~2797_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2796_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -20981,7 +20981,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2796_combout\,
 	combout => \ram_mips|memRAM~2797_combout\);
 
@@ -22362,9 +22362,9 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|MUX_B_5|saida_MUX~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|MUX_B_5|saida_MUX~0_combout\ = ( \banco_regs|registrador~1187_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[3]~0_combout\ & ((!\banco_regs|Equal0~0_combout\))) # 
--- (\unidade_de_controle_FD|saida[3]~0_combout\ & (!\ROM_MIPS|memROM~8_combout\)))) ) ) # ( !\banco_regs|registrador~1187_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\ROM_MIPS|memROM~8_combout\) # 
--- (!\unidade_de_controle_FD|saida[3]~0_combout\))) ) )
+-- \ula_bit_a_bit_MIPS|MUX_B_5|saida_MUX~0_combout\ = ( \banco_regs|registrador~1187_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[5]~0_combout\ & ((!\banco_regs|Equal0~0_combout\))) # 
+-- (\unidade_de_controle_FD|saida[5]~0_combout\ & (!\ROM_MIPS|memROM~8_combout\)))) ) ) # ( !\banco_regs|registrador~1187_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\ROM_MIPS|memROM~8_combout\) # 
+-- (!\unidade_de_controle_FD|saida[5]~0_combout\))) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22375,7 +22375,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \ROM_MIPS|ALT_INV_memROM~8_combout\,
 	datab => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datac => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datac => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datae => \banco_regs|ALT_INV_registrador~1187_combout\,
 	combout => \ula_bit_a_bit_MIPS|MUX_B_5|saida_MUX~0_combout\);
@@ -22442,7 +22442,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2765\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2765_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2764_combout\)
+-- \ram_mips|memRAM~2765_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2764_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -22451,7 +22451,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2764_combout\,
 	combout => \ram_mips|memRAM~2765_combout\);
 
@@ -23846,7 +23846,7 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|MUX_B_4|saida_MUX~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|MUX_B_4|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1192_combout\) # (\unidade_de_controle_FD|saida[3]~0_combout\))))
+-- \ula_bit_a_bit_MIPS|MUX_B_4|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1192_combout\) # (\unidade_de_controle_FD|saida[5]~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23856,7 +23856,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1192_combout\,
 	combout => \ula_bit_a_bit_MIPS|MUX_B_4|saida_MUX~0_combout\);
@@ -23911,7 +23911,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2789\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2789_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2788_combout\)
+-- \ram_mips|memRAM~2789_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2788_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -23920,7 +23920,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2788_combout\,
 	combout => \ram_mips|memRAM~2789_combout\);
 
@@ -25315,7 +25315,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[3]~17\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[3]~17_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & (\banco_regs|Equal0~0_combout\ & ((\banco_regs|registrador~1197_combout\)))) # (\unidade_de_controle_FD|saida[3]~0_combout\ & 
+-- \MUX_register_bank_out|saida_MUX[3]~17_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & (\banco_regs|Equal0~0_combout\ & ((\banco_regs|registrador~1197_combout\)))) # (\unidade_de_controle_FD|saida[5]~0_combout\ & 
 -- (((!\ROM_MIPS|memROM~6_combout\))))
 
 -- pragma translate_off
@@ -25326,7 +25326,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \ROM_MIPS|ALT_INV_memROM~6_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1197_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[3]~17_combout\);
@@ -25400,7 +25400,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2757\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2757_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2756_combout\)
+-- \ram_mips|memRAM~2757_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2756_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -25409,7 +25409,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2756_combout\,
 	combout => \ram_mips|memRAM~2757_combout\);
 
@@ -26818,8 +26818,8 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|MUX_B_2|saida_MUX~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|MUX_B_2|saida_MUX~0_combout\ = ( \banco_regs|registrador~1202_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[3]~0_combout\ & (!\banco_regs|Equal0~0_combout\)) # 
--- (\unidade_de_controle_FD|saida[3]~0_combout\ & ((!\ROM_MIPS|memROM~11_combout\))))) ) ) # ( !\banco_regs|registrador~1202_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[3]~0_combout\) # 
+-- \ula_bit_a_bit_MIPS|MUX_B_2|saida_MUX~0_combout\ = ( \banco_regs|registrador~1202_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[5]~0_combout\ & (!\banco_regs|Equal0~0_combout\)) # 
+-- (\unidade_de_controle_FD|saida[5]~0_combout\ & ((!\ROM_MIPS|memROM~11_combout\))))) ) ) # ( !\banco_regs|registrador~1202_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[5]~0_combout\) # 
 -- (!\ROM_MIPS|memROM~11_combout\))) ) )
 
 -- pragma translate_off
@@ -26830,7 +26830,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \ROM_MIPS|ALT_INV_memROM~11_combout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datae => \banco_regs|ALT_INV_registrador~1202_combout\,
@@ -26897,7 +26897,7 @@ PORT MAP (
 
 \ram_mips|memRAM~2759\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ram_mips|memRAM~2759_combout\ = (\unidade_de_controle_FD|saida[8]~3_combout\ & \ram_mips|memRAM~2758_combout\)
+-- \ram_mips|memRAM~2759_combout\ = (\unidade_de_controle_FD|saida[0]~1_combout\ & \ram_mips|memRAM~2758_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -26906,7 +26906,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
 	datab => \ram_mips|ALT_INV_memRAM~2758_combout\,
 	combout => \ram_mips|memRAM~2759_combout\);
 
@@ -28301,7 +28301,7 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|MUX_B_7|saida_MUX~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|MUX_B_7|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1177_combout\) # (\unidade_de_controle_FD|saida[3]~0_combout\))))
+-- \ula_bit_a_bit_MIPS|MUX_B_7|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1177_combout\) # (\unidade_de_controle_FD|saida[5]~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -28311,7 +28311,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1177_combout\,
 	combout => \ula_bit_a_bit_MIPS|MUX_B_7|saida_MUX~0_combout\);
@@ -29768,9 +29768,9 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|SOMADOR_8|C_out~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|SOMADOR_8|C_out~0_combout\ = ( \banco_regs|saidaA[8]~22_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[3]~0_combout\ & 
+-- \ula_bit_a_bit_MIPS|SOMADOR_8|C_out~0_combout\ = ( \banco_regs|saidaA[8]~22_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[5]~0_combout\ & 
 -- \banco_regs|registrador~1172_combout\)))) ) ) # ( !\banco_regs|saidaA[8]~22_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1172_combout\) # 
--- (\unidade_de_controle_FD|saida[3]~0_combout\)))) ) )
+-- (\unidade_de_controle_FD|saida[5]~0_combout\)))) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29780,7 +29780,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1172_combout\,
 	datae => \banco_regs|ALT_INV_saidaA[8]~22_combout\,
@@ -29813,7 +29813,7 @@ PORT MAP (
 \ula_bit_a_bit_MIPS|SOMADOR_8|C_out~2\ : cyclonev_lcell_comb
 -- Equation(s):
 -- \ula_bit_a_bit_MIPS|SOMADOR_8|C_out~2_combout\ = ( \banco_regs|saidaA[8]~22_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1172_combout\) # 
--- (\unidade_de_controle_FD|saida[3]~0_combout\)))) ) )
+-- (\unidade_de_controle_FD|saida[5]~0_combout\)))) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -29823,7 +29823,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1172_combout\,
 	datae => \banco_regs|ALT_INV_saidaA[8]~22_combout\,
@@ -31277,7 +31277,7 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|MUX_B_9|saida_MUX~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|MUX_B_9|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1167_combout\) # (\unidade_de_controle_FD|saida[3]~0_combout\))))
+-- \ula_bit_a_bit_MIPS|MUX_B_9|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1167_combout\) # (\unidade_de_controle_FD|saida[5]~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -31287,7 +31287,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1167_combout\,
 	combout => \ula_bit_a_bit_MIPS|MUX_B_9|saida_MUX~0_combout\);
@@ -32752,7 +32752,7 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|MUX_B_10|saida_MUX~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|MUX_B_10|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1162_combout\) # (\unidade_de_controle_FD|saida[3]~0_combout\))))
+-- \ula_bit_a_bit_MIPS|MUX_B_10|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1162_combout\) # (\unidade_de_controle_FD|saida[5]~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -32762,7 +32762,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1162_combout\,
 	combout => \ula_bit_a_bit_MIPS|MUX_B_10|saida_MUX~0_combout\);
@@ -34236,7 +34236,7 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|MUX_B_11|saida_MUX~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|MUX_B_11|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1157_combout\) # (\unidade_de_controle_FD|saida[3]~0_combout\))))
+-- \ula_bit_a_bit_MIPS|MUX_B_11|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1157_combout\) # (\unidade_de_controle_FD|saida[5]~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -34246,7 +34246,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1157_combout\,
 	combout => \ula_bit_a_bit_MIPS|MUX_B_11|saida_MUX~0_combout\);
@@ -35711,7 +35711,7 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|MUX_B_12|saida_MUX~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|MUX_B_12|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1152_combout\) # (\unidade_de_controle_FD|saida[3]~0_combout\))))
+-- \ula_bit_a_bit_MIPS|MUX_B_12|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1152_combout\) # (\unidade_de_controle_FD|saida[5]~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -35721,7 +35721,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1152_combout\,
 	combout => \ula_bit_a_bit_MIPS|MUX_B_12|saida_MUX~0_combout\);
@@ -37178,9 +37178,9 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|SOMADOR_13|C_out~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|SOMADOR_13|C_out~0_combout\ = ( \banco_regs|saidaA[13]~17_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[3]~0_combout\ & 
+-- \ula_bit_a_bit_MIPS|SOMADOR_13|C_out~0_combout\ = ( \banco_regs|saidaA[13]~17_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[5]~0_combout\ & 
 -- \banco_regs|registrador~1147_combout\)))) ) ) # ( !\banco_regs|saidaA[13]~17_combout\ & ( !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|Equal0~0_combout\) # ((!\banco_regs|registrador~1147_combout\) # 
--- (\unidade_de_controle_FD|saida[3]~0_combout\)))) ) )
+-- (\unidade_de_controle_FD|saida[5]~0_combout\)))) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -37190,7 +37190,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1147_combout\,
 	datae => \banco_regs|ALT_INV_saidaA[13]~17_combout\,
@@ -37222,7 +37222,7 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|SOMADOR_13|C_out~2\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|SOMADOR_13|C_out~2_combout\ = (\banco_regs|saidaA[13]~17_combout\ & (!\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|saidaB[13]~17_combout\) # (\unidade_de_controle_FD|saida[3]~0_combout\)))))
+-- \ula_bit_a_bit_MIPS|SOMADOR_13|C_out~2_combout\ = (\banco_regs|saidaA[13]~17_combout\ & (!\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|saidaB[13]~17_combout\) # (\unidade_de_controle_FD|saida[5]~0_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -37231,7 +37231,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datac => \banco_regs|ALT_INV_saidaB[13]~17_combout\,
 	datad => \banco_regs|ALT_INV_saidaA[13]~17_combout\,
@@ -38685,7 +38685,7 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|MUX_B_14|saida_MUX~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|MUX_B_14|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[3]~0_combout\ & ((!\banco_regs|saidaB[14]~16_combout\))) # (\unidade_de_controle_FD|saida[3]~0_combout\ & 
+-- \ula_bit_a_bit_MIPS|MUX_B_14|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\unidade_de_controle_FD|saida[5]~0_combout\ & ((!\banco_regs|saidaB[14]~16_combout\))) # (\unidade_de_controle_FD|saida[5]~0_combout\ & 
 -- (!\ROM_MIPS|memROM~8_combout\))))
 
 -- pragma translate_off
@@ -38696,7 +38696,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \ROM_MIPS|ALT_INV_memROM~8_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datad => \banco_regs|ALT_INV_saidaB[14]~16_combout\,
 	combout => \ula_bit_a_bit_MIPS|MUX_B_14|saida_MUX~0_combout\);
@@ -40161,7 +40161,7 @@ PORT MAP (
 
 \ula_bit_a_bit_MIPS|MUX_B_15|saida_MUX~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \ula_bit_a_bit_MIPS|MUX_B_15|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|saidaB[15]~15_combout\) # (\unidade_de_controle_FD|saida[3]~0_combout\)))
+-- \ula_bit_a_bit_MIPS|MUX_B_15|saida_MUX~0_combout\ = !\unidade_de_controle_ULA|ULActrl[2]~3_combout\ $ (((!\banco_regs|saidaB[15]~15_combout\) # (\unidade_de_controle_FD|saida[5]~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -40170,7 +40170,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \unidade_de_controle_ULA|ALT_INV_ULActrl[2]~3_combout\,
 	datac => \banco_regs|ALT_INV_saidaB[15]~15_combout\,
 	combout => \ula_bit_a_bit_MIPS|MUX_B_15|saida_MUX~0_combout\);
@@ -41644,7 +41644,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[16]~14\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[16]~14_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[16]~14_combout\)
+-- \MUX_register_bank_out|saida_MUX[16]~14_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[16]~14_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -41653,7 +41653,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[16]~14_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[16]~14_combout\);
 
@@ -43132,7 +43132,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[17]~13\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[17]~13_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[17]~13_combout\)
+-- \MUX_register_bank_out|saida_MUX[17]~13_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[17]~13_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -43141,7 +43141,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[17]~13_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[17]~13_combout\);
 
@@ -44623,7 +44623,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[18]~12\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[18]~12_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[18]~12_combout\)
+-- \MUX_register_bank_out|saida_MUX[18]~12_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[18]~12_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -44632,7 +44632,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[18]~12_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[18]~12_combout\);
 
@@ -46139,7 +46139,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[19]~11\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[19]~11_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[19]~11_combout\)
+-- \MUX_register_bank_out|saida_MUX[19]~11_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[19]~11_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -46148,7 +46148,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[19]~11_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[19]~11_combout\);
 
@@ -47805,7 +47805,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[20]~10\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[20]~10_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[20]~10_combout\)
+-- \MUX_register_bank_out|saida_MUX[20]~10_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[20]~10_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -47814,7 +47814,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[20]~10_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[20]~10_combout\);
 
@@ -49302,7 +49302,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[21]~9\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[21]~9_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[21]~9_combout\)
+-- \MUX_register_bank_out|saida_MUX[21]~9_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[21]~9_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -49311,7 +49311,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[21]~9_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[21]~9_combout\);
 
@@ -50790,7 +50790,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[22]~8\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[22]~8_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[22]~8_combout\)
+-- \MUX_register_bank_out|saida_MUX[22]~8_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[22]~8_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -50799,7 +50799,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[22]~8_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[22]~8_combout\);
 
@@ -52332,7 +52332,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[23]~7\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[23]~7_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[23]~7_combout\)
+-- \MUX_register_bank_out|saida_MUX[23]~7_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[23]~7_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -52341,7 +52341,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[23]~7_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[23]~7_combout\);
 
@@ -53862,7 +53862,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[24]~6\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[24]~6_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[24]~6_combout\)
+-- \MUX_register_bank_out|saida_MUX[24]~6_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[24]~6_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -53871,7 +53871,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[24]~6_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[24]~6_combout\);
 
@@ -55588,7 +55588,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[25]~5\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[25]~5_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[25]~5_combout\)
+-- \MUX_register_bank_out|saida_MUX[25]~5_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[25]~5_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -55597,7 +55597,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[25]~5_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[25]~5_combout\);
 
@@ -57087,7 +57087,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[26]~4\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[26]~4_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[26]~4_combout\)
+-- \MUX_register_bank_out|saida_MUX[26]~4_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[26]~4_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -57096,7 +57096,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[26]~4_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[26]~4_combout\);
 
@@ -58575,7 +58575,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[27]~3\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[27]~3_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[27]~3_combout\)
+-- \MUX_register_bank_out|saida_MUX[27]~3_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[27]~3_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -58584,7 +58584,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[27]~3_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[27]~3_combout\);
 
@@ -60167,7 +60167,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[28]~2\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[28]~2_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[28]~2_combout\)
+-- \MUX_register_bank_out|saida_MUX[28]~2_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[28]~2_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -60176,7 +60176,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[28]~2_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[28]~2_combout\);
 
@@ -61662,7 +61662,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[29]~1\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[29]~1_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[29]~1_combout\)
+-- \MUX_register_bank_out|saida_MUX[29]~1_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[29]~1_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -61671,7 +61671,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[29]~1_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[29]~1_combout\);
 
@@ -63507,7 +63507,7 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[3]~52\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[3]~52_combout\ = ( !\unidade_de_controle_FD|saida[0]~1_combout\ & ( (((\ROM_MIPS|memROM~4_combout\))) ) ) # ( \unidade_de_controle_FD|saida[0]~1_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
+-- \MUX_proxPC|saida_MUX[3]~52_combout\ = ( !\unidade_de_controle_FD|saida[8]~3_combout\ & ( (((\ROM_MIPS|memROM~4_combout\))) ) ) # ( \unidade_de_controle_FD|saida[8]~3_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
 -- ((!\unidade_de_controle_ULA|ULActrl~0_combout\ & (\proxPC|Add0~9_sumout\)) # (\unidade_de_controle_ULA|ULActrl~0_combout\ & ((\add_extended_signal_and_PC|Add0~9_sumout\))))) # (\ula_bit_a_bit_MIPS|Z~8_combout\ & (\proxPC|Add0~9_sumout\)))) # 
 -- (\ula_bit_a_bit_MIPS|Z~9_combout\ & (((\proxPC|Add0~9_sumout\)))) ) )
 
@@ -63522,7 +63522,7 @@ PORT MAP (
 	datab => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datac => \proxPC|ALT_INV_Add0~9_sumout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datae => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datae => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	dataf => \add_extended_signal_and_PC|ALT_INV_Add0~9_sumout\,
 	datag => \ROM_MIPS|ALT_INV_memROM~4_combout\,
 	combout => \MUX_proxPC|saida_MUX[3]~52_combout\);
@@ -63574,9 +63574,9 @@ PORT MAP (
 	datac => \ROM_MIPS|ALT_INV_memROM~1_combout\,
 	combout => \ROM_MIPS|memROM~15_combout\);
 
-\unidade_de_controle_FD|saida[0]~1\ : cyclonev_lcell_comb
+\unidade_de_controle_FD|saida[8]~3\ : cyclonev_lcell_comb
 -- Equation(s):
--- \unidade_de_controle_FD|saida[0]~1_combout\ = (((!\ROM_MIPS|memROM~15_combout\) # (\ROM_MIPS|memROM~2_combout\)) # (\ROM_MIPS|memROM~0_combout\)) # (\ROM_MIPS|memROM~9_combout\)
+-- \unidade_de_controle_FD|saida[8]~3_combout\ = (((!\ROM_MIPS|memROM~15_combout\) # (\ROM_MIPS|memROM~2_combout\)) # (\ROM_MIPS|memROM~0_combout\)) # (\ROM_MIPS|memROM~9_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -63589,7 +63589,7 @@ PORT MAP (
 	datab => \ROM_MIPS|ALT_INV_memROM~0_combout\,
 	datac => \ROM_MIPS|ALT_INV_memROM~15_combout\,
 	datad => \ROM_MIPS|ALT_INV_memROM~2_combout\,
-	combout => \unidade_de_controle_FD|saida[0]~1_combout\);
+	combout => \unidade_de_controle_FD|saida[8]~3_combout\);
 
 \proxPC|Add0~5\ : cyclonev_lcell_comb
 -- Equation(s):
@@ -63628,9 +63628,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[6]~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[6]~0_combout\ = ( \proxPC|Add0~5_sumout\ & ( \add_extended_signal_and_PC|Add0~5_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~5_sumout\ & ( \add_extended_signal_and_PC|Add0~5_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~5_sumout\ & ( !\add_extended_signal_and_PC|Add0~5_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[6]~0_combout\ = ( \proxPC|Add0~5_sumout\ & ( \add_extended_signal_and_PC|Add0~5_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~5_sumout\ & ( \add_extended_signal_and_PC|Add0~5_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~5_sumout\ & ( !\add_extended_signal_and_PC|Add0~5_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -63640,7 +63640,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~5_sumout\,
@@ -63681,10 +63681,10 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[2]~1\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[2]~1_combout\ = ( \ula_bit_a_bit_MIPS|Z~8_combout\ & ( \ula_bit_a_bit_MIPS|Z~9_combout\ & ( (!\unidade_de_controle_FD|saida[0]~1_combout\ & (\ROM_MIPS|memROM~12_combout\)) # (\unidade_de_controle_FD|saida[0]~1_combout\ & 
--- ((\proxPC|Add0~21_sumout\))) ) ) ) # ( !\ula_bit_a_bit_MIPS|Z~8_combout\ & ( \ula_bit_a_bit_MIPS|Z~9_combout\ & ( (!\unidade_de_controle_FD|saida[0]~1_combout\ & (\ROM_MIPS|memROM~12_combout\)) # (\unidade_de_controle_FD|saida[0]~1_combout\ & 
--- ((\proxPC|Add0~21_sumout\))) ) ) ) # ( \ula_bit_a_bit_MIPS|Z~8_combout\ & ( !\ula_bit_a_bit_MIPS|Z~9_combout\ & ( (!\unidade_de_controle_FD|saida[0]~1_combout\ & (\ROM_MIPS|memROM~12_combout\)) # (\unidade_de_controle_FD|saida[0]~1_combout\ & 
--- ((\proxPC|Add0~21_sumout\))) ) ) ) # ( !\ula_bit_a_bit_MIPS|Z~8_combout\ & ( !\ula_bit_a_bit_MIPS|Z~9_combout\ & ( (!\unidade_de_controle_FD|saida[0]~1_combout\ & (((\ROM_MIPS|memROM~12_combout\)))) # (\unidade_de_controle_FD|saida[0]~1_combout\ & 
+-- \MUX_proxPC|saida_MUX[2]~1_combout\ = ( \ula_bit_a_bit_MIPS|Z~8_combout\ & ( \ula_bit_a_bit_MIPS|Z~9_combout\ & ( (!\unidade_de_controle_FD|saida[8]~3_combout\ & (\ROM_MIPS|memROM~12_combout\)) # (\unidade_de_controle_FD|saida[8]~3_combout\ & 
+-- ((\proxPC|Add0~21_sumout\))) ) ) ) # ( !\ula_bit_a_bit_MIPS|Z~8_combout\ & ( \ula_bit_a_bit_MIPS|Z~9_combout\ & ( (!\unidade_de_controle_FD|saida[8]~3_combout\ & (\ROM_MIPS|memROM~12_combout\)) # (\unidade_de_controle_FD|saida[8]~3_combout\ & 
+-- ((\proxPC|Add0~21_sumout\))) ) ) ) # ( \ula_bit_a_bit_MIPS|Z~8_combout\ & ( !\ula_bit_a_bit_MIPS|Z~9_combout\ & ( (!\unidade_de_controle_FD|saida[8]~3_combout\ & (\ROM_MIPS|memROM~12_combout\)) # (\unidade_de_controle_FD|saida[8]~3_combout\ & 
+-- ((\proxPC|Add0~21_sumout\))) ) ) ) # ( !\ula_bit_a_bit_MIPS|Z~8_combout\ & ( !\ula_bit_a_bit_MIPS|Z~9_combout\ & ( (!\unidade_de_controle_FD|saida[8]~3_combout\ & (((\ROM_MIPS|memROM~12_combout\)))) # (\unidade_de_controle_FD|saida[8]~3_combout\ & 
 -- (!\unidade_de_controle_ULA|ULActrl~0_combout\ & ((\proxPC|Add0~21_sumout\)))) ) ) )
 
 -- pragma translate_off
@@ -63696,7 +63696,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
 	datab => \ROM_MIPS|ALT_INV_memROM~12_combout\,
-	datac => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datac => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datad => \proxPC|ALT_INV_Add0~21_sumout\,
 	datae => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	dataf => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
@@ -65208,7 +65208,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[31]~15\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[31]~15_combout\ = (\banco_regs|saidaB[31]~18_combout\ & !\unidade_de_controle_FD|saida[3]~0_combout\)
+-- \MUX_register_bank_out|saida_MUX[31]~15_combout\ = (\banco_regs|saidaB[31]~18_combout\ & !\unidade_de_controle_FD|saida[5]~0_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -65218,7 +65218,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_saidaB[31]~18_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[31]~15_combout\);
 
 \ula_bit_a_bit_MIPS|MUX_B_31|saida_MUX~0\ : cyclonev_lcell_comb
@@ -65298,7 +65298,7 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[7]~56\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[7]~56_combout\ = ( !\unidade_de_controle_FD|saida[0]~1_combout\ & ( (((\ROM_MIPS|memROM~8_combout\))) ) ) # ( \unidade_de_controle_FD|saida[0]~1_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
+-- \MUX_proxPC|saida_MUX[7]~56_combout\ = ( !\unidade_de_controle_FD|saida[8]~3_combout\ & ( (((\ROM_MIPS|memROM~8_combout\))) ) ) # ( \unidade_de_controle_FD|saida[8]~3_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
 -- ((!\unidade_de_controle_ULA|ULActrl~0_combout\ & (\proxPC|Add0~1_sumout\)) # (\unidade_de_controle_ULA|ULActrl~0_combout\ & ((\add_extended_signal_and_PC|Add0~1_sumout\))))) # (\ula_bit_a_bit_MIPS|Z~8_combout\ & (\proxPC|Add0~1_sumout\)))) # 
 -- (\ula_bit_a_bit_MIPS|Z~9_combout\ & (((\proxPC|Add0~1_sumout\)))) ) )
 
@@ -65313,7 +65313,7 @@ PORT MAP (
 	datab => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datac => \proxPC|ALT_INV_Add0~1_sumout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datae => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datae => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	dataf => \add_extended_signal_and_PC|ALT_INV_Add0~1_sumout\,
 	datag => \ROM_MIPS|ALT_INV_memROM~8_combout\,
 	combout => \MUX_proxPC|saida_MUX[7]~56_combout\);
@@ -65372,7 +65372,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[30]~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[30]~0_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[30]~0_combout\)
+-- \MUX_register_bank_out|saida_MUX[30]~0_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[30]~0_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -65381,7 +65381,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[30]~0_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[30]~0_combout\);
 
@@ -65514,9 +65514,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[8]~2\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[8]~2_combout\ = ( \proxPC|Add0~25_sumout\ & ( \add_extended_signal_and_PC|Add0~21_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~25_sumout\ & ( \add_extended_signal_and_PC|Add0~21_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~25_sumout\ & ( !\add_extended_signal_and_PC|Add0~21_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[8]~2_combout\ = ( \proxPC|Add0~25_sumout\ & ( \add_extended_signal_and_PC|Add0~21_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~25_sumout\ & ( \add_extended_signal_and_PC|Add0~21_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~25_sumout\ & ( !\add_extended_signal_and_PC|Add0~21_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -65526,7 +65526,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~25_sumout\,
@@ -65583,9 +65583,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[9]~3\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[9]~3_combout\ = ( \proxPC|Add0~29_sumout\ & ( \add_extended_signal_and_PC|Add0~25_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~29_sumout\ & ( \add_extended_signal_and_PC|Add0~25_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~29_sumout\ & ( !\add_extended_signal_and_PC|Add0~25_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[9]~3_combout\ = ( \proxPC|Add0~29_sumout\ & ( \add_extended_signal_and_PC|Add0~25_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~29_sumout\ & ( \add_extended_signal_and_PC|Add0~25_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~29_sumout\ & ( !\add_extended_signal_and_PC|Add0~25_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -65595,7 +65595,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~29_sumout\,
@@ -65652,9 +65652,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[10]~4\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[10]~4_combout\ = ( \proxPC|Add0~33_sumout\ & ( \add_extended_signal_and_PC|Add0~29_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~33_sumout\ & ( \add_extended_signal_and_PC|Add0~29_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~33_sumout\ & ( !\add_extended_signal_and_PC|Add0~29_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[10]~4_combout\ = ( \proxPC|Add0~33_sumout\ & ( \add_extended_signal_and_PC|Add0~29_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~33_sumout\ & ( \add_extended_signal_and_PC|Add0~29_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~33_sumout\ & ( !\add_extended_signal_and_PC|Add0~29_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -65664,7 +65664,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~33_sumout\,
@@ -65721,9 +65721,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[11]~5\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[11]~5_combout\ = ( \proxPC|Add0~37_sumout\ & ( \add_extended_signal_and_PC|Add0~33_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~37_sumout\ & ( \add_extended_signal_and_PC|Add0~33_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~37_sumout\ & ( !\add_extended_signal_and_PC|Add0~33_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[11]~5_combout\ = ( \proxPC|Add0~37_sumout\ & ( \add_extended_signal_and_PC|Add0~33_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~37_sumout\ & ( \add_extended_signal_and_PC|Add0~33_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~37_sumout\ & ( !\add_extended_signal_and_PC|Add0~33_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -65733,7 +65733,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~37_sumout\,
@@ -65790,9 +65790,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[12]~6\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[12]~6_combout\ = ( \proxPC|Add0~41_sumout\ & ( \add_extended_signal_and_PC|Add0~37_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~41_sumout\ & ( \add_extended_signal_and_PC|Add0~37_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~41_sumout\ & ( !\add_extended_signal_and_PC|Add0~37_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[12]~6_combout\ = ( \proxPC|Add0~41_sumout\ & ( \add_extended_signal_and_PC|Add0~37_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~41_sumout\ & ( \add_extended_signal_and_PC|Add0~37_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~41_sumout\ & ( !\add_extended_signal_and_PC|Add0~37_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -65802,7 +65802,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~41_sumout\,
@@ -65859,9 +65859,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[13]~7\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[13]~7_combout\ = ( \proxPC|Add0~45_sumout\ & ( \add_extended_signal_and_PC|Add0~41_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~45_sumout\ & ( \add_extended_signal_and_PC|Add0~41_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~45_sumout\ & ( !\add_extended_signal_and_PC|Add0~41_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[13]~7_combout\ = ( \proxPC|Add0~45_sumout\ & ( \add_extended_signal_and_PC|Add0~41_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~45_sumout\ & ( \add_extended_signal_and_PC|Add0~41_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~45_sumout\ & ( !\add_extended_signal_and_PC|Add0~41_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -65871,7 +65871,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~45_sumout\,
@@ -65928,9 +65928,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[14]~8\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[14]~8_combout\ = ( \proxPC|Add0~49_sumout\ & ( \add_extended_signal_and_PC|Add0~45_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~49_sumout\ & ( \add_extended_signal_and_PC|Add0~45_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~49_sumout\ & ( !\add_extended_signal_and_PC|Add0~45_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[14]~8_combout\ = ( \proxPC|Add0~49_sumout\ & ( \add_extended_signal_and_PC|Add0~45_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~49_sumout\ & ( \add_extended_signal_and_PC|Add0~45_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~49_sumout\ & ( !\add_extended_signal_and_PC|Add0~45_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -65940,7 +65940,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~49_sumout\,
@@ -65997,9 +65997,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[15]~9\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[15]~9_combout\ = ( \proxPC|Add0~53_sumout\ & ( \add_extended_signal_and_PC|Add0~49_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~53_sumout\ & ( \add_extended_signal_and_PC|Add0~49_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~53_sumout\ & ( !\add_extended_signal_and_PC|Add0~49_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[15]~9_combout\ = ( \proxPC|Add0~53_sumout\ & ( \add_extended_signal_and_PC|Add0~49_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~53_sumout\ & ( \add_extended_signal_and_PC|Add0~49_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~53_sumout\ & ( !\add_extended_signal_and_PC|Add0~49_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -66009,7 +66009,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~53_sumout\,
@@ -66067,7 +66067,7 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[16]~40\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[16]~40_combout\ = ( !\unidade_de_controle_FD|saida[0]~1_combout\ & ( (((\ROM_MIPS|memROM~8_combout\))) ) ) # ( \unidade_de_controle_FD|saida[0]~1_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
+-- \MUX_proxPC|saida_MUX[16]~40_combout\ = ( !\unidade_de_controle_FD|saida[8]~3_combout\ & ( (((\ROM_MIPS|memROM~8_combout\))) ) ) # ( \unidade_de_controle_FD|saida[8]~3_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
 -- ((!\unidade_de_controle_ULA|ULActrl~0_combout\ & (\proxPC|Add0~57_sumout\)) # (\unidade_de_controle_ULA|ULActrl~0_combout\ & ((\add_extended_signal_and_PC|Add0~53_sumout\))))) # (\ula_bit_a_bit_MIPS|Z~8_combout\ & (\proxPC|Add0~57_sumout\)))) # 
 -- (\ula_bit_a_bit_MIPS|Z~9_combout\ & (((\proxPC|Add0~57_sumout\)))) ) )
 
@@ -66082,7 +66082,7 @@ PORT MAP (
 	datab => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datac => \proxPC|ALT_INV_Add0~57_sumout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datae => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datae => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	dataf => \add_extended_signal_and_PC|ALT_INV_Add0~53_sumout\,
 	datag => \ROM_MIPS|ALT_INV_memROM~8_combout\,
 	combout => \MUX_proxPC|saida_MUX[16]~40_combout\);
@@ -66137,9 +66137,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[17]~10\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[17]~10_combout\ = ( \proxPC|Add0~61_sumout\ & ( \add_extended_signal_and_PC|Add0~57_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~61_sumout\ & ( \add_extended_signal_and_PC|Add0~57_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~61_sumout\ & ( !\add_extended_signal_and_PC|Add0~57_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[17]~10_combout\ = ( \proxPC|Add0~61_sumout\ & ( \add_extended_signal_and_PC|Add0~57_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~61_sumout\ & ( \add_extended_signal_and_PC|Add0~57_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~61_sumout\ & ( !\add_extended_signal_and_PC|Add0~57_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -66149,7 +66149,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~61_sumout\,
@@ -66206,7 +66206,7 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[18]~36\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[18]~36_combout\ = ( !\unidade_de_controle_FD|saida[0]~1_combout\ & ( (((!\ROM_MIPS|memROM~16_combout\))) ) ) # ( \unidade_de_controle_FD|saida[0]~1_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ 
+-- \MUX_proxPC|saida_MUX[18]~36_combout\ = ( !\unidade_de_controle_FD|saida[8]~3_combout\ & ( (((!\ROM_MIPS|memROM~16_combout\))) ) ) # ( \unidade_de_controle_FD|saida[8]~3_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ 
 -- & ((!\unidade_de_controle_ULA|ULActrl~0_combout\ & (\proxPC|Add0~65_sumout\)) # (\unidade_de_controle_ULA|ULActrl~0_combout\ & ((\add_extended_signal_and_PC|Add0~61_sumout\))))) # (\ula_bit_a_bit_MIPS|Z~8_combout\ & (\proxPC|Add0~65_sumout\)))) # 
 -- (\ula_bit_a_bit_MIPS|Z~9_combout\ & (((\proxPC|Add0~65_sumout\)))) ) )
 
@@ -66221,7 +66221,7 @@ PORT MAP (
 	datab => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datac => \proxPC|ALT_INV_Add0~65_sumout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datae => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datae => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	dataf => \add_extended_signal_and_PC|ALT_INV_Add0~61_sumout\,
 	datag => \ROM_MIPS|ALT_INV_memROM~16_combout\,
 	combout => \MUX_proxPC|saida_MUX[18]~36_combout\);
@@ -66276,7 +66276,7 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[19]~32\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[19]~32_combout\ = ( !\unidade_de_controle_FD|saida[0]~1_combout\ & ( (((\ROM_MIPS|memROM~8_combout\))) ) ) # ( \unidade_de_controle_FD|saida[0]~1_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
+-- \MUX_proxPC|saida_MUX[19]~32_combout\ = ( !\unidade_de_controle_FD|saida[8]~3_combout\ & ( (((\ROM_MIPS|memROM~8_combout\))) ) ) # ( \unidade_de_controle_FD|saida[8]~3_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
 -- ((!\unidade_de_controle_ULA|ULActrl~0_combout\ & (\proxPC|Add0~69_sumout\)) # (\unidade_de_controle_ULA|ULActrl~0_combout\ & ((\add_extended_signal_and_PC|Add0~65_sumout\))))) # (\ula_bit_a_bit_MIPS|Z~8_combout\ & (\proxPC|Add0~69_sumout\)))) # 
 -- (\ula_bit_a_bit_MIPS|Z~9_combout\ & (((\proxPC|Add0~69_sumout\)))) ) )
 
@@ -66291,7 +66291,7 @@ PORT MAP (
 	datab => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datac => \proxPC|ALT_INV_Add0~69_sumout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datae => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datae => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	dataf => \add_extended_signal_and_PC|ALT_INV_Add0~65_sumout\,
 	datag => \ROM_MIPS|ALT_INV_memROM~8_combout\,
 	combout => \MUX_proxPC|saida_MUX[19]~32_combout\);
@@ -66346,9 +66346,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[20]~11\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[20]~11_combout\ = ( \proxPC|Add0~73_sumout\ & ( \add_extended_signal_and_PC|Add0~69_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~73_sumout\ & ( \add_extended_signal_and_PC|Add0~69_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~73_sumout\ & ( !\add_extended_signal_and_PC|Add0~69_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[20]~11_combout\ = ( \proxPC|Add0~73_sumout\ & ( \add_extended_signal_and_PC|Add0~69_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~73_sumout\ & ( \add_extended_signal_and_PC|Add0~69_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~73_sumout\ & ( !\add_extended_signal_and_PC|Add0~69_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -66358,7 +66358,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~73_sumout\,
@@ -66415,7 +66415,7 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[21]~28\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[21]~28_combout\ = ( !\unidade_de_controle_FD|saida[0]~1_combout\ & ( (((\ROM_MIPS|memROM~17_combout\))) ) ) # ( \unidade_de_controle_FD|saida[0]~1_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ 
+-- \MUX_proxPC|saida_MUX[21]~28_combout\ = ( !\unidade_de_controle_FD|saida[8]~3_combout\ & ( (((\ROM_MIPS|memROM~17_combout\))) ) ) # ( \unidade_de_controle_FD|saida[8]~3_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ 
 -- & ((!\unidade_de_controle_ULA|ULActrl~0_combout\ & (\proxPC|Add0~77_sumout\)) # (\unidade_de_controle_ULA|ULActrl~0_combout\ & ((\add_extended_signal_and_PC|Add0~73_sumout\))))) # (\ula_bit_a_bit_MIPS|Z~8_combout\ & (\proxPC|Add0~77_sumout\)))) # 
 -- (\ula_bit_a_bit_MIPS|Z~9_combout\ & (((\proxPC|Add0~77_sumout\)))) ) )
 
@@ -66430,7 +66430,7 @@ PORT MAP (
 	datab => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datac => \proxPC|ALT_INV_Add0~77_sumout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datae => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datae => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	dataf => \add_extended_signal_and_PC|ALT_INV_Add0~73_sumout\,
 	datag => \ROM_MIPS|ALT_INV_memROM~17_combout\,
 	combout => \MUX_proxPC|saida_MUX[21]~28_combout\);
@@ -66485,9 +66485,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[22]~12\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[22]~12_combout\ = ( \proxPC|Add0~81_sumout\ & ( \add_extended_signal_and_PC|Add0~77_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~81_sumout\ & ( \add_extended_signal_and_PC|Add0~77_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~81_sumout\ & ( !\add_extended_signal_and_PC|Add0~77_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[22]~12_combout\ = ( \proxPC|Add0~81_sumout\ & ( \add_extended_signal_and_PC|Add0~77_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~81_sumout\ & ( \add_extended_signal_and_PC|Add0~77_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~81_sumout\ & ( !\add_extended_signal_and_PC|Add0~77_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -66497,7 +66497,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~81_sumout\,
@@ -66554,7 +66554,7 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[23]~24\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[23]~24_combout\ = ( !\unidade_de_controle_FD|saida[0]~1_combout\ & ( (((\ROM_MIPS|memROM~14_combout\))) ) ) # ( \unidade_de_controle_FD|saida[0]~1_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ 
+-- \MUX_proxPC|saida_MUX[23]~24_combout\ = ( !\unidade_de_controle_FD|saida[8]~3_combout\ & ( (((\ROM_MIPS|memROM~14_combout\))) ) ) # ( \unidade_de_controle_FD|saida[8]~3_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ 
 -- & ((!\unidade_de_controle_ULA|ULActrl~0_combout\ & (\proxPC|Add0~85_sumout\)) # (\unidade_de_controle_ULA|ULActrl~0_combout\ & ((\add_extended_signal_and_PC|Add0~81_sumout\))))) # (\ula_bit_a_bit_MIPS|Z~8_combout\ & (\proxPC|Add0~85_sumout\)))) # 
 -- (\ula_bit_a_bit_MIPS|Z~9_combout\ & (((\proxPC|Add0~85_sumout\)))) ) )
 
@@ -66569,7 +66569,7 @@ PORT MAP (
 	datab => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datac => \proxPC|ALT_INV_Add0~85_sumout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datae => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datae => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	dataf => \add_extended_signal_and_PC|ALT_INV_Add0~81_sumout\,
 	datag => \ROM_MIPS|ALT_INV_memROM~14_combout\,
 	combout => \MUX_proxPC|saida_MUX[23]~24_combout\);
@@ -66624,9 +66624,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[24]~13\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[24]~13_combout\ = ( \proxPC|Add0~89_sumout\ & ( \add_extended_signal_and_PC|Add0~85_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~89_sumout\ & ( \add_extended_signal_and_PC|Add0~85_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~89_sumout\ & ( !\add_extended_signal_and_PC|Add0~85_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[24]~13_combout\ = ( \proxPC|Add0~89_sumout\ & ( \add_extended_signal_and_PC|Add0~85_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~89_sumout\ & ( \add_extended_signal_and_PC|Add0~85_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~89_sumout\ & ( !\add_extended_signal_and_PC|Add0~85_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -66636,7 +66636,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~89_sumout\,
@@ -66693,9 +66693,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[25]~14\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[25]~14_combout\ = ( \proxPC|Add0~93_sumout\ & ( \add_extended_signal_and_PC|Add0~89_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~93_sumout\ & ( \add_extended_signal_and_PC|Add0~89_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~93_sumout\ & ( !\add_extended_signal_and_PC|Add0~89_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[25]~14_combout\ = ( \proxPC|Add0~93_sumout\ & ( \add_extended_signal_and_PC|Add0~89_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~93_sumout\ & ( \add_extended_signal_and_PC|Add0~89_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~93_sumout\ & ( !\add_extended_signal_and_PC|Add0~89_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -66705,7 +66705,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~93_sumout\,
@@ -66762,7 +66762,7 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[26]~20\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[26]~20_combout\ = ( !\unidade_de_controle_FD|saida[0]~1_combout\ & ( (((\ROM_MIPS|memROM~8_combout\))) ) ) # ( \unidade_de_controle_FD|saida[0]~1_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
+-- \MUX_proxPC|saida_MUX[26]~20_combout\ = ( !\unidade_de_controle_FD|saida[8]~3_combout\ & ( (((\ROM_MIPS|memROM~8_combout\))) ) ) # ( \unidade_de_controle_FD|saida[8]~3_combout\ & ( (!\ula_bit_a_bit_MIPS|Z~9_combout\ & ((!\ula_bit_a_bit_MIPS|Z~8_combout\ & 
 -- ((!\unidade_de_controle_ULA|ULActrl~0_combout\ & (\proxPC|Add0~97_sumout\)) # (\unidade_de_controle_ULA|ULActrl~0_combout\ & ((\add_extended_signal_and_PC|Add0~93_sumout\))))) # (\ula_bit_a_bit_MIPS|Z~8_combout\ & (\proxPC|Add0~97_sumout\)))) # 
 -- (\ula_bit_a_bit_MIPS|Z~9_combout\ & (((\proxPC|Add0~97_sumout\)))) ) )
 
@@ -66777,7 +66777,7 @@ PORT MAP (
 	datab => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datac => \proxPC|ALT_INV_Add0~97_sumout\,
 	datad => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datae => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datae => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	dataf => \add_extended_signal_and_PC|ALT_INV_Add0~93_sumout\,
 	datag => \ROM_MIPS|ALT_INV_memROM~8_combout\,
 	combout => \MUX_proxPC|saida_MUX[26]~20_combout\);
@@ -66832,9 +66832,9 @@ PORT MAP (
 
 \MUX_proxPC|saida_MUX[27]~15\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_proxPC|saida_MUX[27]~15_combout\ = ( \proxPC|Add0~101_sumout\ & ( \add_extended_signal_and_PC|Add0~97_sumout\ & ( \unidade_de_controle_FD|saida[0]~1_combout\ ) ) ) # ( !\proxPC|Add0~101_sumout\ & ( \add_extended_signal_and_PC|Add0~97_sumout\ & ( 
--- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[0]~1_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~101_sumout\ & ( !\add_extended_signal_and_PC|Add0~97_sumout\ & ( 
--- (\unidade_de_controle_FD|saida[0]~1_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
+-- \MUX_proxPC|saida_MUX[27]~15_combout\ = ( \proxPC|Add0~101_sumout\ & ( \add_extended_signal_and_PC|Add0~97_sumout\ & ( \unidade_de_controle_FD|saida[8]~3_combout\ ) ) ) # ( !\proxPC|Add0~101_sumout\ & ( \add_extended_signal_and_PC|Add0~97_sumout\ & ( 
+-- (\unidade_de_controle_ULA|ULActrl~0_combout\ & (\unidade_de_controle_FD|saida[8]~3_combout\ & (!\ula_bit_a_bit_MIPS|Z~8_combout\ & !\ula_bit_a_bit_MIPS|Z~9_combout\))) ) ) ) # ( \proxPC|Add0~101_sumout\ & ( !\add_extended_signal_and_PC|Add0~97_sumout\ & ( 
+-- (\unidade_de_controle_FD|saida[8]~3_combout\ & ((!\unidade_de_controle_ULA|ULActrl~0_combout\) # ((\ula_bit_a_bit_MIPS|Z~9_combout\) # (\ula_bit_a_bit_MIPS|Z~8_combout\)))) ) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -66844,7 +66844,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \unidade_de_controle_ULA|ALT_INV_ULActrl~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[0]~1_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[8]~3_combout\,
 	datac => \ula_bit_a_bit_MIPS|ALT_INV_Z~8_combout\,
 	datad => \ula_bit_a_bit_MIPS|ALT_INV_Z~9_combout\,
 	datae => \proxPC|ALT_INV_Add0~101_sumout\,
@@ -67130,7 +67130,7 @@ PORT MAP (
 
 \MUX_register_bank_out|saida_MUX[1]~20\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[1]~20_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & (\banco_regs|Equal0~0_combout\ & ((\banco_regs|registrador~1207_combout\)))) # (\unidade_de_controle_FD|saida[3]~0_combout\ & 
+-- \MUX_register_bank_out|saida_MUX[1]~20_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & (\banco_regs|Equal0~0_combout\ & ((\banco_regs|registrador~1207_combout\)))) # (\unidade_de_controle_FD|saida[5]~0_combout\ & 
 -- (((\ROM_MIPS|memROM~4_combout\))))
 
 -- pragma translate_off
@@ -67141,14 +67141,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \ROM_MIPS|ALT_INV_memROM~4_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1207_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[1]~20_combout\);
 
 \MUX_register_bank_out|saida_MUX[2]~21\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[2]~21_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & (\banco_regs|Equal0~0_combout\ & ((\banco_regs|registrador~1202_combout\)))) # (\unidade_de_controle_FD|saida[3]~0_combout\ & 
+-- \MUX_register_bank_out|saida_MUX[2]~21_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & (\banco_regs|Equal0~0_combout\ & ((\banco_regs|registrador~1202_combout\)))) # (\unidade_de_controle_FD|saida[5]~0_combout\ & 
 -- (((\ROM_MIPS|memROM~11_combout\))))
 
 -- pragma translate_off
@@ -67159,14 +67159,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \ROM_MIPS|ALT_INV_memROM~11_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1202_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[2]~21_combout\);
 
 \MUX_register_bank_out|saida_MUX[4]~22\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[4]~22_combout\ = (\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|registrador~1192_combout\))
+-- \MUX_register_bank_out|saida_MUX[4]~22_combout\ = (\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|registrador~1192_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67176,13 +67176,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \banco_regs|ALT_INV_registrador~1192_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[4]~22_combout\);
 
 \MUX_register_bank_out|saida_MUX[5]~23\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[5]~23_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & (((\banco_regs|Equal0~0_combout\ & \banco_regs|registrador~1187_combout\)))) # (\unidade_de_controle_FD|saida[3]~0_combout\ & (\ROM_MIPS|memROM~8_combout\))
+-- \MUX_register_bank_out|saida_MUX[5]~23_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & (((\banco_regs|Equal0~0_combout\ & \banco_regs|registrador~1187_combout\)))) # (\unidade_de_controle_FD|saida[5]~0_combout\ & (\ROM_MIPS|memROM~8_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67193,13 +67193,13 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \ROM_MIPS|ALT_INV_memROM~8_combout\,
 	datab => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datac => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datac => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datad => \banco_regs|ALT_INV_registrador~1187_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[5]~23_combout\);
 
 \MUX_register_bank_out|saida_MUX[6]~24\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[6]~24_combout\ = (\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|registrador~1182_combout\))
+-- \MUX_register_bank_out|saida_MUX[6]~24_combout\ = (\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|registrador~1182_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67209,13 +67209,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \banco_regs|ALT_INV_registrador~1182_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[6]~24_combout\);
 
 \MUX_register_bank_out|saida_MUX[7]~25\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[7]~25_combout\ = (\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|registrador~1177_combout\))
+-- \MUX_register_bank_out|saida_MUX[7]~25_combout\ = (\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|registrador~1177_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67225,13 +67225,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \banco_regs|ALT_INV_registrador~1177_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[7]~25_combout\);
 
 \MUX_register_bank_out|saida_MUX[9]~26\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[9]~26_combout\ = (\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|registrador~1167_combout\))
+-- \MUX_register_bank_out|saida_MUX[9]~26_combout\ = (\banco_regs|Equal0~0_combout\ & (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|registrador~1167_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67241,13 +67241,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \banco_regs|ALT_INV_Equal0~0_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \banco_regs|ALT_INV_registrador~1167_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[9]~26_combout\);
 
 \MUX_register_bank_out|saida_MUX[10]~27\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[10]~27_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[10]~20_combout\)
+-- \MUX_register_bank_out|saida_MUX[10]~27_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[10]~20_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67256,13 +67256,13 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[10]~20_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[10]~27_combout\);
 
 \MUX_register_bank_out|saida_MUX[11]~28\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[11]~28_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[11]~21_combout\)
+-- \MUX_register_bank_out|saida_MUX[11]~28_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[11]~21_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67271,13 +67271,13 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[11]~21_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[11]~28_combout\);
 
 \MUX_register_bank_out|saida_MUX[12]~29\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[12]~29_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[12]~22_combout\)
+-- \MUX_register_bank_out|saida_MUX[12]~29_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[12]~22_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67286,13 +67286,13 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[12]~22_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[12]~29_combout\);
 
 \MUX_register_bank_out|saida_MUX[14]~30\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[14]~30_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & ((\banco_regs|saidaB[14]~16_combout\))) # (\unidade_de_controle_FD|saida[3]~0_combout\ & (\ROM_MIPS|memROM~8_combout\))
+-- \MUX_register_bank_out|saida_MUX[14]~30_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & ((\banco_regs|saidaB[14]~16_combout\))) # (\unidade_de_controle_FD|saida[5]~0_combout\ & (\ROM_MIPS|memROM~8_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67302,13 +67302,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \ROM_MIPS|ALT_INV_memROM~8_combout\,
-	datab => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	datab => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datac => \banco_regs|ALT_INV_saidaB[14]~16_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[14]~30_combout\);
 
 \MUX_register_bank_out|saida_MUX[15]~31\ : cyclonev_lcell_comb
 -- Equation(s):
--- \MUX_register_bank_out|saida_MUX[15]~31_combout\ = (!\unidade_de_controle_FD|saida[3]~0_combout\ & \banco_regs|saidaB[15]~15_combout\)
+-- \MUX_register_bank_out|saida_MUX[15]~31_combout\ = (!\unidade_de_controle_FD|saida[5]~0_combout\ & \banco_regs|saidaB[15]~15_combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -67317,7 +67317,7 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \unidade_de_controle_FD|ALT_INV_saida[3]~0_combout\,
+	dataa => \unidade_de_controle_FD|ALT_INV_saida[5]~0_combout\,
 	datab => \banco_regs|ALT_INV_saidaB[15]~15_combout\,
 	combout => \MUX_register_bank_out|saida_MUX[15]~31_combout\);
 

@@ -230,15 +230,15 @@ funct <= ROM_out(5 downto 0);
 imediate <= ROM_out (15 downto 0);
 
 -- conexoes da unidade de controle do fluxo de dados
-UCFD_proxPC_beqJump <= UCFD_out(0);
-UCFD_mux_RdRt <= UCFD_out(1);
-UCFD_habEscritaReg <= UCFD_out(2);
-UCFD_mux_Rt_imediato <= UCFD_out(3);
+UCFD_proxPC_beqJump <= UCFD_out(8);
+UCFD_mux_RdRt <= UCFD_out(7);
+UCFD_habEscritaReg <= UCFD_out(6);
+UCFD_mux_Rt_imediato <= UCFD_out(5);
 UCFD_tipoR <= UCFD_out(4);
-UCFD_mux_ULA_mem <= UCFD_out(5);
-UCFD_BEQ <= UCFD_out(6);
-UCFD_habLeituraMEM <= UCFD_out(7);
-UCFD_habEscritaMEM <= UCFD_out(8);
+UCFD_mux_ULA_mem <= UCFD_out(3);
+UCFD_BEQ <= UCFD_out(2);
+UCFD_habLeituraMEM <= UCFD_out(1);
+UCFD_habEscritaMEM <= UCFD_out(0);
 
 -- saidas para visualizar na simulacao
 simu_ula_out <= ULA_out;

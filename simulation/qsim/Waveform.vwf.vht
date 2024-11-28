@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/27/2024 23:59:59"
+-- Generated on "11/28/2024 00:18:02"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          TipoRIJ
 -- 
@@ -47,13 +47,13 @@ COMPONENT TipoRIJ
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
 	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	simu_decoder_out : BUFFER STD_LOGIC_VECTOR(8 DOWNTO 0);
-	simu_instru_out : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	simu_pc_out : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	simu_ula_A : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	simu_ula_B : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	simu_ula_out : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	simu_ula_z : BUFFER STD_LOGIC
+	simu_decoder_out : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
+	simu_instru_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	simu_pc_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	simu_ula_A : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	simu_ula_B : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	simu_ula_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	simu_ula_z : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN

@@ -22,15 +22,15 @@ architecture comportamento of UC_FD is
 
 begin 
  
-	 saida <= "000010110" when entrada = ANDD else
-           "000010110" when entrada = ORR else
-           "000010110" when entrada = ADD else
-           "000010110" when entrada = SUB else
-           "000010110" when entrada = SLT else
-           "010101100" when entrada = LW else
-           "100001000" when entrada = SW else
-           "001000000" when entrada = BEQ else
-           "000000001" when entrada = JMP else
+	 saida <= "011010000" when entrada = ANDD else
+           "011010000" when entrada = ORR else
+           "011010000" when entrada = ADD else
+           "011010000" when entrada = SUB else
+           "011010000" when entrada = SLT else
+           "001101010" when entrada = LW else
+           "000100001" when entrada = SW else
+           "000000100" when entrada = BEQ else
+           "100000000" when entrada = JMP else
            "000000000"; -- NOP para os entradas Indefinidas
 	 
 	 
