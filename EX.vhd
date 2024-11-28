@@ -94,4 +94,6 @@ EX <= EX_in(146 downto 138);
 funct <= EX_in(15 downto 10);
 
 EX_out <= WB & M & add_extended_signal_and_PC_out & ULA_Z & ULA_out & EX_in(73 downto 42) & MUX_reg_address_out; -- 2 + 3 + 32 + 1 + 32 + 32 + 5 = 107
+
+debug_incrementaPC_EX <= EX_in(137 downto 106);
 end architecture;

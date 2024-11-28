@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Nov 28 03:54:13 2024
+Analysis & Synthesis Status : Successful - Thu Nov 28 04:34:15 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : MIPS_DLX_pipeline
 Top-level Entity Name : MIPS_DLX_pipeline
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2142
+Total registers : 2553
 Total pins : 101
 Total virtual pins : 0
-Total block memory bits : 0
+Total block memory bits : 2,048
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

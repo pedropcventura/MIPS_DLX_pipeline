@@ -1,5 +1,5 @@
 Flow report for MIPS_DLX_pipeline
-Thu Nov 28 04:16:17 2024
+Thu Nov 28 04:34:28 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Nov 28 04:16:17 2024       ;
+; Flow Status                     ; Successful - Thu Nov 28 04:34:28 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS_DLX_pipeline                           ;
 ; Top-level Entity Name           ; MIPS_DLX_pipeline                           ;
@@ -49,10 +49,10 @@ https://fpgasoftware.intel.com/eula.
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2142                                        ;
+; Total registers                 ; 2553                                        ;
 ; Total pins                      ; 101                                         ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
+; Total block memory bits         ; 2,048                                       ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/28/2024 03:54:03 ;
+; Start date & time ; 11/28/2024 04:34:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIPS_DLX_pipeline   ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 154031909629752.173277684318420        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 154031909629752.173277924620591        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -105,16 +105,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 563 MB              ; 00:00:18                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 663 MB              ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 677 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 665 MB              ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 677 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 665 MB              ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 677 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 665 MB              ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 677 MB              ; 00:00:01                           ;
-; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:22                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 589 MB              ; 00:00:18                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 666 MB              ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 679 MB              ; 00:00:01                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:19                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -126,12 +120,6 @@ https://fpgasoftware.intel.com/eula.
 ; Analysis & Synthesis ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
 ; EDA Netlist Writer   ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
 ; EDA Netlist Writer   ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
-; EDA Netlist Writer   ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
-; EDA Netlist Writer   ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
-; EDA Netlist Writer   ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
-; EDA Netlist Writer   ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
-; EDA Netlist Writer   ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
-; EDA Netlist Writer   ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
 +----------------------+--------------------+----------------+------------+----------------+
 
 
@@ -139,12 +127,6 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off MIPS_DLX_pipeline -c MIPS_DLX_pipeline
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX_pipeline -c MIPS_DLX_pipeline --vector_source=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/Waveform.vwf --testbench_file=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/ MIPS_DLX_pipeline -c MIPS_DLX_pipeline
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX_pipeline -c MIPS_DLX_pipeline --vector_source=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/Waveform.vwf --testbench_file=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/ MIPS_DLX_pipeline -c MIPS_DLX_pipeline
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX_pipeline -c MIPS_DLX_pipeline --vector_source=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/Waveform.vwf --testbench_file=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/ MIPS_DLX_pipeline -c MIPS_DLX_pipeline
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX_pipeline -c MIPS_DLX_pipeline --vector_source=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/Waveform1.vwf --testbench_file=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/Waveform1.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/ MIPS_DLX_pipeline -c MIPS_DLX_pipeline
 

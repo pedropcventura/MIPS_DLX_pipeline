@@ -22,10 +22,10 @@ architecture Behavioral of MIPS_DLX_pipeline is
 signal CLK : std_logic;
 
   -- Registradores que dividem o pipeline 
---  signal IF_ID_out : std_logic_vector(xxxx downto 0);
---  signal ID_EX_out : std_logic_vector(xxxx downto 0);
---  signal EX_MEM_out : std_logic_vector(xxxx downto 0);
---  signal MEM_WB_out : std_logic_vector(xxxx downto 0);
+  signal IF_ID_out : std_logic_vector(63 downto 0);
+  signal ID_EX_out : std_logic_vector(151 downto 0);
+  signal EX_MEM_out : std_logic_vector(106 downto 0);
+  signal MEM_WB_out : std_logic_vector(70 downto 0);
 
 -- IF
   signal mux_no_jump_in_B : std_logic_vector (instruction_size-1 downto 0);
@@ -51,38 +51,38 @@ CLK <= CLOCK_50;
 end generate;
  
 -- Registradores do Pipeline
---  IF_ID : entity work.registradorGenerico generic map (larguraDados => 64)
---	 port map(
---		DIN => ,
---		DOUT => IF_ID_out,
---		ENABLE => '1',
---		CLK => CLK,
---		RST => '0'
---	 );
---  ID_EX : entity work.registradorGenerico generic map (larguraDados => 152)
---	 port map(
---		DIN => ,
---		DOUT => ID_EX_out,
---		ENABLE => '1',
---		CLK => CLK,
---		RST => '0'
---	 );
---  EX_MEM : entity work.registradorGenerico generic map (larguraDados => 107)
---	 port map(
---		DIN => ,
---		DOUT => EX_MEM_out,
---		ENABLE => '1',
---		CLK => CLK,
---		RST => '0'
---	 );
---  MEM_WB : entity work.registradorGenerico generic map (larguraDados => 71)
---	 port map(
---		DIN => ,
---		DOUT => MEM_WB_out,
---		ENABLE => '1',
---		CLK => CLK,
---		RST => '0'
---	 );
+  IF_ID : entity work.registradorGenerico generic map (larguraDados => 64)
+	 port map(
+		DIN => IFF_out,
+		DOUT => IF_ID_out,
+		ENABLE => '1',
+		CLK => CLK,
+		RST => '0'
+	 );
+  ID_EX : entity work.registradorGenerico generic map (larguraDados => 152)
+	 port map(
+		DIN => ID_out,
+		DOUT => ID_EX_out,
+		ENABLE => '1',
+		CLK => CLK,
+		RST => '0'
+	 );
+  EX_MEM : entity work.registradorGenerico generic map (larguraDados => 107)
+	 port map(
+		DIN => EX_out,
+		DOUT => EX_MEM_out,
+		ENABLE => '1',
+		CLK => CLK,
+		RST => '0'
+	 );
+  MEM_WB : entity work.registradorGenerico generic map (larguraDados => 71)
+	 port map(
+		DIN => MEM_out,
+		DOUT => MEM_WB_out,
+		ENABLE => '1',
+		CLK => CLK,
+		RST => '0'
+	 );
 
 
 -- Instanciando as etapas
@@ -100,7 +100,7 @@ inst_IFF : entity work.IFF
 inst_ID : entity work.ID
   port map (
       clk => CLK,
-      ID_in => IFF_out,
+      ID_in => IF_ID_out,
       RegWrite => RegWrite,
       write_register => rd,
       write_data => write_data_mux_out,
@@ -112,14 +112,14 @@ inst_EX : entity work.EX
   port map (
     debug_incrementaPC_EX => debug_incrementaPC_EX,
   
-    EX_in => ID_out,
+    EX_in => ID_EX_out,
     EX_out => EX_out
   );
 
 inst_MEM : entity work.MEM
   port map (
       clk => CLK,
-      MEM_in => EX_out,
+      MEM_in => EX_MEM_out,
       PCSrc => PCSrc,
       mux_no_jump_in_B => mux_no_jump_in_B,
       MEM_out => MEM_out
@@ -127,7 +127,7 @@ inst_MEM : entity work.MEM
 
 inst_WB : entity work.WB
   port map (
-      WB_in => MEM_out,
+      WB_in => MEM_WB_out,
       RegWrite => RegWrite,
       mux_ULA_mem_out => write_data_mux_out,
       rd => rd

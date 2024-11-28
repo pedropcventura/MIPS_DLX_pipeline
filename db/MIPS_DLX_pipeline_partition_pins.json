@@ -4,6 +4,14 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "debug_PC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_PC[1]",
+					"strict" : false
+				},
+				{
 					"name" : "debug_PC[2]",
 					"strict" : false
 				},
@@ -121,6 +129,134 @@
 				},
 				{
 					"name" : "debug_PC[31]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[7]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[8]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[9]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[10]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[11]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[12]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[13]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[14]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[15]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[16]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[17]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[18]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[19]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[20]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[21]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[22]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[23]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[24]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[25]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[26]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[27]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[28]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[29]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[30]",
+					"strict" : false
+				},
+				{
+					"name" : "debug_incrementaPC_EX[31]",
 					"strict" : false
 				},
 				{

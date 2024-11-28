@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 d/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim
 Emips_dlx_pipeline
-Z1 w1732778177
+Z1 w1732779268
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,7 +20,7 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 12
+!i122 16
 R0
 Z11 8MIPS_DLX_pipeline.vho
 Z12 FMIPS_DLX_pipeline.vho
@@ -30,9 +30,9 @@ VW8gBQPHSA5?oLi@GBDBP<1
 !s100 kKQ]P_72N9^z0cK]d8eBl0
 Z14 OV;C;2020.1;71
 32
-Z15 !s110 1732778178
+Z15 !s110 1732779269
 !i10b 1
-Z16 !s108 1732778178.000000
+Z16 !s108 1732779269.000000
 Z17 !s90 -work|work|MIPS_DLX_pipeline.vho|
 Z18 !s107 MIPS_DLX_pipeline.vho|
 !i113 1
@@ -49,11 +49,11 @@ R8
 R9
 R10
 DEx4 work 17 mips_dlx_pipeline 0 22 W8gBQPHSA5?oLi@GBDBP<1
-!i122 12
-l6755
-L49 66281
-V`WYlEKnWWg3dCId0nUA=F2
-!s100 IlF^KD@MG^52o7G_c5zEO3
+!i122 16
+l6700
+L49 73029
+VzXJcfKSNzo]<b<IL]kJW62
+!s100 2j10HkJ>H;mQG8e8mfl``0
 R14
 32
 R15
@@ -65,10 +65,10 @@ R18
 R19
 R20
 Emips_dlx_pipeline_vhd_vec_tst
-Z21 w1732778176
+Z21 w1732779267
 R8
 R9
-!i122 13
+!i122 17
 R0
 Z22 8Waveform1.vwf.vht
 Z23 FWaveform1.vwf.vht
@@ -78,35 +78,35 @@ V4:U76LQk@>RU9jbDKJXn>3
 !s100 l6A`_JF@=O09FPM35IBzR3
 R14
 32
-R15
+Z25 !s110 1732779270
 !i10b 1
-R16
-Z25 !s90 -work|work|Waveform1.vwf.vht|
-!s107 Waveform1.vwf.vht|
+Z26 !s108 1732779270.000000
+Z27 !s90 -work|work|Waveform1.vwf.vht|
+Z28 !s107 Waveform1.vwf.vht|
 !i113 1
 R19
 R20
 Amips_dlx_pipeline_arch
 R8
 R9
-Z26 DEx4 work 29 mips_dlx_pipeline_vhd_vec_tst 0 22 4:U76LQk@>RU9jbDKJXn>3
-!i122 13
+Z29 DEx4 work 29 mips_dlx_pipeline_vhd_vec_tst 0 22 4:U76LQk@>RU9jbDKJXn>3
+!i122 17
 l51
-L34 77
+Z30 L34 77
 VdE?jJ9HG[E9Hc7Sij^_T23
 !s100 6]EXGDD345J>1_kPH>?UE2
 R14
 32
-R15
-!i10b 1
-R16
 R25
-Z27 !s107 Waveform1.vwf.vht|
+!i10b 1
+R26
+R27
+R28
 !i113 1
 R19
 R20
 Etiporij
-Z28 w1732763884
+Z31 w1732763884
 R2
 R3
 R4
@@ -128,7 +128,7 @@ R14
 32
 !s110 1732763884
 !i10b 1
-Z29 !s108 1732763884.000000
+Z32 !s108 1732763884.000000
 R17
 R18
 !i113 1
@@ -152,33 +152,33 @@ V1=AJbS5kmJZ8M@AVUK4QH3
 !s100 :ko2YXB`GKU3H@_LS:oKR0
 R14
 32
-Z30 !s110 1732763885
+Z33 !s110 1732763885
 !i10b 1
-R29
+R32
 R17
 R18
 !i113 1
 R19
 R20
 Etiporij_vhd_vec_tst
-Z31 w1732763882
+Z34 w1732763882
 R8
 R9
 !i122 5
 R0
-Z32 8Waveform.vwf.vht
-Z33 FWaveform.vwf.vht
+Z35 8Waveform.vwf.vht
+Z36 FWaveform.vwf.vht
 l0
 R24
 V;8H@T[fP>PTaQ4^;93:Eh2
 !s100 VGk17X]dgM4@Re99^ff?A3
 R14
 32
-R30
+R33
 !i10b 1
-Z34 !s108 1732763885.000000
-Z35 !s90 -work|work|Waveform.vwf.vht|
-Z36 !s107 Waveform.vwf.vht|
+Z37 !s108 1732763885.000000
+Z38 !s90 -work|work|Waveform.vwf.vht|
+Z39 !s107 Waveform.vwf.vht|
 !i113 1
 R19
 R20
@@ -193,11 +193,11 @@ VKJa4fIc]oXNYDgUiiBTFo1
 !s100 2WLlB8WGc8>2:d2U>EG[G3
 R14
 32
-R30
+R33
 !i10b 1
-R34
-R35
-R36
+R37
+R38
+R39
 !i113 1
 R19
 R20
