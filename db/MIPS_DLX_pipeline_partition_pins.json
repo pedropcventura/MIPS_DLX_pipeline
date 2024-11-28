@@ -1,0 +1,661 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "simu_ula_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_decoder_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_decoder_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_decoder_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_decoder_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_decoder_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_decoder_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_decoder_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_decoder_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_decoder_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[18]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[20]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[22]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[23]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[25]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[30]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_pc_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[16]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[17]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[19]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[21]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[24]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[26]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[27]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[28]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[29]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_instru_out[31]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[5]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[6]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[7]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[8]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[9]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[10]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[11]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[12]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[13]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[14]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[15]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[16]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[17]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[18]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[19]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[20]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[21]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[22]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[23]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[24]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[25]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[26]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[27]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[28]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[29]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[30]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_A[31]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[8]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[9]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[10]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[11]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[12]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[13]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[14]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[15]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[16]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[17]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[18]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[19]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[20]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[21]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[22]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[23]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[24]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[25]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[26]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[27]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[28]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[29]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[30]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_B[31]",
+					"strict" : false
+				},
+				{
+					"name" : "simu_ula_z",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
