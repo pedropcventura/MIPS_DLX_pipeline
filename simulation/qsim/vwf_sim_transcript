@@ -7,18 +7,18 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX_pipeline -c MIPS_DLX_pipeline --vector_source="/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/Waveform.vwf" --testbench_file="/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX_pipeline -c MIPS_DLX_pipeline --vector_source="/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/Waveform1.vwf" --testbench_file="/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/Waveform1.vwf.vht"
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Thu Nov 28 04:04:06 2024Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX_pipeline -c MIPS_DLX_pipeline --vector_source=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/Waveform.vwf --testbench_file=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/Waveform.vwf.vhtInfo (119006): Selected device 5CEBA4F23C7 for design "MIPS_DLX_pipeline"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-output pin "debug_incrementaPC_EX[13]" in vector source file when writing test bench files
-" in vector source file when writing test bench files
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Thu Nov 28 04:16:15 2024Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX_pipeline -c MIPS_DLX_pipeline --vector_source=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/Waveform1.vwf --testbench_file=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/Waveform1.vwf.vhtInfo (119006): Selected device 5CEBA4F23C7 for design "MIPS_DLX_pipeline"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+g output pin "debug_incrementaPC_EX[13]" in vector source file when writing test bench files
+4]" in vector source file when writing test bench files
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
 quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/" MIPS_DLX_pipeline -c MIPS_DLX_pipeline
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Thu Nov 28 04:04:07 2024Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/ MIPS_DLX_pipeline -c MIPS_DLX_pipelineInfo (119006): Selected device 5CEBA4F23C7 for design "MIPS_DLX_pipeline"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file MIPS_DLX_pipeline.vho in folder "/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 677 megabytes    Info: Processing ended: Thu Nov 28 04:04:08 2024    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and any partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details, at    Info: https://fpgasoftware.intel.com/eula.    Info: Processing started: Thu Nov 28 04:16:16 2024Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/ MIPS_DLX_pipeline -c MIPS_DLX_pipelineInfo (119006): Selected device 5CEBA4F23C7 for design "MIPS_DLX_pipeline"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file MIPS_DLX_pipeline.vho in folder "/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 677 megabytes    Info: Processing ended: Thu Nov 28 04:16:17 2024    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
@@ -36,233 +36,37 @@ Reading pref.tcl
 # do MIPS_DLX_pipeline.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 04:04:09 on Nov 28,2024# vcom -work work MIPS_DLX_pipeline.vho 
+# Start time: 04:16:18 on Nov 28,2024# vcom -work work MIPS_DLX_pipeline.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
-# -- Loading package std_logic_1164# -- Loading package VITAL_Timing# -- Loading package VITAL_Primitives# -- Loading package dffeas_pack# -- Loading package altera_primitives_components
-# -- Loading package altera_lnsim_components
+# -- Loading package std_logic_1164# -- Loading package VITAL_Timing# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack# -- Loading package altera_primitives_components# -- Loading package altera_lnsim_components
 # -- Loading package cyclonev_atom_pack
 # -- Loading package cyclonev_components
 # -- Compiling entity MIPS_DLX_pipeline
 # -- Compiling architecture structure of MIPS_DLX_pipeline
-# End time: 04:04:09 on Nov 28,2024, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020# Start time: 04:04:09 on Nov 28,2024
-# vcom -work work Waveform.vwf.vht 
+# End time: 04:16:18 on Nov 28,2024, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:16:18 on Nov 28,2024# vcom -work work Waveform1.vwf.vht 
 # -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity MIPS_DLX_pipeline_vhd_vec_tst# -- Compiling architecture MIPS_DLX_pipeline_arch of MIPS_DLX_pipeline_vhd_vec_tst
-# End time: 04:04:10 on Nov 28,2024, Elapsed time: 0:00:01# Errors: 0, Warnings: 0
-# vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.TipoRIJ_vhd_vec_tst # Start time: 04:04:10 on Nov 28,2024# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.tiporij_vhd_vec_tst(tiporij_arch)# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading altera.dffeas_pack# Loading altera.altera_primitives_components# Loading altera_lnsim.altera_lnsim_components# Loading cyclonev.cyclonev_atom_pack(body)# Loading cyclonev.cyclonev_components# Loading work.tiporij(structure)# Loading ieee.std_logic_arith(body)# Loading cyclonev.cyclonev_io_obuf(arch)# Loading cyclonev.cyclonev_io_ibuf(arch)# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)# Loading altera.dffeas(vital_dffeas)# ** Warning: Design size of 626069 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.# Expect performance to be adversely affected.
+# -- Loading package TEXTIO# -- Loading package std_logic_1164# -- Compiling entity MIPS_DLX_pipeline_vhd_vec_tst
+# -- Compiling architecture MIPS_DLX_pipeline_arch of MIPS_DLX_pipeline_vhd_vec_tst
+# End time: 04:16:18 on Nov 28,2024, Elapsed time: 0:00:00# Errors: 0, Warnings: 0
+# vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.MIPS_DLX_pipeline_vhd_vec_tst # Start time: 04:16:18 on Nov 28,2024# Loading std.standard# Loading std.textio(body)# Loading ieee.std_logic_1164(body)# Loading work.mips_dlx_pipeline_vhd_vec_tst(mips_dlx_pipeline_arch)# Loading ieee.vital_timing(body)# Loading ieee.vital_primitives(body)# Loading altera.dffeas_pack# Loading altera.altera_primitives_components# Loading altera_lnsim.altera_lnsim_components# Loading cyclonev.cyclonev_atom_pack(body)# Loading cyclonev.cyclonev_components# Loading work.mips_dlx_pipeline(structure)# Loading ieee.std_logic_arith(body)# Loading cyclonev.cyclonev_io_obuf(arch)# Loading cyclonev.cyclonev_io_ibuf(arch)# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)# Loading altera.dffeas(vital_dffeas)# ** Warning: Design size of 607092 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.# Expect performance to be adversely affected.
 # after#34
-# Simulation time: 100000 ps
-# Simulation time: 100000 ps
-# End time: 04:04:15 on Nov 28,2024, Elapsed time: 0:00:05# Errors: 0, Warnings: 1
+# Simulation time: 120000 ps
+# End time: 04:16:24 on Nov 28,2024, Elapsed time: 0:00:06# Errors: 0, Warnings: 1
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading /home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/Waveform.vwf...
+Reading /home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/Waveform1.vwf...
 
 Reading /home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/MIPS_DLX_pipeline.msim.vcd...
 
 Processing channel transitions... 
 
-Warning: debug_incrementaPC_EX[31] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[30] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[29] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[28] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[27] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[26] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[25] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[24] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[23] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[22] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[21] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[20] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[19] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[18] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[17] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[16] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[15] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[14] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[13] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[12] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[11] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[10] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[9] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[8] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[7] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[6] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[5] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[4] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[3] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[2] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[1] - signal not found in VCD.
-
-Warning: debug_incrementaPC_EX[0] - signal not found in VCD.
-
-Warning: debug_PC[31] - signal not found in VCD.
-
-Warning: debug_PC[30] - signal not found in VCD.
-
-Warning: debug_PC[29] - signal not found in VCD.
-
-Warning: debug_PC[28] - signal not found in VCD.
-
-Warning: debug_PC[27] - signal not found in VCD.
-
-Warning: debug_PC[26] - signal not found in VCD.
-
-Warning: debug_PC[25] - signal not found in VCD.
-
-Warning: debug_PC[24] - signal not found in VCD.
-
-Warning: debug_PC[23] - signal not found in VCD.
-
-Warning: debug_PC[22] - signal not found in VCD.
-
-Warning: debug_PC[21] - signal not found in VCD.
-
-Warning: debug_PC[20] - signal not found in VCD.
-
-Warning: debug_PC[19] - signal not found in VCD.
-
-Warning: debug_PC[18] - signal not found in VCD.
-
-Warning: debug_PC[17] - signal not found in VCD.
-
-Warning: debug_PC[16] - signal not found in VCD.
-
-Warning: debug_PC[15] - signal not found in VCD.
-
-Warning: debug_PC[14] - signal not found in VCD.
-
-Warning: debug_PC[13] - signal not found in VCD.
-
-Warning: debug_PC[12] - signal not found in VCD.
-
-Warning: debug_PC[11] - signal not found in VCD.
-
-Warning: debug_PC[10] - signal not found in VCD.
-
-Warning: debug_PC[9] - signal not found in VCD.
-
-Warning: debug_PC[8] - signal not found in VCD.
-
-Warning: debug_PC[7] - signal not found in VCD.
-
-Warning: debug_PC[6] - signal not found in VCD.
-
-Warning: debug_PC[5] - signal not found in VCD.
-
-Warning: debug_PC[4] - signal not found in VCD.
-
-Warning: debug_PC[3] - signal not found in VCD.
-
-Warning: debug_PC[2] - signal not found in VCD.
-
-Warning: debug_PC[1] - signal not found in VCD.
-
-Warning: debug_PC[0] - signal not found in VCD.
-
-Warning: debug_ULA_out[31] - signal not found in VCD.
-
-Warning: debug_ULA_out[30] - signal not found in VCD.
-
-Warning: debug_ULA_out[29] - signal not found in VCD.
-
-Warning: debug_ULA_out[28] - signal not found in VCD.
-
-Warning: debug_ULA_out[27] - signal not found in VCD.
-
-Warning: debug_ULA_out[26] - signal not found in VCD.
-
-Warning: debug_ULA_out[25] - signal not found in VCD.
-
-Warning: debug_ULA_out[24] - signal not found in VCD.
-
-Warning: debug_ULA_out[23] - signal not found in VCD.
-
-Warning: debug_ULA_out[22] - signal not found in VCD.
-
-Warning: debug_ULA_out[21] - signal not found in VCD.
-
-Warning: debug_ULA_out[20] - signal not found in VCD.
-
-Warning: debug_ULA_out[19] - signal not found in VCD.
-
-Warning: debug_ULA_out[18] - signal not found in VCD.
-
-Warning: debug_ULA_out[17] - signal not found in VCD.
-
-Warning: debug_ULA_out[16] - signal not found in VCD.
-
-Warning: debug_ULA_out[15] - signal not found in VCD.
-
-Warning: debug_ULA_out[14] - signal not found in VCD.
-
-Warning: debug_ULA_out[13] - signal not found in VCD.
-
-Warning: debug_ULA_out[12] - signal not found in VCD.
-
-Warning: debug_ULA_out[11] - signal not found in VCD.
-
-Warning: debug_ULA_out[10] - signal not found in VCD.
-
-Warning: debug_ULA_out[9] - signal not found in VCD.
-
-Warning: debug_ULA_out[8] - signal not found in VCD.
-
-Warning: debug_ULA_out[7] - signal not found in VCD.
-
-Warning: debug_ULA_out[6] - signal not found in VCD.
-
-Warning: debug_ULA_out[5] - signal not found in VCD.
-
-Warning: debug_ULA_out[4] - signal not found in VCD.
-
-Warning: debug_ULA_out[3] - signal not found in VCD.
-
-Warning: debug_ULA_out[2] - signal not found in VCD.
-
-Warning: debug_ULA_out[1] - signal not found in VCD.
-
-Warning: debug_ULA_out[0] - signal not found in VCD.
-
-Warning: KEY[0] - signal not found in VCD.
-
-Writing the resulting VWF to /home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/MIPS_DLX_pipeline_20241128040416.sim.vwf
+Writing the resulting VWF to /home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/MIPS_DLX_pipeline_20241128041624.sim.vwf
 
 Finished VCD to VWF conversion.
 

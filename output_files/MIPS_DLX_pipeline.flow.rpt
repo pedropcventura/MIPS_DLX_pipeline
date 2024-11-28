@@ -1,5 +1,5 @@
 Flow report for MIPS_DLX_pipeline
-Thu Nov 28 04:04:08 2024
+Thu Nov 28 04:16:17 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Nov 28 04:04:08 2024       ;
+; Flow Status                     ; Successful - Thu Nov 28 04:16:17 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS_DLX_pipeline                           ;
 ; Top-level Entity Name           ; MIPS_DLX_pipeline                           ;
@@ -112,7 +112,9 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 677 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 665 MB              ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 677 MB              ; 00:00:01                           ;
-; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:21                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 665 MB              ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 677 MB              ; 00:00:01                           ;
+; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:22                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -122,6 +124,8 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname   ; OS Name        ; OS Version ; Processor type ;
 +----------------------+--------------------+----------------+------------+----------------+
 ; Analysis & Synthesis ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
+; EDA Netlist Writer   ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
+; EDA Netlist Writer   ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
 ; EDA Netlist Writer   ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
 ; EDA Netlist Writer   ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
 ; EDA Netlist Writer   ; pedropcv-Alienware ; Ubuntu 22.04.4 ; 22         ; x86_64         ;
@@ -140,6 +144,8 @@ quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX_pipeline -c MIPS_DLX_pipeline --vector_source=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/Waveform.vwf --testbench_file=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/Waveform.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/ MIPS_DLX_pipeline -c MIPS_DLX_pipeline
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX_pipeline -c MIPS_DLX_pipeline --vector_source=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/Waveform.vwf --testbench_file=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/Waveform.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/ MIPS_DLX_pipeline -c MIPS_DLX_pipeline
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX_pipeline -c MIPS_DLX_pipeline --vector_source=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/Waveform1.vwf --testbench_file=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/Waveform1.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/pedropcv/Semestres/6/DesComp/MIPS_DLX_pipeline/simulation/qsim/ MIPS_DLX_pipeline -c MIPS_DLX_pipeline
 
 
