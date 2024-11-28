@@ -1,0 +1,20 @@
+-- MEM
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity MEM is
+  generic (
+    instruction_size : natural := 32
+  );
+  port (
+    MEM_in : in std_logic_vector(106 downto 0)
+  );
+end entity;
+
+architecture Behavioral of MEM is
+begin
+  
+  
+end architecture;

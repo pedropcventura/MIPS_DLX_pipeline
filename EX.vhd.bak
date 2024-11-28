@@ -1,0 +1,28 @@
+-- EX
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity EX is
+  generic (
+    instruction_size : natural := 32
+  );
+  port (
+    EX_in : in std_logic_vector(151 downto 0);
+	 EX_out : out std_logic_vector(xxxx downto 0)
+  );
+end entity;
+
+architecture Behavioral of EX is
+begin
+
+-- Incrementa PC + imediato shiftado por 2
+  add_extended_signal_and_PC : entity work.somadorGenerico generic map (larguraDados => 32)
+    port map (
+	   entradaA => incrementa_PC, 
+		entradaB => extended_imediate(29 downto 0) & "00", -- extended imediate shifted 
+		saida => add_extended_signal_and_PC_out
+	 );	
+  
+end architecture;

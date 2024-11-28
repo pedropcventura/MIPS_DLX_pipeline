@@ -1,0 +1,19 @@
+-- ID
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity ID is
+  generic (
+    instruction_size : natural := 32
+  );
+  port (
+  
+  );
+end entity;
+
+architecture Behavioral of ID is
+begin
+  
+  
+end architecture;

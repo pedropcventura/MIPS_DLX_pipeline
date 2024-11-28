@@ -103,13 +103,13 @@ end generate;
 --		    saida => incrementa_PC
 --		  );
 		  
--- Jump related components
-  add_extended_signal_and_PC : entity work.somadorGenerico generic map (larguraDados => 32)
-    port map (
-	   entradaA => incrementa_PC, 
-		entradaB => extended_imediate(29 downto 0) & "00", -- extended imediate shifted 
-		saida => add_extended_signal_and_PC_out
-	);	
+---- Jump related components
+--  add_extended_signal_and_PC : entity work.somadorGenerico generic map (larguraDados => 32)
+--    port map (
+--	   entradaA => incrementa_PC, 
+--		entradaB => extended_imediate(29 downto 0) & "00", -- extended imediate shifted 
+--		saida => add_extended_signal_and_PC_out
+--	);	
 ----  MUX Z and BEQ
 --  MUX_Z_and_BEQ : entity work.muxGenerico2x1 generic map (larguraDados => 32)
 --    port map (
@@ -131,56 +131,56 @@ end generate;
 --  ROM_MIPS : entity work.ROMMIPS generic map (dataWidth => instruction_size, addrWidth => instruction_size, memoryAddrWidth => 6)
 --          port map (Endereco => PC_out, Dado => ROM_out);
 
--- MUX reg address
-  MUX_register_bank_in : entity work.muxGenerico2x1 generic map (larguraDados => 5)
-    port map (
-	   entrada_MUX_A => Rt, 
-		entrada_MUX_B => Rd, 
-		seletor_MUX => UCFD_mux_RdRt, 
-	   saida_MUX => reg_3_address
-	);
+---- MUX reg address
+--  MUX_register_bank_in : entity work.muxGenerico2x1 generic map (larguraDados => 5)
+--    port map (
+--	   entrada_MUX_A => Rt, 
+--		entrada_MUX_B => Rd, 
+--		seletor_MUX => UCFD_mux_RdRt, 
+--	   saida_MUX => reg_3_address
+--	);
 				  
 			         
--- banco de registradores
-  banco_regs : entity work.bancoRegistradores generic map (larguraDados => instruction_size, larguraEndBancoRegs => 5)
-    port map (
-        clk => CLK,        
-        enderecoA => Rs,          
-        enderecoB => Rt,          
-        enderecoC => reg_3_address,         
-        dadoEscritaC => mux_ULA_mem_out,      
-        escreveC => UCFD_habEscritaReg,          
-        saidaA => bancoReg_reg1_out,            
-        saidaB => bancoReg_reg2_out            
-    );
+---- banco de registradores
+--  banco_regs : entity work.bancoRegistradores generic map (larguraDados => instruction_size, larguraEndBancoRegs => 5)
+--    port map (
+--        clk => CLK,        
+--        enderecoA => Rs,          
+--        enderecoB => Rt,          
+--        enderecoC => reg_3_address,         
+--        dadoEscritaC => mux_ULA_mem_out,      
+--        escreveC => UCFD_habEscritaReg,          
+--        saidaA => bancoReg_reg1_out,            
+--        saidaB => bancoReg_reg2_out            
+--    );
+--
+---- signal externder for imediate use
+--imediate_signal_extender : entity work.estendeSinalGenerico generic map (larguraDadoEntrada => 16, larguraDadoSaida => 32)
+--  port map (
+--    estendeSinal_IN => imediate, 
+--	 estendeSinal_OUT => extended_imediate
+--  );
 
--- signal externder for imediate use
-imediate_signal_extender : entity work.estendeSinalGenerico generic map (larguraDadoEntrada => 16, larguraDadoSaida => 32)
-  port map (
-    estendeSinal_IN => imediate, 
-	 estendeSinal_OUT => extended_imediate
-  );
-
--- MUX out reg bank in ULA
-MUX_register_bank_out : entity work.muxGenerico2x1 generic map (larguraDados => 32)
-    port map (
-	   entrada_MUX_A => bancoReg_reg2_out, 
-		entrada_MUX_B => extended_imediate, 
-		seletor_MUX => UCFD_mux_Rt_imediato, 
-	   saida_MUX => MUX_out_ULA_in_B
-	);
-	 
--- ULA MIPS
-  ula_bit_a_bit_MIPS : entity work.ULAMIPS generic map (larguraDados => instruction_size)
-    port map (
-	   entradaA => bancoReg_reg1_out,
-		entradaB => MUX_out_ULA_in_B,
-		inverteA => UCULA_operacao(3),
-		inverteB => UCULA_operacao(2),
-      seletor => UCULA_operacao(1 downto 0),
-      saida => ULA_out,
-		Z => ULA_Z
-  );
+---- MUX out reg bank in ULA
+--MUX_register_bank_out : entity work.muxGenerico2x1 generic map (larguraDados => 32)
+--    port map (
+--	   entrada_MUX_A => bancoReg_reg2_out, 
+--		entrada_MUX_B => extended_imediate, 
+--		seletor_MUX => UCFD_mux_Rt_imediato, 
+--	   saida_MUX => MUX_out_ULA_in_B
+--	);
+--	 
+---- ULA MIPS
+--  ula_bit_a_bit_MIPS : entity work.ULAMIPS generic map (larguraDados => instruction_size)
+--    port map (
+--	   entradaA => bancoReg_reg1_out,
+--		entradaB => MUX_out_ULA_in_B,
+--		inverteA => UCULA_operacao(3),
+--		inverteB => UCULA_operacao(2),
+--      seletor => UCULA_operacao(1 downto 0),
+--      saida => ULA_out,
+--		Z => ULA_Z
+--  );
   
 -- RAM MIPS
   ram_mips : entity work.RAMMIPS generic map (dataWidth => 32, addrWidth => 32, memoryAddrWidth => 6)
@@ -203,21 +203,21 @@ MUX_register_bank_out : entity work.muxGenerico2x1 generic map (larguraDados => 
 	   saida_MUX => mux_ULA_mem_out
 	);
 	
--- Unidade de Controle FD
-  unidade_de_controle_FD : entity work.UC_FD
-    port map(
-	   entrada => opcode,
-		saida => UCFD_out
-	);
+---- Unidade de Controle FD
+--  unidade_de_controle_FD : entity work.UC_FD
+--    port map(
+--	   entrada => opcode,
+--		saida => UCFD_out
+--	);
 
--- Unidade de Controle ULA
-  unidade_de_controle_ULA : entity work.UC_ULA
-    port map(
-	   funct => funct,
-		opcode => opcode,
-		tipoR => UCFD_tipoR,
-		ULActrl => UCULA_operacao
-	);
+---- Unidade de Controle ULA
+--  unidade_de_controle_ULA : entity work.UC_ULA
+--    port map(
+--	   funct => funct,
+--		opcode => opcode,
+--		tipoR => UCFD_tipoR,
+--		ULActrl => UCULA_operacao
+--	);
 
 -- conexoes da instrucao
 opcode <= ROM_out(31 downto 26);
