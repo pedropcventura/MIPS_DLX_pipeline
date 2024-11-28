@@ -88,20 +88,20 @@ else generate
 CLK <= CLOCK_50;
 end generate;
 
--- Program Counter
-  PC : entity work.registradorGenerico generic map (larguraDados => instruction_size)
-    port map(
-      DIN => MUX_proxPC_out,
-      DOUT => PC_out,
-      ENABLE => '1',
-      CLK => CLK,
-      RST => '0'
-    );
-  proxPC :  entity work.somaConstante generic map (larguraDados => instruction_size, constante => 4)
-        port map( 
-		    entrada => PC_out, 
-		    saida => incrementa_PC
-		  );
+---- Program Counter
+--  PC : entity work.registradorGenerico generic map (larguraDados => instruction_size)
+--    port map(
+--      DIN => MUX_proxPC_out,
+--      DOUT => PC_out,
+--      ENABLE => '1',
+--      CLK => CLK,
+--      RST => '0'
+--    );
+--  proxPC :  entity work.somaConstante generic map (larguraDados => instruction_size, constante => 4)
+--        port map( 
+--		    entrada => PC_out, 
+--		    saida => incrementa_PC
+--		  );
 		  
 -- Jump related components
   add_extended_signal_and_PC : entity work.somadorGenerico generic map (larguraDados => 32)
@@ -110,26 +110,26 @@ end generate;
 		entradaB => extended_imediate(29 downto 0) & "00", -- extended imediate shifted 
 		saida => add_extended_signal_and_PC_out
 	);	
---  MUX Z and BEQ
-  MUX_Z_and_BEQ : entity work.muxGenerico2x1 generic map (larguraDados => 32)
-    port map (
-	   entrada_MUX_A => incrementa_PC, 
-		entrada_MUX_B => add_extended_signal_and_PC_out, 
-		seletor_MUX => ULA_Z and UCFD_BEQ, 
-	   saida_MUX => mux_pc_shiftedImediate_out
-	);
---  MUX proximo PC
-  MUX_proxPC : entity work.muxGenerico2x1 generic map (larguraDados => 32)
-    port map (
-	   entrada_MUX_A => mux_pc_shiftedImediate_out, 
-		entrada_MUX_B => incrementa_PC(31 downto 28) & ROM_out(25 downto 0) & '0' & '0', 
-		seletor_MUX => UCFD_proxPC_beqJump, 
-	   saida_MUX => MUX_proxPC_out
-	);
+----  MUX Z and BEQ
+--  MUX_Z_and_BEQ : entity work.muxGenerico2x1 generic map (larguraDados => 32)
+--    port map (
+--	   entrada_MUX_A => incrementa_PC, 
+--		entrada_MUX_B => add_extended_signal_and_PC_out, 
+--		seletor_MUX => ULA_Z and UCFD_BEQ, 
+--	   saida_MUX => mux_pc_shiftedImediate_out
+--	);
+----  MUX proximo PC
+--  MUX_proxPC : entity work.muxGenerico2x1 generic map (larguraDados => 32)
+--    port map (
+--	   entrada_MUX_A => mux_pc_shiftedImediate_out, 
+--		entrada_MUX_B => incrementa_PC(31 downto 28) & ROM_out(25 downto 0) & '0' & '0', 
+--		seletor_MUX => UCFD_proxPC_beqJump, 
+--	   saida_MUX => MUX_proxPC_out
+--	);
 	
--- ROM
-  ROM_MIPS : entity work.ROMMIPS generic map (dataWidth => instruction_size, addrWidth => instruction_size, memoryAddrWidth => 6)
-          port map (Endereco => PC_out, Dado => ROM_out);
+---- ROM
+--  ROM_MIPS : entity work.ROMMIPS generic map (dataWidth => instruction_size, addrWidth => instruction_size, memoryAddrWidth => 6)
+--          port map (Endereco => PC_out, Dado => ROM_out);
 
 -- MUX reg address
   MUX_register_bank_in : entity work.muxGenerico2x1 generic map (larguraDados => 5)

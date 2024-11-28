@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Nov 28 00:16:11 2024
+Analysis & Synthesis Status : Successful - Thu Nov 28 00:59:15 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : MIPS_DLX_pipeline
-Top-level Entity Name : TipoRIJ
+Top-level Entity Name : IFF
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2142
-Total pins : 175
+Total registers : 32
+Total pins : 99
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

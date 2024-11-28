@@ -1,0 +1,21 @@
+-- IFF
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity IFF is
+  generic (
+    instruction_size : natural := 32;
+    simulacao : boolean := TRUE
+  );
+  port (
+  
+  );
+end entity;
+
+architecture Behavioral of IFF is
+begin
+  
+  
+end architecture;
