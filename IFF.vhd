@@ -14,6 +14,7 @@ entity IFF is
 	 PCSrc : in std_logic;
 	 seletor_MUX_proxPC : in std_logic;
 	 
+	 debug_PC : out std_logic_vector(instruction_size-1 downto 0);
 	 IFF_out : out std_logic_vector(63 downto 0)
   );
 end entity;
@@ -67,4 +68,6 @@ begin
           port map (Endereco => PC_out, Dado => instruction);
  
 IFF_out <= incrementa_PC & instruction; 
+
+debug_PC <= PC_out;
 end architecture;

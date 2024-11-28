@@ -9,6 +9,8 @@ entity EX is
     instruction_size : natural := 32
   );
   port (
+    debug_incrementaPC_EX : out std_logic_vector(instruction_size-1 downto 0);
+  
     EX_in : in std_logic_vector(151 downto 0);
 	 EX_out : out std_logic_vector(106 downto 0)
   );

@@ -4,851 +4,255 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "PCSrc",
+					"name" : "debug_PC[2]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[0]",
+					"name" : "debug_PC[3]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[1]",
+					"name" : "debug_PC[4]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[2]",
+					"name" : "debug_PC[5]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[3]",
+					"name" : "debug_PC[6]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[4]",
+					"name" : "debug_PC[7]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[5]",
+					"name" : "debug_PC[8]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[6]",
+					"name" : "debug_PC[9]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[7]",
+					"name" : "debug_PC[10]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[8]",
+					"name" : "debug_PC[11]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[9]",
+					"name" : "debug_PC[12]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[10]",
+					"name" : "debug_PC[13]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[11]",
+					"name" : "debug_PC[14]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[12]",
+					"name" : "debug_PC[15]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[13]",
+					"name" : "debug_PC[16]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[14]",
+					"name" : "debug_PC[17]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[15]",
+					"name" : "debug_PC[18]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[16]",
+					"name" : "debug_PC[19]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[17]",
+					"name" : "debug_PC[20]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[18]",
+					"name" : "debug_PC[21]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[19]",
+					"name" : "debug_PC[22]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[20]",
+					"name" : "debug_PC[23]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[21]",
+					"name" : "debug_PC[24]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[22]",
+					"name" : "debug_PC[25]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[23]",
+					"name" : "debug_PC[26]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[24]",
+					"name" : "debug_PC[27]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[25]",
+					"name" : "debug_PC[28]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[26]",
+					"name" : "debug_PC[29]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[27]",
+					"name" : "debug_PC[30]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[28]",
+					"name" : "debug_PC[31]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[29]",
+					"name" : "debug_ULA_out[0]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[30]",
+					"name" : "debug_ULA_out[1]",
 					"strict" : false
 				},
 				{
-					"name" : "mux_no_jump_in_B[31]",
+					"name" : "debug_ULA_out[2]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[0]",
+					"name" : "debug_ULA_out[3]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[1]",
+					"name" : "debug_ULA_out[4]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[2]",
+					"name" : "debug_ULA_out[5]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[3]",
+					"name" : "debug_ULA_out[6]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[4]",
+					"name" : "debug_ULA_out[7]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[5]",
+					"name" : "debug_ULA_out[8]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[6]",
+					"name" : "debug_ULA_out[9]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[7]",
+					"name" : "debug_ULA_out[10]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[8]",
+					"name" : "debug_ULA_out[11]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[9]",
+					"name" : "debug_ULA_out[12]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[10]",
+					"name" : "debug_ULA_out[13]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[11]",
+					"name" : "debug_ULA_out[14]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[12]",
+					"name" : "debug_ULA_out[15]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[13]",
+					"name" : "debug_ULA_out[16]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[14]",
+					"name" : "debug_ULA_out[17]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[15]",
+					"name" : "debug_ULA_out[18]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[16]",
+					"name" : "debug_ULA_out[19]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[17]",
+					"name" : "debug_ULA_out[20]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[18]",
+					"name" : "debug_ULA_out[21]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[19]",
+					"name" : "debug_ULA_out[22]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[20]",
+					"name" : "debug_ULA_out[23]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[21]",
+					"name" : "debug_ULA_out[24]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[22]",
+					"name" : "debug_ULA_out[25]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[23]",
+					"name" : "debug_ULA_out[26]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[24]",
+					"name" : "debug_ULA_out[27]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[25]",
+					"name" : "debug_ULA_out[28]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[26]",
+					"name" : "debug_ULA_out[29]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[27]",
+					"name" : "debug_ULA_out[30]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[28]",
+					"name" : "debug_ULA_out[31]",
 					"strict" : false
 				},
 				{
-					"name" : "MEM_out[29]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[30]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[31]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[32]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[33]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[34]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[35]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[36]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[37]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[38]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[39]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[40]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[41]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[42]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[43]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[44]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[45]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[46]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[47]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[48]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[49]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[50]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[51]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[52]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[53]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[54]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[55]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[56]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[57]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[58]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[59]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[60]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[61]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[62]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[63]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[64]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[65]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[66]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[67]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[68]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[69]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_out[70]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[69]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[104]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[70]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[71]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[72]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[73]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[74]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[75]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[76]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[77]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[78]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[79]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[80]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[81]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[82]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[83]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[84]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[85]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[86]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[87]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[88]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[89]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[90]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[91]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[92]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[93]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[94]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[95]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[96]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[97]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[98]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[99]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[100]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[101]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[0]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[1]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[2]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[3]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[4]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[37]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[38]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[39]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[40]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[41]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[42]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[43]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[44]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[45]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[46]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[47]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[48]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[49]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[50]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[51]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[52]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[53]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[54]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[55]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[56]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[57]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[58]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[59]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[60]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[61]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[62]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[63]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[64]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[65]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[66]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[67]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[68]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[105]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[106]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[103]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[5]",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[102]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[6]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[7]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[8]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[9]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[10]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[11]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[12]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[13]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[14]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[15]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[16]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[17]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[18]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[19]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[20]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[21]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[22]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[23]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[24]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[25]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[26]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[27]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[28]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[29]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[30]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[31]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[32]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[33]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[34]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[35]",
-					"strict" : false
-				},
-				{
-					"name" : "MEM_in[36]",
+					"name" : "KEY[0]",
 					"strict" : false
 				}
 			]

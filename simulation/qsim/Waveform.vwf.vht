@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/28/2024 00:18:02"
+-- Generated on "11/28/2024 04:04:07"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          TipoRIJ
+-- Vhdl Test Bench(with test vectors) for design  :          MIPS_DLX_pipeline
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,46 +29,34 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY TipoRIJ_vhd_vec_tst IS
-END TipoRIJ_vhd_vec_tst;
-ARCHITECTURE TipoRIJ_arch OF TipoRIJ_vhd_vec_tst IS
+ENTITY MIPS_DLX_pipeline_vhd_vec_tst IS
+END MIPS_DLX_pipeline_vhd_vec_tst;
+ARCHITECTURE MIPS_DLX_pipeline_arch OF MIPS_DLX_pipeline_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL CLOCK_50 : STD_LOGIC;
+SIGNAL debug_incrementaPC_EX : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL debug_PC : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL debug_ULA_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL KEY : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL simu_decoder_out : STD_LOGIC_VECTOR(8 DOWNTO 0);
-SIGNAL simu_instru_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL simu_pc_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL simu_ula_A : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL simu_ula_B : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL simu_ula_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL simu_ula_z : STD_LOGIC;
-COMPONENT TipoRIJ
+COMPONENT MIPS_DLX_pipeline
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
-	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	simu_decoder_out : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
-	simu_instru_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	simu_pc_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	simu_ula_A : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	simu_ula_B : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	simu_ula_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	simu_ula_z : OUT STD_LOGIC
+	debug_incrementaPC_EX : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	debug_PC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	debug_ULA_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : TipoRIJ
+	i1 : MIPS_DLX_pipeline
 	PORT MAP (
 -- list connections between master ports and signals
 	CLOCK_50 => CLOCK_50,
-	KEY => KEY,
-	simu_decoder_out => simu_decoder_out,
-	simu_instru_out => simu_instru_out,
-	simu_pc_out => simu_pc_out,
-	simu_ula_A => simu_ula_A,
-	simu_ula_B => simu_ula_B,
-	simu_ula_out => simu_ula_out,
-	simu_ula_z => simu_ula_z
+	debug_incrementaPC_EX => debug_incrementaPC_EX,
+	debug_PC => debug_PC,
+	debug_ULA_out => debug_ULA_out,
+	KEY => KEY
 	);
 
 -- KEY[0]
@@ -86,4 +74,4 @@ BEGIN
 	KEY(0) <= '0';
 WAIT;
 END PROCESS t_prcs_KEY_0;
-END TipoRIJ_arch;
+END MIPS_DLX_pipeline_arch;
