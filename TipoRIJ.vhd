@@ -182,17 +182,17 @@ end generate;
 --		Z => ULA_Z
 --  );
   
--- RAM MIPS
-  ram_mips : entity work.RAMMIPS generic map (dataWidth => 32, addrWidth => 32, memoryAddrWidth => 6)
-    port map (
-	   clk => CLK,
-      Endereco => ULA_out,
-      Dado_in => bancoReg_reg2_out,
-      Dado_out => RAM_out,
-      we => UCFD_habEscritaMEM, 
-		re => UCFD_habLeituraMEM, 
-		habilita => '1'
-	 );
+---- RAM MIPS
+--  ram_mips : entity work.RAMMIPS generic map (dataWidth => 32, addrWidth => 32, memoryAddrWidth => 6)
+--    port map (
+--	   clk => CLK,
+--      Endereco => ULA_out,
+--      Dado_in => bancoReg_reg2_out,
+--      Dado_out => RAM_out,
+--      we => UCFD_habEscritaMEM, 
+--		re => UCFD_habLeituraMEM, 
+--		habilita => '1'
+--	 );
   
 -- MUX ULA MEM
   MUX_ULA_MEM : entity work.muxGenerico2x1 generic map (larguraDados => 32)
